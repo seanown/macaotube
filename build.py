@@ -21,7 +21,7 @@ ga = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}">
 html = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
         '<meta name="description" content="Discover and Visit Macao: the best of Macao tourism and culture on YouTube, '
-        'from official channels and independent creators. Sponsored by GBAECA.org.">\n'
+        'from official channels and independent creators. Curated by Sean Own, a GBAECA initiative.">\n'
         '<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
         + ga +
         '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
