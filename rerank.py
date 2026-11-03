@@ -22,12 +22,12 @@ GP = re.compile(r'格蘭披治|grand prix', re.I)
 TOPICS = [  # first match wins; English and Chinese keywords
     ('Grand Prix', r'grand prix|格蘭披治|\bgp\b|\bf3\b|\bfia\b|motorcycle race|racing|guia circuit|賽車'),
     ('Festivals & events', r'festival|節|fireworks|煙花|light up|光影|lunar new year|新春|春節|中秋|carnival|嘉年華|parade|巡遊|'
-                           r'celebrat|慶祝|anniversary|creatorweek|創作者大會|expo|博覽|countdown|倒數'),
-    ('Food', r'food|eat|egg tart|蛋撻|pork chop|豬扒|restaurant|michelin|dessert|noodle|cuisine|美食|葡國菜|土生菜|餐|'
+                           r'celebrat|慶祝|christmas|聖誕|anniversary|creatorweek|創作者大會|expo|博覽|countdown|倒數'),
+    ('Food', r'food|\beat\b|eating|egg tart|蛋撻|pork chop|豬扒|restaurant|michelin|dessert|noodle|\bbuns?\b|cuisine|美食|葡國菜|土生菜|餐|'
              r'gastronom|cafe|snack|serradura|treats|asmr|小食|甜品'),
     ('Heritage & history', r'heritage|世遺|世界遺產|history|歷史|portugu|colonial|ruins|大三巴|st\.? paul|a-ma|媽閣|temple|廟|'
                            r'church|教堂|unesco|古蹟|文物|senado|議事亭|lighthouse|燈塔|fortress|炮台|archaeolog|考古'),
-    ('Arts & music', r'music|音樂|concert|音樂會|orchestra|樂團|art\b|arts|藝術|exhibit|展覽|museum|博物館|theatre|theater|戲劇|'
+    ('Arts & music', r'music|音樂|concert|音樂會|orchestra|樂團|\bart\b|\barts\b|藝術|exhibit|展覽|museum|博物館|theatre|theater|戲劇|'
                      r'dance|舞|opera|粵劇|粉墨|film|電影|photograph|攝影|design|設計|literature|文學|書|painting|畫'),
     ('Traditions & local life', r'tradition|傳統|craft|工藝|非遺|intangible|patuá|patua|土生|macanese|community|社區|neighbourhood|'
                                 r'街坊|old street|老街|market|街市|taipa|氹仔|coloane|路環|local|folk|民俗|神誕'),
