@@ -3,7 +3,7 @@ import json, os, datetime as dt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 # Google Analytics 4 Measurement ID (public, safe to commit). Empty = no analytics.
-GA_ID = ''
+GA_ID = 'G-LDG73TDR2R'
 rows = json.load(open(os.path.join(HERE, 'data', 'ranked.json')))
 keep = ['id', 'title', 'channel', 'published', 'seconds', 'views', 'subs', 'breakout',
         'engagement', 'score', 'short', 'topic', 'lang', 'official']
