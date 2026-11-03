@@ -1,0 +1,205 @@
+<title>MacaoTube</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: azulejo-blue masthead with a calçada wave band, then one reading column:
+   a "what's working" topic strip, sticky filters, and a dense ranked list. */
+:root {
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --ink: #14213a;
+  --muted: #5d6880;
+  --line: #dde3ee;
+  --azulejo: #1f4fa3;        /* primary accent: Portuguese tile blue */
+  --azulejo-soft: #e3ebf9;
+  --ochre: #c98a1b;          /* Senado Square ochre: breakout highlight */
+  --ochre-soft: #f8ecd2;
+  --mast-ink: #ffffff;
+  --font-display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --font-body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --font-num: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1422; --surface: #161e30; --ink: #e6ebf5; --muted: #95a0b8; --line: #263049;
+  --azulejo: #7ea6ef; --azulejo-soft: #1c2a48; --ochre: #e8b04c; --ochre-soft: #3a2d12; --mast-ink: #ffffff; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1422; --surface: #161e30; --ink: #e6ebf5; --muted: #95a0b8; --line: #263049;
+  --azulejo: #7ea6ef; --azulejo-soft: #1c2a48; --ochre: #e8b04c; --ochre-soft: #3a2d12; --mast-ink: #ffffff; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--azulejo); outline-offset: 2px; border-radius: 4px; }
+.in { max-width: 920px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.mast { background: #1f4fa3; color: var(--mast-ink); }
+.mast .in { padding-block: 34px 26px; display: flex; flex-direction: column; gap: 8px; }
+.mast h1 { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: clamp(30px, 6vw, 46px); letter-spacing: -0.03em; line-height: 1; }
+.mast p { margin: 0; max-width: 60ch; color: #dbe6fb; text-wrap: pretty; }
+.mast .stats { font-family: var(--font-num); font-size: 12px; color: #b9cbf2; }
+/* calçada portuguesa wave band */
+.wave { height: 22px; background-color: #f4f1ea;
+  background-image: radial-gradient(circle at 11px -6px, transparent 12px, #1b2230 12.5px, #1b2230 15px, transparent 15.5px);
+  background-size: 22px 22px; }
+
+section.working { padding-block: 22px 6px; }
+.label { font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.topics { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.tcard { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; display: grid; gap: 4px; cursor: pointer; text-align: left; font: inherit; color: inherit; }
+.tcard[aria-pressed=true] { border-color: var(--azulejo); box-shadow: inset 0 0 0 1px var(--azulejo); }
+.tcard .tn { font-weight: 600; display: flex; justify-content: space-between; gap: 8px; }
+.tcard .tn span { font-family: var(--font-num); font-size: 12px; color: var(--muted); font-weight: 500; }
+.bar { height: 6px; border-radius: 3px; background: var(--azulejo-soft); overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--ochre); }
+.tcard small { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.controls .in { padding-block: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+input[type=search], select { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; min-width: 0; }
+input[type=search] { flex: 1 1 200px; }
+.seg { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { font: inherit; font-size: 13px; border: 0; background: none; color: var(--muted); padding: 7px 11px; cursor: pointer; }
+.seg button[aria-pressed=true] { background: var(--azulejo-soft); color: var(--azulejo); font-weight: 600; }
+
+ol { list-style: none; margin: 0; padding: 0; }
+li.v { display: grid; grid-template-columns: 2.4em 1fr auto; gap: 4px 12px; padding: 13px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.rank { font-family: var(--font-num); color: var(--muted); font-size: 12.5px; text-align: right; padding-top: 3px; }
+.main { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.title { font-weight: 600; font-size: 15.5px; text-decoration: none; overflow-wrap: anywhere; text-wrap: pretty; }
+.title:hover { color: var(--azulejo); }
+.meta { font-size: 12.5px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 2px 10px; font-variant-numeric: tabular-nums; }
+.tag { font-size: 11px; font-weight: 600; border-radius: 4px; padding: 0 6px; background: var(--azulejo-soft); color: var(--azulejo); }
+.tag.off { background: var(--ochre-soft); color: var(--ochre); }
+.tag.short { background: var(--surface); border: 1px solid var(--line); color: var(--muted); }
+.sig { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-family: var(--font-num); font-size: 12px; white-space: nowrap; }
+.bo { background: var(--ochre-soft); color: var(--ochre); border-radius: 5px; padding: 1px 7px; font-weight: 500; }
+.eg { color: var(--muted); }
+.empty { padding: 40px 0; color: var(--muted); text-align: center; }
+.more { display: block; margin: 18px auto 0; font: inherit; font-size: 14px; font-weight: 600; color: var(--azulejo); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 9px 20px; cursor: pointer; }
+footer { padding-block: 34px 56px; font-size: 12.5px; color: var(--muted); }
+footer p { max-width: 72ch; margin: 0 0 6px; }
+@media (max-width: 520px) {
+  li.v { grid-template-columns: 1fr auto; } .rank { display: none; }
+  .sig { font-size: 11px; }
+}
+@media (prefers-reduced-motion: no-preference) { .bar i { transition: width .4s ease; } }
+</style>
+
+<header class="mast">
+  <div class="in">
+    <h1>MacaoTube</h1>
+    <p>Macau's tourism and culture on YouTube: the official channels of the Tourism Office (澳門旅遊局) and the Cultural Affairs Bureau (文化局), alongside the independent creators people actually watch. Ranked by breakout, engagement and freshness, with festivals, heritage, arts and food lifted.</p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+<div class="wave" aria-hidden="true"></div>
+
+<section class="working in">
+  <p class="label">What's working · median breakout by topic</p>
+  <div class="topics" id="topics"></div>
+</section>
+
+<div class="controls">
+  <div class="in">
+    <input type="search" id="q" placeholder="Search titles and channels" aria-label="Search">
+    <div class="seg" role="group" aria-label="Format">
+      <button id="f-all" aria-pressed="true">All</button>
+      <button id="f-long" aria-pressed="false">Videos</button>
+      <button id="f-short" aria-pressed="false">Shorts</button>
+    </div>
+    <select id="src" aria-label="Source">
+      <option value="">All sources</option>
+      <option value="official">Official: Tourism Office &amp; 文化局</option>
+      <option value="creators">Independent creators</option>
+    </select>
+    <select id="lang" aria-label="Language">
+      <option value="">All languages</option>
+      <option value="English">English</option>
+      <option value="Chinese">中文</option>
+      <option value="Portuguese">Português</option>
+    </select>
+    <select id="sort" aria-label="Sort by">
+      <option value="score">Best overall</option>
+      <option value="breakout">Biggest breakout</option>
+      <option value="engagement">Most engaging</option>
+      <option value="views">Most viewed</option>
+      <option value="published">Newest</option>
+    </select>
+  </div>
+</div>
+
+<main class="in">
+  <ol id="list"></ol>
+  <button class="more" id="more" hidden>Show 50 more</button>
+</main>
+
+<footer class="in">
+  <p><b>How the ranking works.</b> Breakout is a video's views divided by its channel's average views per video, capped at 50×. Engagement is likes plus twice the comments, per view. Freshness halves every 18 months. Independent videos need Macau in the title and at least 1,000 views. Official videos need at least 300 views; sports, public-service and admin videos are left out. Festival, heritage, arts, tradition and food videos get a small boost. Shorts are videos of three minutes or less.</p>
+  <p id="built"></p>
+</footer>
+
+<script>
+const DATA = /*DATA*/[];
+const BUILT = "/*BUILT*/";
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = n => n >= 1e6 ? (n/1e6).toFixed(n >= 1e7 ? 0 : 1)+'M' : n >= 1e3 ? Math.round(n/1e3)+'K' : String(n);
+const dur = s => { const h = Math.floor(s/3600), m = Math.floor(s%3600/60), x = s%60;
+  return (h ? h+':'+String(m).padStart(2,'0') : m)+':'+String(x).padStart(2,'0'); };
+const median = a => { const s = [...a].sort((x,y) => x-y); const m = s.length >> 1; return s.length ? (s.length % 2 ? s[m] : (s[m-1]+s[m])/2) : 0; };
+
+let format = 'all', topic = '', shown = 50;
+try { const s = JSON.parse(localStorage.getItem("macaotube") || '{}'); if (s.sort) $('sort').value = s.sort; } catch (e) {}
+
+$('stats').textContent = `${DATA.length} videos · ${DATA.filter(v => v.official).length} from official channels · ${new Set(DATA.map(v => v.channel)).size} channels`;
+$('built').textContent = BUILT ? `Data from the YouTube Data API, ${BUILT}.` : '';
+
+// Topic strip: median breakout per topic, the creator's "what over-performs" view.
+const byTopic = {};
+DATA.forEach(v => (byTopic[v.topic] ||= []).push(v));
+const topicRows = Object.entries(byTopic).map(([t, vs]) => ({ t, n: vs.length,
+  bo: median(vs.map(v => v.breakout)), eg: median(vs.map(v => v.engagement)) })).sort((a,b) => b.bo - a.bo);
+const maxBo = Math.max(...topicRows.map(r => r.bo), 1);
+$('topics').innerHTML = topicRows.map(r => `
+  <button class="tcard" data-t="${esc(r.t)}" aria-pressed="false">
+    <span class="tn">${esc(r.t)} <span>${r.n}</span></span>
+    <span class="bar"><i style="width:${(r.bo/maxBo*100).toFixed(0)}%"></i></span>
+    <small>${r.bo.toFixed(1)}× breakout · ${r.eg.toFixed(1)}% engagement</small>
+  </button>`).join('');
+document.querySelectorAll('.tcard').forEach(b => b.addEventListener('click', () => {
+  topic = topic === b.dataset.t ? '' : b.dataset.t; shown = 50; render(); }));
+
+function render() {
+  const q = $('q').value.trim().toLowerCase(), sort = $('sort').value, src = $('src').value, lang = $('lang').value;
+  let rows = DATA.filter(v => (format === 'all' || (format === 'short') === v.short) &&
+    (!topic || v.topic === topic) && (!src || (src === 'official') === v.official) && (!lang || v.lang === lang) && (!q || (v.title + ' ' + v.channel).toLowerCase().includes(q)));
+  rows.sort(sort === 'published' ? (a,b) => b.published.localeCompare(a.published) : (a,b) => b[sort] - a[sort]);
+  ['all','long','short'].forEach(k => $('f-'+k).setAttribute('aria-pressed', k === format));
+  document.querySelectorAll('.tcard').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === topic));
+  $('list').innerHTML = rows.length ? rows.slice(0, shown).map((v, i) => `
+    <li class="v">
+      <div class="rank">${i+1}.</div>
+      <div class="main">
+        <a class="title" href="https://www.youtube.com/${v.short ? 'shorts/' : 'watch?v='}${v.id}" target="_blank" rel="noopener">${esc(v.title)}</a>
+        <div class="meta">
+          <span class="tag">${esc(v.topic)}</span>${v.official ? '<span class="tag off">Official</span>' : ''}${v.short ? '<span class="tag short">Short</span>' : ''}${v.lang !== 'English' ? `<span class="tag short">${v.lang === 'Chinese' ? '中文' : 'PT'}</span>` : ''}
+          <span>${esc(v.channel)}${v.subs ? ` · ${fmt(v.subs)} subs` : ''}</span>
+          <span>${dur(v.seconds)}</span><span>${fmt(v.views)} views</span><span>${v.published.slice(0,7)}</span>
+        </div>
+      </div>
+      <div class="sig" title="Views vs channel average · engagement rate">
+        <span class="bo">${v.breakout >= 50 ? '50×+' : v.breakout.toFixed(v.breakout < 10 ? 1 : 0)+'×'}</span>
+        <span class="eg">${v.engagement.toFixed(1)}% eng</span>
+      </div>
+    </li>`).join('') : '<li class="empty">No videos match. Clear the search or pick a different topic.</li>';
+  $('more').hidden = rows.length <= shown;
+}
+
+$('q').addEventListener('input', () => { shown = 50; render(); });
+['src','lang'].forEach(id => $(id).addEventListener('change', () => { shown = 50; render(); }));
+$('sort').addEventListener('change', () => { shown = 50; render();
+  try { localStorage.setItem("macaotube", JSON.stringify({sort: $('sort').value})); } catch (e) {} });
+['all','long','short'].forEach(k => $('f-'+k).addEventListener('click', () => { format = k; shown = 50; render(); }));
+$('more').addEventListener('click', () => { shown += 50; render(); });
+render();
+</script>

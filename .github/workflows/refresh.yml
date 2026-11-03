@@ -1,0 +1,70 @@
+name: Refresh and publish
+
+on:
+  schedule:
+    - cron: '13 18 * * *'   # every day at 02:13 Macau time
+  workflow_dispatch:         # lets you run it by hand from the Actions tab
+  push:
+    branches: [main]
+
+permissions:
+  contents: write   # to save refreshed data back to the repo
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Fetch steps are skipped on plain pushes and allowed to fail (e.g. quota),
+      # in which case the site is rebuilt from the last saved data.
+      - name: Fetch official channel uploads
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          YT_KEY: ${{ secrets.YT_KEY }}
+        run: python official.py
+
+      - name: Search independent creators
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          YT_KEY: ${{ secrets.YT_KEY }}
+        run: python fetch.py
+
+      - name: Rank and build page
+        run: |
+          python rerank.py
+          python build.py
+
+      - name: Save refreshed data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "macaotube-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Refresh data $(date -u +%F)"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
