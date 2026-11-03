@@ -59,7 +59,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .rail a[aria-current=page] { background: var(--surface); font-weight: 600; }
 .rail a .n { margin-left: auto; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .rail hr { border: 0; border-top: 1px solid var(--line); margin: 10px 4px; }
-.rail .about { font-size: 12px; color: var(--muted); padding: 4px 12px; line-height: 1.5; }
+.rail .about { font-size: 12px; color: var(--muted); padding: 4px 12px; line-height: 1.5; margin: 0; }
+.rail .sponsor { margin-top: 6px; }
+.rail .sponsor a, .sponsor-link { display: inline; height: auto; padding: 0; color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.rail .sponsor a:hover { background: none; }
 main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48px 16px; }
 
 /* filters */
@@ -166,7 +169,8 @@ dialog form button { height: 34px; padding: 0 16px; border-radius: 17px; backgro
     <a href="#later" data-r="later"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 3v4.6l3.6 2.1-1 1.7L11 12.7V7z"/></svg>Watch later<span class="n" id="n-later"></span></a>
     <a href="#categories" data-r="categories"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm8-2h8v8h-8zm2 2v4h4v-4z"/></svg>Categories</a>
     <hr>
-    <p class="about">Macao's tourism and culture on YouTube: the Tourism Office and Cultural Affairs Bureau channels, plus the independent creators people actually watch. Refreshed daily.</p>
+    <p class="about">Discover and Visit Macao: the best of its tourism and culture on YouTube, from official channels and the independent creators people actually watch. Refreshed daily.</p>
+    <p class="about sponsor">Sponsored by <a href="https://gbaeca.org" target="_blank" rel="noopener">GBAECA.org</a></p>
   </nav>
 
   <main id="main">
@@ -178,10 +182,11 @@ dialog form button { height: 34px; padding: 0 16px; border-radius: 17px; backgro
 
 <dialog id="about">
   <h2>How MacaoTube works</h2>
-  <p>Every day it collects every upload from the Macao Government Tourism Office and the Cultural Affairs Bureau (文化局), and searches YouTube for English-language videos about Macao by independent creators.</p>
+  <p>Discover and Visit Macao. Every day MacaoTube collects the uploads of Macao's official tourism and culture channels, and searches YouTube for English-language videos about Macao by independent creators.</p>
   <p><b>Best first</b> combines breakout (views divided by the channel's usual views, capped at 50×), engagement (likes and comments per view), freshness, and a small lift for festivals, heritage, arts, traditions and food.</p>
   <p>Sports, public-service notices and spam are filtered out. Shorts are videos of three minutes or less.</p>
   <p id="built"></p>
+  <p>Sponsored by <a class="sponsor-link" href="https://gbaeca.org" target="_blank" rel="noopener">GBAECA.org</a></p>
   <form method="dialog"><button>Got it</button></form>
 </dialog>
 
@@ -272,7 +277,7 @@ function renderBar() {
 }
 
 const TITLES = { home: 'Home', videos: 'Videos', shorts: 'Shorts', official: 'Official channels', creators: 'Independent creators', later: 'Watch later', categories: 'Categories' };
-const SUBS = { official: 'Macao Government Tourism Office and 澳門文化局 IC Macao', creators: 'English-language videos by creators outside government',
+const SUBS = { official: 'Discover and Visit Macao', creators: 'English-language videos by creators outside government',
   later: 'Saved in this browser only' };
 
 function renderList(reset) {

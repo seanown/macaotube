@@ -14,8 +14,8 @@ assert 'AIza' not in body, 'API key must never reach the published page'
 
 html = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-        '<meta name="description" content="Macau tourism and culture on YouTube: official Tourism Office and '
-        'Cultural Affairs Bureau videos plus the independent creators people watch.">\n'
+        '<meta name="description" content="Discover and Visit Macao: the best of Macao tourism and culture on YouTube, '
+        'from official channels and independent creators. Sponsored by GBAECA.org.">\n'
         '<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
         '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
 
