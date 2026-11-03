@@ -60,9 +60,15 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .rail a .n { margin-left: auto; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .rail hr { border: 0; border-top: 1px solid var(--line); margin: 10px 4px; }
 .rail .about { font-size: 12px; color: var(--muted); padding: 4px 12px; line-height: 1.5; margin: 0; }
-.rail .sponsor { margin-top: 6px; }
-.rail .sponsor a, .sponsor-link { display: inline; height: auto; padding: 0; color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.rail .sponsor { margin-top: 6px; display: flex; flex-direction: column; gap: 8px; }
+.rail .sponsor .about a, .sponsor-link { display: inline; height: auto; padding: 0; color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 .rail .sponsor a:hover { background: none; }
+.rail .sponsor-logo { display: block; height: auto; padding: 0 12px; width: fit-content; }
+.rail .sponsor-logo img { display: block; width: 88px; height: 88px; border-radius: 50%; transition: transform .15s ease; }
+.rail .sponsor-logo:hover img { transform: scale(1.04); }
+.dialog-sponsor { display: flex; align-items: center; gap: 14px; margin: 4px 0 14px; }
+.dialog-sponsor img { width: 64px; height: 64px; border-radius: 50%; display: block; }
+.dialog-sponsor p { margin: 0; }
 main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48px 16px; }
 
 /* filters */
@@ -170,7 +176,12 @@ dialog form button { height: 34px; padding: 0 16px; border-radius: 17px; backgro
     <a href="#categories" data-r="categories"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm8-2h8v8h-8zm2 2v4h4v-4z"/></svg>Categories</a>
     <hr>
     <p class="about">Discover and Visit Macao: the best of its tourism and culture on YouTube, from official channels and the independent creators people actually watch. Refreshed daily.</p>
-    <p class="about sponsor">Sponsored by <a href="https://gbaeca.org" target="_blank" rel="noopener">GBAECA.org</a></p>
+    <div class="sponsor">
+      <p class="about">Sponsored by <a href="https://gbaeca.org" target="_blank" rel="noopener">GBAECA.org</a></p>
+      <a class="sponsor-logo" href="https://gbaeca.org" target="_blank" rel="noopener" title="GBAECA.org">
+        <img src="gbaeca-logo.png" width="88" height="88" alt="Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association (GBAECA)" loading="lazy">
+      </a>
+    </div>
   </nav>
 
   <main id="main">
@@ -186,7 +197,10 @@ dialog form button { height: 34px; padding: 0 16px; border-radius: 17px; backgro
   <p><b>Best first</b> combines breakout (views divided by the channel's usual views, capped at 50×), engagement (likes and comments per view), freshness, and a small lift for festivals, heritage, arts, traditions and food.</p>
   <p>Sports, public-service notices and spam are filtered out. Shorts are videos of three minutes or less.</p>
   <p id="built"></p>
-  <p>Sponsored by <a class="sponsor-link" href="https://gbaeca.org" target="_blank" rel="noopener">GBAECA.org</a></p>
+  <div class="dialog-sponsor">
+    <a href="https://gbaeca.org" target="_blank" rel="noopener"><img src="gbaeca-logo.png" width="64" height="64" alt="GBAECA logo"></a>
+    <p>Sponsored by <a class="sponsor-link" href="https://gbaeca.org" target="_blank" rel="noopener">GBAECA.org</a>, the Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association.</p>
+  </div>
   <form method="dialog"><button>Got it</button></form>
 </dialog>
 

@@ -27,5 +27,8 @@ html = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
         '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
 
 os.makedirs(os.path.join(HERE, 'site'), exist_ok=True)
+import shutil
+for asset in ('gbaeca-logo.png',):
+    shutil.copy(os.path.join(HERE, asset), os.path.join(HERE, 'site', asset))
 open(os.path.join(HERE, 'site', 'index.html'), 'w', encoding='utf-8').write(html)
 print(len(slim), 'videos -> site/index.html')
