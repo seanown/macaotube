@@ -5,7 +5,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # Google Analytics 4 Measurement ID (public, safe to commit). Empty = no analytics.
 GA_ID = 'G-LDG73TDR2R'
 # Baidu Tongji site code: the 32 characters after 'hm.js?'. Empty = no Baidu Tongji.
-BAIDU_ID = ''
+BAIDU_ID = 'b844c9f0bbbb22e5a149c38476c4cdf4'
 rows = json.load(open(os.path.join(HERE, 'data', 'ranked.json')))
 keep = ['id', 'title', 'channel', 'published', 'seconds', 'views', 'subs', 'breakout',
         'engagement', 'score', 'short', 'topic', 'lang', 'official']
