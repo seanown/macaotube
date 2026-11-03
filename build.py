@@ -2,6 +2,8 @@
 import json, os, datetime as dt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# Google Analytics 4 Measurement ID (public, safe to commit). Empty = no analytics.
+GA_ID = 'G-LDG73TDR2R'
 rows = json.load(open(os.path.join(HERE, 'data', 'ranked.json')))
 keep = ['id', 'title', 'channel', 'published', 'seconds', 'views', 'subs', 'breakout',
         'engagement', 'score', 'short', 'topic', 'lang', 'official']
@@ -12,11 +14,16 @@ body = body.replace('/*DATA*/[]', json.dumps(slim, ensure_ascii=False, separator
 body = body.replace('/*BUILT*/', dt.date.today().isoformat())
 assert 'AIza' not in body, 'API key must never reach the published page'
 
+ga = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>\n'
+      f'<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}'
+      f"gtag('js',new Date());gtag('config','{GA_ID}');</script>\n") if GA_ID else ''
+
 html = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-        '<meta name="description" content="Macau tourism and culture on YouTube: official Tourism Office and '
-        'Cultural Affairs Bureau videos plus the independent creators people watch.">\n'
+        '<meta name="description" content="Discover and Visit Macao: the best of Macao tourism and culture on YouTube, '
+        'from official channels and independent creators. Sponsored by GBAECA.org.">\n'
         '<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
+        + ga +
         '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
 
 os.makedirs(os.path.join(HERE, 'site'), exist_ok=True)
