@@ -315,7 +315,8 @@ urls.append(page('/topics/', title='Macau Video Topics: Food, Festivals, Heritag
 evs = upcoming()
 ev_cards, ev_ld = [], []
 for e in evs:
-    status = '<span class="now">On now</span>' if e['_now'] else ('' if 'start' in e else '<span class="tbc">Dates to be confirmed</span>')
+    status = ('<span class="now">On now</span>' if e['_now'] else '<span class="tbc">Provisional dates</span>' if e.get('provisional')
+              else '' if 'start' in e else '<span class="tbc">Dates to be confirmed</span>')
     ev_cards.append(f"""<article class="event">
       <div class="when">{E(when(e))}{status}</div>
       <div class="what">
