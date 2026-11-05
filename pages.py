@@ -278,10 +278,11 @@ GP_HUB = {
     ],
 }
 
-# Official MacaoTube social accounts (TikTok to be added once registered in the app).
+# Official MacaoTube social accounts.
 SOCIAL = [
     ('Instagram', 'https://www.instagram.com/macaotube/'),
     ('Threads', 'https://www.threads.com/@macaotube'),
     ('X', 'https://x.com/MacaoTube'),
     ('YouTube', 'https://www.youtube.com/@macaotube_org'),
+    ('TikTok', 'https://www.tiktok.com/@macaotube'),
 ]
