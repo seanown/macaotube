@@ -10,6 +10,7 @@
   --line: #e3e6e6;
   --accent: #00785e;          /* Macao flag green */
   --accent-soft: #e0f1ec;
+  --orange: #f05a1a;          /* logo orange: antennas, play button, "Tube" */
   --badge-bg: rgba(0,0,0,.78);
   --font: "Figtree", "Segoe UI", Roboto, system-ui, sans-serif;
   --rail: 232px;
@@ -17,10 +18,10 @@
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0f1212; --surface: #1c2121; --surface-2: #283030; --ink: #eef2f1; --muted: #9aa5a3; --line: #262d2d;
-  --accent: #3fc29c; --accent-soft: #13332a; color-scheme: dark } }
+  --accent: #3fc29c; --accent-soft: #13332a; --orange: #ff7a3d; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #0f1212; --surface: #1c2121; --surface-2: #283030; --ink: #eef2f1; --muted: #9aa5a3; --line: #262d2d;
-  --accent: #3fc29c; --accent-soft: #13332a; color-scheme: dark }
+  --accent: #3fc29c; --accent-soft: #13332a; --orange: #ff7a3d; color-scheme: dark }
 
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 14px; line-height: 1.4; }
@@ -40,8 +41,10 @@ svg { width: 22px; height: 22px; fill: currentColor; flex: none; }
 .iconbtn { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; }
 .iconbtn:hover { background: var(--surface); }
 .logo { font-weight: 800; font-size: 19px; letter-spacing: -0.03em; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
-.logo i { font-style: normal; color: var(--accent); }
-.logo b { width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 13px; font-weight: 800; letter-spacing: 0; }
+.logo span { color: var(--accent); }
+.logo i { font-style: normal; color: var(--orange); }
+.logo svg { width: 30px; height: 30px; flex: none; }
+.logo .tv { fill: var(--accent); } .logo .tvl { stroke: var(--accent); } .logo .or { fill: var(--orange); } .logo .orl { stroke: var(--orange); }
 .search { flex: 1; max-width: 620px; margin: 0 auto; display: flex; min-width: 0; }
 .search input { flex: 1; min-width: 0; height: 40px; border: 1px solid var(--line); border-right: 0; border-radius: 20px 0 0 20px;
   padding: 0 16px; font: inherit; font-size: 15px; background: var(--bg); color: var(--ink); }
@@ -199,7 +202,7 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
 @media (max-width: 560px) {
   .top { gap: 6px; }
   .logo { font-size: 17px; }
-  .logo b { display: none; }
+  .logo svg { width: 26px; height: 26px; }
   .search button { width: 46px; }
   .grid.shorts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .head h1 { font-size: 21px; }
@@ -211,7 +214,7 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
 <a class="skip" href="#main">Skip to videos</a>
 <header class="top">
   <button class="iconbtn" id="menu" aria-label="Menu" aria-controls="rail" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
-  <a class="logo" href="/" aria-label="MacaoTube home"><b aria-hidden="true">M</b><span>Macao<i>Tube</i></span></a>
+  <a class="logo" href="/" aria-label="MacaoTube home"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="orl" d="M38 22 L26 7 M62 22 L74 7" stroke-width="6" stroke-linecap="round"/><circle class="or" cx="26" cy="7" r="4"/><circle class="or" cx="74" cy="7" r="4"/><rect class="tv" x="6" y="20" width="88" height="66" rx="22"/><rect x="17" y="30" width="66" height="46" rx="14" fill="#fff"/><path class="or orl" d="M42 42 L60 53 L42 64Z" stroke-width="3" stroke-linejoin="round"/><path class="tvl" d="M28 86 L24 94 M72 86 L76 94" stroke-width="6" stroke-linecap="round"/></svg><span>Macao<i>Tube</i></span></a>
   <form class="search" id="searchForm" role="search" action="/" method="get">
     <input type="search" id="q" name="q" placeholder="Search Macao videos" aria-label="Search Macao videos">
     <button aria-label="Search"><svg viewBox="0 0 24 24"><path d="M10 3a7 7 0 0 1 5.6 11.2l5.1 5.1-1.4 1.4-5.1-5.1A7 7 0 1 1 10 3zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg></button>

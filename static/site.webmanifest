@@ -1,7 +1,7 @@
 {
  "name": "MacaoTube",
  "short_name": "MacaoTube",
- "description": "Discover and Visit Macao through the best YouTube videos.",
+ "description": "Discover and Visit Macao through its most-watched YouTube videos.",
  "start_url": "/",
  "display": "standalone",
  "background_color": "#ffffff",
