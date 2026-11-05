@@ -11,7 +11,7 @@ Output
   plus everything in static/ (icons, preview image, logo, IndexNow key).
 """
 import datetime as dt, html, json, os, shutil
-from pages import SITE, NAME, TOPICS, SECTIONS, EVENTS, topic_path
+from pages import SITE, NAME, TOPICS, SECTIONS, EVENTS, PACKAGES, PARTNER_EMAIL, SPONSORS, topic_path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
@@ -152,6 +152,16 @@ def coming_up_strip(n=3, days=45):
     items = ' · '.join(f'<a href="{E(e["link"])}">{E(e["name"])}</a> <span>{"now on" if e["_now"] else when(e, short=True)}</span>' for e in soon)
     return f'<p class="soon"><b>Coming up</b> {items} · <a href="/whats-on/">What\'s on →</a></p>'
 
+
+
+def sponsor_line(path):
+    sp = SPONSORS.get(path)
+    if not sp:
+        return ''
+    line = f' · {E(sp["line"])}' if sp.get('line') else ''
+    return (f'<p class="sponsor"><span class="tag">Sponsored</span> Presented by '
+            f'<a href="{E(sp["url"])}" target="_blank" rel="sponsored noopener">{E(sp["name"])}</a>{line}</p>')
+
 # ---------------------------------------------------------------- page shell
 STYLE, BODY = open(os.path.join(HERE, 'template.html'), encoding='utf-8').read().split('<!--BODY-->')
 COUNTS = {'N_VIDEOS': fmt_n(sum(not v['short'] for v in DATA)), 'N_SHORTS': fmt_n(sum(v['short'] for v in DATA)),
@@ -253,6 +263,7 @@ for key, s in SECTIONS.items():
     head = f'<h1>{E(s["h1"])}</h1><p class="intro">{E(s["intro"])}</p>{count}'
     if key == 'home':
         head += coming_up_strip()
+    head += sponsor_line(s['path'])
     ld = [{'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': s['title'], 'url': SITE + s['path'],
            'description': s['description'], 'inLanguage': 'en', 'about': {'@type': 'Place', 'name': 'Macao'},
            'isPartOf': {'@type': 'WebSite', 'name': NAME, 'url': SITE + '/'}, 'mainEntity': item_list(vids)}]
@@ -274,6 +285,7 @@ for t in TOPIC_ORDER:
     head = ('<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span>'
             '<a href="/topics/">Topics</a></nav>'
             f'<h1>{E(t)}</h1><p class="intro">{E(m["intro"])}</p><span class="count">{len(vids):,} videos</span>')
+    head += sponsor_line(path)
     ld = [{'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': m['title'], 'url': SITE + path,
            'description': m['description'], 'inLanguage': 'en', 'about': {'@type': 'Place', 'name': 'Macao'},
            'isPartOf': {'@type': 'WebSite', 'name': NAME, 'url': SITE + '/'}, 'mainEntity': item_list(vids)},
@@ -339,6 +351,33 @@ urls.append(page('/whats-on/', title="What's On in Macau: Festivals and Events C
                  description='Upcoming festivals and events in Macao: the Grand Prix, the Food Festival, Light Up Macao, Chinese New Year, the fireworks contest and more, with videos of each.',
                  view_html=whats_on, rail_key='whats-on',
                  ld=[{'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': "What's on in Macao", 'url': SITE + '/whats-on/'}] + ev_ld))
+
+# partner page
+pk_cards = ''.join(f"""<section class="pkg">
+      <h2>{E(k['name'])}</h2>
+      <p class="note">{E(k['note'])}</p>
+      <p class="price"><b>{E(k['price'])}</b> <span>{E(k['per'])}</span></p>
+      <ul>{''.join(f'<li>{E(g)}</li>' for g in k['gets'])}</ul>
+    </section>""" for k in PACKAGES)
+partner_html = f"""    <article class="prose wide">
+      <header>
+        <h1>Partner with MacaoTube</h1>
+        <p class="lede">Put your business in front of English-speaking travellers while they plan a trip to Macao. MacaoTube is a new, free guide to the best YouTube videos about Macao, refreshed every day, with {len(DATA):,} videos across {len(TOPIC_ORDER)} topics.</p>
+      </header>
+      <div class="pkgs">{pk_cards}</div>
+      <section>
+        <h2>Our promise to viewers</h2>
+        <p>Sponsors never change which videos are shown or in what order. Every paid placement is labelled <b>Sponsored</b>, and each page carries at most one sponsor. Trust is what makes MacaoTube worth sponsoring, so we protect it.</p>
+      </section>
+      <section>
+        <h2>Get in touch</h2>
+        <p>Email <a href="mailto:{PARTNER_EMAIL}?subject=Partnering%20with%20MacaoTube">{PARTNER_EMAIL}</a> with your business name and the package you are interested in. We reply in English or Chinese, usually within a day. Prices are in Macao patacas; US$1 is about MOP 8.</p>
+      </section>
+    </article>"""
+urls.append(page('/partner/', title='Partner with MacaoTube: Sponsorship for Macao Businesses',
+                 description='Sponsor MacaoTube and reach English-speaking travellers planning a trip to Macao: founding partner, season sponsor and business video page packages.',
+                 view_html=partner_html, rail_key='partner',
+                 ld={'@context': 'https://schema.org', '@type': 'WebPage', 'name': 'Partner with MacaoTube', 'url': SITE + '/partner/', 'publisher': PUBLISHER}))
 
 # about
 n_ch = len({v['channel'] for v in DATA})

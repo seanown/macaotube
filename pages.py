@@ -201,3 +201,22 @@ EVENTS = [
      'what': 'Next year’s edition of the street race.',
      'link': '/topics/grand-prix/', 'source': 'https://51gt3.com'},
 ]
+
+
+# Partner programme. Prices in MOP (US$1 ≈ MOP 8). Contact goes live once the inbox is verified.
+PARTNER_EMAIL = 'partners@macaotube.org'
+PACKAGES = [
+    {'name': 'Founding partner', 'price': 'MOP 2,400', 'per': 'for 3 months (≈ US$300)', 'note': 'Only three founding places',
+     'gets': ['"Presented by" on one topic page of your choice', 'Your logo and link on the About page',
+              'A mention in the MacaoTube email once it launches', 'The founding rate if you renew']},
+    {'name': 'Season sponsor', 'price': 'MOP 800', 'per': 'for the 2026 season (≈ US$100)', 'note': 'Grand Prix or Food Festival',
+     'gets': ['"Presented by" on the Grand Prix or Food Festival page', 'A line on What\'s on beside the event',
+              'Runs until 6 December 2026']},
+    {'name': 'Business video page', 'price': 'from MOP 1,500', 'per': 'setup, then MOP 300 a month', 'note': 'For hotels, shops and restaurants',
+     'gets': ['A page of the best videos about the streets around your business, updated daily',
+              'A QR code for your front desk, menus or windows', 'A link you can put on your own website']},
+]
+
+# Live sponsorships: page path -> sponsor. Shown as a labelled "Presented by" line.
+# Example: '/topics/food/': {'name': 'Example Café', 'url': 'https://example.com', 'line': 'Macanese food since 1990'}
+SPONSORS = {}
