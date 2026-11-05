@@ -24,10 +24,9 @@ TODAY = dt.date.today()
 BUILT = TODAY.isoformat()
 
 E = lambda s: html.escape(str(s), quote=True)
-KEEP = ['id', 'title', 'channel', 'published', 'seconds', 'views', 'breakout', 'engagement',
-        'score', 'short', 'topic', 'lang', 'official']
+KEEP = ['id', 'title', 'channel', 'published', 'seconds', 'views', 'tier', 'short', 'topic', 'lang', 'official']
 DATA = [{k: r[k] for k in KEEP} for r in json.load(open(os.path.join(HERE, 'data', 'ranked.json')))]
-DATA.sort(key=lambda v: -v['score'])
+DATA.sort(key=lambda v: (v['tier'], -v['views']))  # English first, then most viewed
 assert 'AIza' not in json.dumps(DATA), 'API key must never reach the published site'
 TOPIC_ORDER = sorted(TOPICS, key=lambda t: -sum(v['topic'] == t for v in DATA))
 
@@ -70,9 +69,6 @@ def card(v):
     href = yt_url(v)
     img = f"https://i.ytimg.com/vi/{v['id']}/{'hqdefault' if v['short'] else 'mqdefault'}.jpg"
     bo = ''
-    if v['breakout'] >= 3:
-        mult = '50×+' if v['breakout'] >= 50 else f"{round(v['breakout'])}×"
-        bo = f""" • <span class="bo" title="Views compared with this channel's average">{mult} usual</span>"""
     lang = {'Chinese': '<span class="lang">中文</span>', 'Portuguese': '<span class="lang">PT</span>'}.get(v['lang'], '')
     return f"""<article class="card">
       <a class="thumb" href="{href}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
@@ -318,7 +314,7 @@ directory = (f'    <div class="head"><h1>Explore Macao by topic</h1><p class="in
              'from the Grand Prix and Macanese food to festivals, heritage and life in the city.</p></div>\n'
              f'    <div class="cats">{"".join(cards)}</div>')
 urls.append(page('/topics/', title='Macau Video Topics: Food, Festivals, Heritage, Grand Prix and More',
-                 description='Browse the best YouTube videos about Macao by topic: travel, food, festivals, heritage, arts, local life, casinos and shows, the Grand Prix and more.',
+                 description='Browse the most-watched YouTube videos about Macao by topic: travel, food, festivals, heritage, arts, local life, casinos and shows, the Grand Prix and more.',
                  view_html=directory, rail_key='topics',
                  ld={'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Macao video topics', 'url': SITE + '/topics/',
                      'hasPart': [{'@type': 'CollectionPage', 'name': t, 'url': SITE + topic_path(t)} for t in TOPIC_ORDER]}))
@@ -362,7 +358,7 @@ pk_cards = ''.join(f"""<section class="pkg">
 partner_html = f"""    <article class="prose wide">
       <header>
         <h1>Partner with MacaoTube</h1>
-        <p class="lede">Put your business in front of English-speaking travellers while they plan a trip to Macao. MacaoTube is a new, free guide to the best YouTube videos about Macao, refreshed every day, with {len(DATA):,} videos across {len(TOPIC_ORDER)} topics.</p>
+        <p class="lede">Put your business in front of English-speaking travellers while they plan a trip to Macao. MacaoTube is a new, free guide to the most-watched YouTube videos about Macao, refreshed every day, with {len(DATA):,} videos across {len(TOPIC_ORDER)} topics.</p>
       </header>
       <div class="pkgs">{pk_cards}</div>
       <section>
@@ -379,17 +375,49 @@ urls.append(page('/partner/', title='Partner with MacaoTube: Sponsorship for Mac
                  view_html=partner_html, rail_key='partner',
                  ld={'@context': 'https://schema.org', '@type': 'WebPage', 'name': 'Partner with MacaoTube', 'url': SITE + '/partner/', 'publisher': PUBLISHER}))
 
+# privacy
+privacy_html = """    <article class="prose">
+      <header>
+        <h1>Privacy</h1>
+        <p class="lede">MacaoTube is a free website that lists YouTube videos about Macao. It has no accounts or sign-ups and asks you for no personal information.</p>
+      </header>
+      <section>
+        <h2>YouTube API Services</h2>
+        <p>MacaoTube uses YouTube API Services to show video titles, thumbnails, channel names and view counts. We only read public video information; we never access your YouTube or Google account. When you play a video you go to YouTube, where the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> apply. By using MacaoTube you agree to the YouTube Terms of Service.</p>
+      </section>
+      <section>
+        <h2>What your browser loads from others</h2>
+        <p>Video thumbnails load from YouTube's image servers, and the typeface loads from Google Fonts. Like any website, those servers receive your IP address and browser details when your browser fetches them.</p>
+      </section>
+      <section>
+        <h2>Visitor statistics</h2>
+        <p>We use Google Analytics and Baidu Tongji to count visits and see which pages are useful. They set cookies and record things like the pages you view, your device type and your approximate location. We use these numbers only in aggregate, to improve the site, and we do not sell them. You can block these cookies in your browser settings without losing any feature of MacaoTube.</p>
+      </section>
+      <section>
+        <h2>Watch later</h2>
+        <p>Videos you save to Watch later are stored only in your own browser, on your device. They are never sent to us. Clearing your browser data removes them.</p>
+      </section>
+      <section>
+        <h2>Email</h2>
+        <p>If you email us, we use your message and address only to reply and to follow up on what you asked about. Contact: <a href="mailto:hello@macaotube.org">hello@macaotube.org</a>; for sponsorship, <a href="mailto:partners@macaotube.org">partners@macaotube.org</a>.</p>
+      </section>
+      <p class="fine">Last updated 5 November 2026.</p>
+    </article>"""
+urls.append(page('/privacy/', title='Privacy', description='How MacaoTube handles data: YouTube API Services, visitor statistics, Watch later and email.',
+                 view_html=privacy_html, rail_key='privacy',
+                 ld={'@context': 'https://schema.org', '@type': 'WebPage', 'name': 'MacaoTube privacy', 'url': SITE + '/privacy/', 'publisher': PUBLISHER}))
+
 # about
 n_ch = len({v['channel'] for v in DATA})
 about = f"""    <article class="prose">
       <header>
         <h1>Discover and Visit Macao</h1>
-        <p class="lede">MacaoTube gathers the best YouTube videos about Macao in one place: its festivals, heritage, food, neighbourhoods and nightlife, from the city's official channels and from the travellers and creators people actually watch.</p>
+        <p class="lede">MacaoTube gathers the most-watched YouTube videos about Macao in one place, sorted by topic: its festivals, heritage, food, neighbourhoods and nightlife, from the city's official channels and from the travellers and creators people actually watch.</p>
       </header>
       <section>
         <h2>How it works</h2>
         <p>Every night MacaoTube collects the latest uploads from Macao's official tourism and culture channels and searches YouTube for English-language videos about the city. Right now that is {len(DATA):,} videos from {n_ch:,} channels, {sum(v['official'] for v in DATA):,} of them official.</p>
-        <p><b>Best first</b> favours videos that did far better than their channel usually does, that viewers liked and commented on, and that are recent, with a small lift for festivals, heritage, arts, traditions and food. English-language videos come first; Chinese and Portuguese ones stay available through the language filter. Sports, public notices and spam are left out. Shorts are videos of three minutes or less.</p>
+        <p>Pages list English-language videos first, then videos in Chinese and Portuguese, each group ordered by YouTube view count. You can also sort by upload date. View counts, titles and thumbnails come from YouTube and are refreshed every night. Sports, public notices and spam are left out. Shorts are videos of three minutes or less.</p>
       </section>
       <section>
         <h2>Explore</h2>
@@ -414,7 +442,7 @@ about = f"""    <article class="prose">
       <p class="fine">Last refreshed {BUILT}. Videos remain on YouTube and belong to their creators; MacaoTube only links to them.</p>
     </article>"""
 urls.append(page('/about/', title='About MacaoTube',
-                 description='How MacaoTube finds and ranks the best YouTube videos about Macao, and who is behind it.',
+                 description='How MacaoTube finds and sorts YouTube videos about Macao, and who is behind it.',
                  view_html=about, rail_key='about',
                  ld={'@context': 'https://schema.org', '@type': 'AboutPage', 'name': 'About MacaoTube',
                      'url': SITE + '/about/', 'publisher': PUBLISHER}))

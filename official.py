@@ -4,9 +4,11 @@ Uses playlistItems (1 unit / 50 videos) instead of search, so the whole
 back catalogue costs ~150 quota units.
 """
 import json, os, re, sys, urllib.parse, urllib.request
+from datetime import datetime, timezone
 from fetch import call, batched, iso_seconds
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+TODAY = datetime.now(timezone.utc).date().isoformat()
 CHANNELS = {
     'UC0gaccizp0Mm85hxiqE56pw': 'Macao Government Tourism Office',
     'UCCunZAif3rudh3umgTbeVKQ': 'Macao Government Tourism Office - USA',
@@ -33,12 +35,10 @@ def language(sn):
 
 
 def main():
-    ch = call('channels', 1, part='contentDetails,statistics', id=','.join(CHANNELS))
-    uploads, avg = {}, {}
+    ch = call('channels', 1, part='contentDetails', id=','.join(CHANNELS))
+    uploads = {}
     for c in ch['items']:
         uploads[c['id']] = c['contentDetails']['relatedPlaylists']['uploads']
-        st = c['statistics']
-        avg[c['id']] = int(st.get('viewCount', 0)) / max(int(st.get('videoCount', 1)), 1)
 
     ids = []
     for cid, pl in uploads.items():
@@ -66,10 +66,8 @@ def main():
             out.append({
                 'id': v['id'], 'title': sn['title'], 'channel': CHANNELS[cid], 'channelId': cid,
                 'published': sn['publishedAt'][:10], 'seconds': iso_seconds(v['contentDetails'].get('duration')),
-                'views': views, 'likes': int(st.get('likeCount', 0)), 'comments': int(st.get('commentCount', 0)),
-                'breakout': round(views / avg[cid], 1) if avg[cid] else 1.0,
-                'engagement': round((int(st.get('likeCount', 0)) + 2 * int(st.get('commentCount', 0))) / views * 100, 2) if views else 0,
-                'subs': None, 'lang': language(sn), 'official': True,
+                'views': views, 'fetched': TODAY,
+                'lang': language(sn), 'official': True,
                 'desc': sn.get('description', '')[:300],
             })
     json.dump(out, open(os.path.join(HERE, 'data', 'official.json'), 'w'), ensure_ascii=False, indent=1)

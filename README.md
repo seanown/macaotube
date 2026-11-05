@@ -22,9 +22,10 @@ was found so far is kept.
 One-off sweeps: `python fetch.py --full` (all searches, ~8,000 units) or
 `python fetch.py --topics Food,Festivals`.
 
-**Score** = breakout (views ÷ channel average, capped at 50×) + engagement
-(likes + 2 × comments per view) + freshness (halves every 18 months) + a small
-boost for festival, heritage, arts, tradition and food videos.
+**Order**: English-language videos first, then others, each by YouTube view count.
+YouTube's API policies forbid computing new metrics (scores, ratios) from its data,
+so MacaoTube only sorts by the raw fields YouTube returns and refreshes them nightly;
+data older than 30 days is dropped.
 
 ## Setup
 

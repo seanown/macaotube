@@ -1,5 +1,5 @@
 """Merge creator videos (videos.json) and official channel uploads (official.json),
-clean, classify by tourism/culture topic, and score -> ranked.json. No API calls.
+clean, classify by tourism/culture topic, order English first then by views -> ranked.json. No API calls.
 """
 import json, math, os, re
 from datetime import datetime, timezone
@@ -81,10 +81,11 @@ def main():
             if SPAM.search(t):
                 dropped['spam'] += 1
                 continue
-        breakout = min(v['breakout'], 50)
-        eng = v['engagement'] / 100
-        age = (now - datetime.fromisoformat(v['published']).replace(tzinfo=timezone.utc)).days
-        fresh = 0.5 ** (age / 540)
+        # YouTube's API policies require stored data to be refreshed within 30 days.
+        fetched = datetime.fromisoformat(v.get('fetched') or now.date().isoformat()).replace(tzinfo=timezone.utc)
+        if (now - fetched).days > 30:
+            dropped['stale'] = dropped.get('stale', 0) + 1
+            continue
         v['topic'] = topic(t)
         v['short'] = v['seconds'] <= 180
         if v['official'] and v['topic'] == 'Travel & sights' and v['channel'].startswith('澳門文化局'):
@@ -92,19 +93,12 @@ def main():
         # Language follows the title text: a channel's default language is often wrong.
         if CJK.search(t) and not LATIN_WORD.search(t):
             v['lang'] = 'Chinese'
-        culture_bonus = 0.6 if v['topic'] in CULTURE else 0
-        # English-first: the site is for English speakers, so videos with Chinese or
-        # Portuguese titles stay available but rank lower in "Best first".
-        lang_penalty = {'Chinese': 2.5, 'Portuguese': 2.0}.get(v.get('lang'), 0)
-        v['score'] = round(math.log2(1 + breakout) * 1.6
-                           + min(eng, 0.12) / 0.12 * 2.0
-                           + fresh * 2.0
-                           + math.log10(max(v['views'], 1)) * 0.6
-                           + culture_bonus - lang_penalty, 2)
-        for k in ('topics', 'desc', 'channelId', 'likes', 'comments'):
+        # English-first ordering uses our own language label, not a YouTube-derived metric.
+        v['tier'] = 0 if v.get('lang') == 'English' else 1
+        for k in ('topics', 'desc', 'channelId', 'likes', 'comments', 'breakout', 'engagement', 'subs', 'score'):
             v.pop(k, None)
         out.append(v)
-    out.sort(key=lambda v: -v['score'])
+    out.sort(key=lambda v: (v['tier'], -v['views']))
     json.dump(out, open(os.path.join(HERE, 'data', 'ranked.json'), 'w'), ensure_ascii=False, indent=1)
     print(f'{len(out)} kept ({sum(v["official"] for v in out)} official); dropped {dropped}')
 

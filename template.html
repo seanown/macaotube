@@ -41,8 +41,7 @@ svg { width: 22px; height: 22px; fill: currentColor; flex: none; }
 .iconbtn:hover { background: var(--surface); }
 .logo { font-weight: 800; font-size: 19px; letter-spacing: -0.03em; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
 .logo i { font-style: normal; color: var(--accent); }
-.logo b { width: 22px; height: 16px; border-radius: 4px; background: var(--accent); position: relative; }
-.logo b::after { content: ""; position: absolute; left: 8px; top: 4px; border-left: 7px solid #fff; border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
+.logo b { width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 13px; font-weight: 800; letter-spacing: 0; }
 .search { flex: 1; max-width: 620px; margin: 0 auto; display: flex; min-width: 0; }
 .search input { flex: 1; min-width: 0; height: 40px; border: 1px solid var(--line); border-right: 0; border-radius: 20px 0 0 20px;
   padding: 0 16px; font: inherit; font-size: 15px; background: var(--bg); color: var(--ink); }
@@ -162,6 +161,12 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
 .pkg .price span { font-size: 13px; color: var(--muted); }
 .pkg ul { margin: 6px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; line-height: 1.5; }
 
+/* site footer */
+.site-foot { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; line-height: 1.6; max-width: 90ch; display: flex; flex-direction: column; gap: 6px; }
+.site-foot p { margin: 0; }
+.site-foot a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+.site-foot a:hover { color: var(--accent); }
+
 /* prose pages (about, 404) */
 .prose { max-width: 720px; display: flex; flex-direction: column; gap: 28px; padding-top: 6px; }
 .prose h1 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
@@ -206,7 +211,7 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
 <a class="skip" href="#main">Skip to videos</a>
 <header class="top">
   <button class="iconbtn" id="menu" aria-label="Menu" aria-controls="rail" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
-  <a class="logo" href="/" aria-label="MacaoTube home"><b></b><span>Macao<i>Tube</i></span></a>
+  <a class="logo" href="/" aria-label="MacaoTube home"><b aria-hidden="true">M</b><span>Macao<i>Tube</i></span></a>
   <form class="search" id="searchForm" role="search" action="/" method="get">
     <input type="search" id="q" name="q" placeholder="Search Macao videos" aria-label="Search Macao videos">
     <button aria-label="Search"><svg viewBox="0 0 24 24"><path d="M10 3a7 7 0 0 1 5.6 11.2l5.1 5.1-1.4 1.4-5.1-5.1A7 7 0 1 1 10 3zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg></button>
@@ -230,7 +235,7 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
     %%RAIL_TOPICS%%
     <a href="/topics/" data-r="topics" class="topic"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm8-2h8v8h-8zm2 2v4h4v-4z"/></svg>All topics</a>
     <hr>
-    <p class="about">Discover and Visit Macao: the best of its tourism and culture on YouTube, from official channels and the independent creators people actually watch. Refreshed daily.</p>
+    <p class="about">Discover and Visit Macao: its tourism and culture on YouTube, from official channels and independent creators. Refreshed daily.</p>
     <a href="/about/" data-r="about"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 6v8h-2v-8zm-1-4a1.25 1.25 0 1 1 0 2.5A1.25 1.25 0 0 1 12 6z"/></svg>About</a>
     <a href="/partner/" data-r="partner"><svg viewBox="0 0 24 24"><path d="M12 21l-8.5-8.2A5 5 0 0 1 11 6.2l1 1 1-1a5 5 0 0 1 7.5 6.6z"/></svg>Partner with us</a>
     <p class="credit">Curated by <a href="https://ownsean.com" target="_blank" rel="noopener">Sean Own</a> · a <a href="https://gbaeca.org" target="_blank" rel="noopener">GBAECA</a> initiative</p>
@@ -238,6 +243,10 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
 
   <main id="main">
 %%VIEW%%
+    <footer class="site-foot">
+      <p>Video titles, thumbnails and view counts come from <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a> through YouTube API Services, and every video plays on YouTube. MacaoTube is an independent site, not affiliated with or endorsed by YouTube or Google. By using MacaoTube you agree to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>.</p>
+      <p><a href="/privacy/">Privacy</a> · <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> · <a href="/about/">About</a> · <a href="/partner/">Partner with us</a> · <a href="mailto:hello@macaotube.org">hello@macaotube.org</a></p>
+    </footer>
   </main>
 </div>
 
@@ -282,7 +291,7 @@ if (location.pathname === '/' && OLD[location.hash.slice(1)]) location.replace(O
 // ---------- video lists ----------
 if (PAGE.view === 'list' || PAGE.view === 'later') {
   const params = new URLSearchParams(location.search);
-  const F = { date: '', dur: '', lang: '', sort: 'score', q: '' };
+  const F = { date: '', dur: '', lang: '', sort: 'top', q: '' };
   for (const k of Object.keys(F)) if (params.get(k)) F[k] = params.get(k);
   const PAGE_SIZE = 48;
   let DATA = null, shown = PAGE.shown || 0, panelOpen = false;
@@ -293,17 +302,16 @@ if (PAGE.view === 'list' || PAGE.view === 'later') {
     date: { label: 'Upload date', opts: [['', 'Any time'], ['year', 'Past year'], ['2020s', '2020s'], ['2010s', '2010s'], ['older', 'Before 2010']] },
     dur:  { label: 'Duration', opts: [['', 'Any length'], ['s', 'Under 4 minutes'], ['m', '4–20 minutes'], ['l', '20–60 minutes'], ['xl', 'Over 1 hour']] },
     lang: { label: 'Language', opts: [['', 'Any language'], ['English', 'English'], ['Chinese', '中文'], ['Portuguese', 'Português']] },
-    sort: { label: 'Sort by', opts: [['score', 'Best first'], ['breakout', 'Biggest breakout'], ['engagement', 'Most engaging'], ['views', 'View count'], ['new', 'Upload date'], ['old', 'Oldest first']] },
+    sort: { label: 'Sort by', opts: [['top', 'English first, most viewed'], ['views', 'Most viewed, any language'], ['new', 'Upload date'], ['old', 'Oldest first']] },
   };
   const ORDER = ['date', 'dur', 'lang', 'sort'];
   const matchDate = (v, d) => { const y = +v.published.slice(0, 4);
     return !d || (d === 'year' ? NOW - new Date(v.published) < 365.25*864e5 : d === '2020s' ? y >= 2020 : d === '2010s' ? (y >= 2010 && y < 2020) : y < 2010); };
   const matchDur = (v, d) => !d || (d === 's' ? v.seconds < 240 : d === 'm' ? v.seconds >= 240 && v.seconds < 1200 : d === 'l' ? v.seconds >= 1200 && v.seconds < 3600 : v.seconds >= 3600);
-  const SORTS = { score: (a,b) => b.score - a.score, breakout: (a,b) => b.breakout - a.breakout || b.score - a.score,
-    engagement: (a,b) => b.engagement - a.engagement, views: (a,b) => b.views - a.views,
+  const SORTS = { top: (a,b) => a.tier - b.tier || b.views - a.views, views: (a,b) => b.views - a.views,
     new: (a,b) => b.published.localeCompare(a.published), old: (a,b) => a.published.localeCompare(b.published) };
   const B = PAGE.base || {};
-  const isDefault = () => ORDER.every(k => F[k] === (k === 'sort' ? 'score' : '')) && !F.q;
+  const isDefault = () => ORDER.every(k => F[k] === (k === 'sort' ? 'top' : '')) && !F.q;
 
   function rows() {
     const needle = F.q.toLowerCase();
@@ -320,7 +328,7 @@ if (PAGE.view === 'list' || PAGE.view === 'later') {
     const href = `https://www.youtube.com/${v.short ? 'shorts/' : 'watch?v='}${v.id}`;
     const img = `https://i.ytimg.com/vi/${v.id}/${v.short ? 'hqdefault' : 'mqdefault'}.jpg`;
     const saved = later.has(v.id);
-    const bo = v.breakout >= 3 ? ` • <span class="bo" title="Views compared with this channel's average">${v.breakout >= 50 ? '50×+' : Math.round(v.breakout)+'×'} usual</span>` : '';
+    const bo = '';
     const lang = v.lang === 'Chinese' ? '<span class="lang">中文</span>' : v.lang === 'Portuguese' ? '<span class="lang">PT</span>' : '';
     return `<article class="card">
       <a class="thumb" href="${href}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
@@ -338,14 +346,14 @@ if (PAGE.view === 'list' || PAGE.view === 'later') {
 
   function syncURL() {
     const p = new URLSearchParams();
-    for (const k of [...ORDER, 'q']) if (F[k] && !(k === 'sort' && F[k] === 'score')) p.set(k, F[k]);
+    for (const k of [...ORDER, 'q']) if (F[k] && !(k === 'sort' && F[k] === 'top')) p.set(k, F[k]);
     history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
   }
 
   function renderBar() {
     const active = ORDER.filter(k => k !== 'sort' && F[k]).map(k =>
       `<button class="chip on" data-clear="${k}">${esc(FILTERS[k].opts.find(o => o[0] === F[k])[1])} <span class="x" aria-hidden="true">✕</span></button>`).join('');
-    const sortChip = F.sort !== 'score' ? `<button class="chip on" data-clear="sort">${esc(FILTERS.sort.opts.find(o => o[0] === F.sort)[1])} <span class="x" aria-hidden="true">✕</span></button>` : '';
+    const sortChip = F.sort !== 'top' ? `<button class="chip on" data-clear="sort">${esc(FILTERS.sort.opts.find(o => o[0] === F.sort)[1])} <span class="x" aria-hidden="true">✕</span></button>` : '';
     const qChip = F.q ? `<button class="chip on" data-clear="q">“${esc(F.q)}” <span class="x" aria-hidden="true">✕</span></button>` : '';
     const filtersBtn = `<button class="chip" id="filters" aria-expanded="${panelOpen}" aria-controls="panel">${ICON_FILTER}Filters</button>`;
     $('bar').innerHTML = filtersBtn + qChip + active + sortChip + (PAGE.chips || '');
@@ -376,7 +384,7 @@ if (PAGE.view === 'list' || PAGE.view === 'later') {
     if (t.id === 'filters') { panelOpen = !panelOpen; renderBar(); }
     else if (t.id === 'more') { if (DATA) renderList(false); }
     else if (t.dataset.f) { F[t.dataset.f] = t.dataset.v; update(); }
-    else if (t.dataset.clear) { F[t.dataset.clear] = t.dataset.clear === 'sort' ? 'score' : ''; if (t.dataset.clear === 'q') $('q').value = ''; update(); }
+    else if (t.dataset.clear) { F[t.dataset.clear] = t.dataset.clear === 'sort' ? 'top' : ''; if (t.dataset.clear === 'q') $('q').value = ''; update(); }
     else if (t.classList.contains('later')) {
       const id = t.dataset.id; later.has(id) ? later.delete(id) : later.add(id); store.set('later', [...later]);
       t.setAttribute('aria-pressed', later.has(id)); t.setAttribute('aria-label', (later.has(id) ? 'Remove from' : 'Save to') + ' Watch later');

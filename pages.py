@@ -103,10 +103,10 @@ TOPICS = {
 SECTIONS = {
     'home': {
         'path': '/', 'base': {},
-        'title': 'MacaoTube: The Best YouTube Videos About Macao (Macau)',
-        'h1': 'The best YouTube videos about Macao',
-        'description': 'Discover and visit Macao through the best YouTube videos: travel guides, food, festivals, heritage and the Grand Prix, from official channels and independent creators. Updated daily.',
-        'intro': 'Travel guides, food, festivals, heritage and the Grand Prix, from official channels and the creators people actually watch. Updated every day.',
+        'title': 'MacaoTube: Macao (Macau) on YouTube, Sorted by Topic',
+        'h1': 'Macao on YouTube, sorted by topic',
+        'description': 'Discover and visit Macao through its most-watched YouTube videos: travel guides, food, festivals, heritage and the Grand Prix, from official channels and independent creators. Updated daily.',
+        'intro': 'The most-watched videos about Macao: travel guides, food, festivals, heritage and the Grand Prix, from official channels and independent creators. Updated every day.',
     },
     'videos': {
         'path': '/videos/', 'base': {'format': 'long'},
@@ -117,7 +117,7 @@ SECTIONS = {
     'shorts': {
         'path': '/shorts/', 'base': {'format': 'short'},
         'title': 'Macau Shorts: Quick Videos of Macao',
-        'h1': 'Shorts', 'description': 'The best YouTube Shorts about Macao: quick looks at food, sights, shows and festivals.',
+        'h1': 'Shorts', 'description': 'The most-watched YouTube Shorts about Macao: quick looks at food, sights, shows and festivals.',
         'intro': 'Quick looks at Macao in three minutes or less.',
     },
     'official': {
@@ -213,7 +213,7 @@ PACKAGES = [
      'gets': ['"Presented by" on the Grand Prix or Food Festival page', 'A line on What\'s on beside the event',
               'Runs until 6 December 2026']},
     {'name': 'Business video page', 'price': 'from MOP 1,500', 'per': 'setup, then MOP 300 a month', 'note': 'For hotels, shops and restaurants',
-     'gets': ['A page of the best videos about the streets around your business, updated daily',
+     'gets': ['A page of the most-watched videos about the streets around your business, updated daily',
               'A QR code for your front desk, menus or windows', 'A link you can put on your own website']},
 ]
 

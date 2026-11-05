@@ -1,5 +1,5 @@
 """MacaoTube: find English-language YouTube videos about Macao by independent
-creators, keep a growing catalogue of them, and score them.
+creators and keep a growing catalogue of them (raw YouTube data only).
 
 Every run
   1. "newest" searches  - uploads from the last 14 days for the core queries
@@ -8,8 +8,8 @@ Every run
   3. refresh            - fresh stats for EVERY video in the catalogue, so videos
                           never drop off just because they slipped in a search
 
-Quota (free tier = 10,000 units/day): search.list costs 100; videos.list and
-channels.list cost 1 per 50 ids. A nightly run uses ~3,200 units. If the quota
+Quota (free tier = 10,000 units/day): search.list costs 100; videos.list costs
+1 per 50 ids. A nightly run uses ~3,200 units. If the quota
 runs out mid-run, whatever was found so far is kept.
 
 Usage
@@ -19,9 +19,9 @@ Usage
 
 Files
   data/creators_seen.json   catalogue: video id -> topics, first_seen
-  data/videos.json          scored videos (>= 1,000 views) read by rerank.py
+  data/videos.json          videos with >= 1,000 views, raw YouTube fields, read by rerank.py
 """
-import json, math, os, re, sys, time, urllib.parse, urllib.request
+import json, os, re, sys, time, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 
 KEY = os.environ.get('YT_KEY') or sys.exit('Set YT_KEY to your YouTube Data API key.')
@@ -167,8 +167,7 @@ def main():
                     'id': v['id'], 'title': sn['title'], 'channel': sn['channelTitle'],
                     'channelId': sn['channelId'], 'published': sn['publishedAt'][:10],
                     'seconds': iso_seconds(v['contentDetails'].get('duration')),
-                    'views': int(st.get('viewCount', 0)), 'likes': int(st.get('likeCount', 0)),
-                    'comments': int(st.get('commentCount', 0)), 'topics': seen[v['id']]['topics'],
+                    'views': int(st.get('viewCount', 0)), 'topics': seen[v['id']]['topics'],
                     'first_seen': seen[v['id']]['first_seen'],
                 }
         complete = True
@@ -183,36 +182,21 @@ def main():
         if seen[vid].get('rejected') or (complete and vid not in refreshed):
             del seen[vid]
 
-    channels = {}
-    try:
-        for chunk in batched({v['channelId'] for v in videos.values() if 'channelId' in v}):
-            for c in call('channels', 1, part='statistics', id=','.join(chunk)).get('items', []):
-                st = c.get('statistics', {})
-                n = max(int(st.get('videoCount', 1)), 1)
-                channels[c['id']] = {'avg': int(st.get('viewCount', 0)) / n,
-                                     'subs': int(st.get('subscriberCount', 0)) if not st.get('hiddenSubscriberCount') else None}
-    except QuotaExhausted as e:
-        print(f'  channel refresh cut short: {e}', file=sys.stderr)
-
-    now = datetime.now(timezone.utc)
+    # YouTube's API policies forbid computing new metrics (scores, ratios) from its data,
+    # so we keep only the raw fields YouTube returns, stamped with the day they were fetched.
+    today = datetime.now(timezone.utc).date().isoformat()
     out = []
     for v in videos.values():
         if v['views'] < 1000:
             continue
-        ch = channels.get(v.get('channelId'))
-        if ch:
-            breakout = v['views'] / ch['avg'] if ch['avg'] else 1.0
-            subs = ch['subs']
-        else:  # keep the previous figures when the channel could not be refreshed
-            breakout, subs = v.get('breakout', 1.0), v.get('subs')
-        engagement = (v['likes'] + 2 * v['comments']) / v['views']
-        age_days = (now - datetime.fromisoformat(v['published']).replace(tzinfo=timezone.utc)).days
-        score = (math.log2(1 + breakout) * 2.0 + min(engagement, 0.15) / 0.15 * 2.0
-                 + 0.5 ** (age_days / 540) * 1.5 + math.log10(v['views']) * 0.5)
-        v.update(breakout=round(breakout, 1), engagement=round(engagement * 100, 2),
-                 subs=subs, score=round(score, 2), short=v['seconds'] <= 180)
+        for k in ('likes', 'comments', 'breakout', 'engagement', 'subs', 'score'):
+            v.pop(k, None)
+        if v['id'] in refreshed:
+            v['fetched'] = today
+        v.setdefault('fetched', today)
+        v['short'] = v['seconds'] <= 180
         out.append(v)
-    out.sort(key=lambda v: -v['score'])
+    out.sort(key=lambda v: -v['views'])
 
     json.dump(seen, open(SEEN, 'w'), ensure_ascii=False, indent=0, sort_keys=True)
     json.dump(out, open(OUT, 'w'), ensure_ascii=False, indent=1)
