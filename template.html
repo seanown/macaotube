@@ -284,6 +284,14 @@ $('theme').addEventListener('click', () => {
 });
 document.addEventListener('keydown', e => { if (e.key === '/' && document.activeElement !== $('q')) { e.preventDefault(); $('q').focus(); } });
 setLaterCount();
+// analytics events: video opened on YouTube, sponsor email clicked
+document.addEventListener('click', e => {
+  const a = e.target.closest('a'); if (!a || typeof gtag !== 'function') return;
+  const m = a.href.match(/youtube\.com\/(?:watch\?v=|shorts\/)([\w-]{11})/);
+  if (m) gtag('event', 'watch_video', { video_id: m[1], page_path: location.pathname });
+  else if (a.href.startsWith('mailto:partners@')) gtag('event', 'partner_contact', { page_path: location.pathname });
+  else if (a.href.startsWith('mailto:hello@')) gtag('event', 'hello_contact', { page_path: location.pathname });
+});
 // links from the old single-page version (#about, #videos, ...)
 const OLD = { about: '/about/', videos: '/videos/', shorts: '/shorts/', official: '/official/', creators: '/creators/', later: '/later/', categories: '/topics/', home: '/' };
 if (location.pathname === '/' && OLD[location.hash.slice(1)]) location.replace(OLD[location.hash.slice(1)]);

@@ -173,7 +173,11 @@ def analytics():
     if GA_ID:
         out += (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>\n'
                 "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
-                f"gtag('js',new Date());gtag('config','{GA_ID}');</script>\n")
+                "gtag('js',new Date());"
+                # team mode: macaotube.org/?team=1 marks this browser's visits as internal traffic (?team=0 undoes it)
+                "var mt;try{var q=new URLSearchParams(location.search).get('team');if(q==='1')localStorage.setItem('macaotube:team','1');"
+                "if(q==='0')localStorage.removeItem('macaotube:team');mt=localStorage.getItem('macaotube:team');}catch(e){}"
+                f"gtag('config','{GA_ID}',mt?{{traffic_type:'internal'}}:{{}});</script>\n")
     if BAIDU_ID:
         assert len(BAIDU_ID) == 32 and BAIDU_ID.isalnum(), 'BAIDU_ID should be the 32-character code after hm.js?'
         out += ('<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");'
