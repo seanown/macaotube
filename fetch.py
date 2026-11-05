@@ -36,7 +36,7 @@ QUERIES = {
     'Travel': ['Macau travel guide', 'things to do in Macau', 'Macau vlog', 'Macau day trip from Hong Kong',
                'Macau first time', 'Macao travel', 'Macau itinerary', 'Macau walking tour', 'Macau budget travel'],
     'Food': ['Macau food', 'Macau street food', 'Macanese food', 'Macau egg tart', 'Macanese cooking',
-             'Macau food tour', 'Macau Michelin'],
+             'Macau food tour', 'Macau Michelin', 'Macau Food Festival', 'Lord Stow egg tart', 'Macau pork chop bun'],
     'Casinos & hotels': ['Macau casino', 'Macau hotel tour', 'Cotai strip', 'House of Dancing Water'],
     'History & culture': ['Macau history', 'Macau Portuguese culture', 'Historic Centre of Macao',
                           'A-Ma Temple Macau', 'Ruins of St Paul Macau', 'Senado Square Macau', 'Macau museum'],
@@ -44,7 +44,8 @@ QUERIES = {
                   'Macao International Fireworks', 'Macao Arts Festival', 'Macau Christmas',
                   'Macau Dragon Boat race', 'Feast of the Drunken Dragon Macau', 'Lusofonia Festival Macau'],
     'Neighbourhoods': ['Taipa village', 'Coloane Macau', 'Macau Tower', 'Macau old town'],
-    'Grand Prix': ['Macau Grand Prix'],
+    'Grand Prix': ['Macau Grand Prix', 'Macau Grand Prix onboard', 'Macau Motorcycle Grand Prix', 'Macau GT World Cup',
+                   'Macau Grand Prix highlights', 'Guia Circuit'],
     'Living there': ['living in Macau', 'moving to Macau'],
 }
 # Searched for brand-new uploads every night.
