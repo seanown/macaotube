@@ -11,7 +11,7 @@ Output
   plus everything in static/ (icons, preview image, logo, IndexNow key).
 """
 import datetime as dt, html, json, os, shutil
-from pages import SITE, NAME, TOPICS, SECTIONS, topic_path
+from pages import SITE, NAME, TOPICS, SECTIONS, EVENTS, topic_path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
@@ -115,6 +115,43 @@ def item_list(videos, n=20):
         {'@type': 'ListItem', 'position': i + 1, 'url': yt_url(v), 'name': v['title']} for i, v in enumerate(videos[:n])]}
 
 
+
+# ---------------------------------------------------------------- events
+MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+
+def fmt_range(a, b, short=False):
+    a, b = dt.date.fromisoformat(a), dt.date.fromisoformat(b)
+    m = (lambda d: MONTHS[d.month - 1][:3]) if short else (lambda d: MONTHS[d.month - 1])
+    yr = '' if short else f' {b.year}'
+    if a == b:
+        return f'{a.day} {m(a)}{yr}'
+    if (a.year, a.month) == (b.year, b.month):
+        return f'{a.day}–{b.day} {m(b)}{yr}'
+    return f"{a.day} {m(a)}{'' if short or a.year == b.year else f' {a.year}'} – {b.day} {m(b)}{yr}"
+
+
+def upcoming():
+    out = []
+    for e in EVENTS:
+        last = dt.date.fromisoformat(e['end']) if 'end' in e else dt.date.fromisoformat(e['sort']) + dt.timedelta(days=31)
+        if last >= TODAY:
+            first = dt.date.fromisoformat(e.get('start', e.get('sort')))
+            out.append(dict(e, _first=first, _last=last, _now='start' in e and first <= TODAY <= last))
+    return sorted(out, key=lambda e: e['_first'])
+
+
+def when(e, short=False):
+    return fmt_range(e['start'], e['end'], short) if 'start' in e else e['when']
+
+
+def coming_up_strip(n=3, days=45):
+    soon = [e for e in upcoming() if 'start' in e and (e['_first'] - TODAY).days <= days][:n]
+    if not soon:
+        return ''
+    items = ' · '.join(f'<a href="{E(e["link"])}">{E(e["name"])}</a> <span>{"now on" if e["_now"] else when(e, short=True)}</span>' for e in soon)
+    return f'<p class="soon"><b>Coming up</b> {items} · <a href="/whats-on/">What\'s on →</a></p>'
+
 # ---------------------------------------------------------------- page shell
 STYLE, BODY = open(os.path.join(HERE, 'template.html'), encoding='utf-8').read().split('<!--BODY-->')
 COUNTS = {'N_VIDEOS': fmt_n(sum(not v['short'] for v in DATA)), 'N_SHORTS': fmt_n(sum(v['short'] for v in DATA)),
@@ -214,6 +251,8 @@ for key, s in SECTIONS.items():
     vids = select(s['base'])
     count = '' if key == 'home' else f'<span class="count">{len(vids):,} videos</span>'
     head = f'<h1>{E(s["h1"])}</h1><p class="intro">{E(s["intro"])}</p>{count}'
+    if key == 'home':
+        head += coming_up_strip()
     ld = [{'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': s['title'], 'url': SITE + s['path'],
            'description': s['description'], 'inLanguage': 'en', 'about': {'@type': 'Place', 'name': 'Macao'},
            'isPartOf': {'@type': 'WebSite', 'name': NAME, 'url': SITE + '/'}, 'mainEntity': item_list(vids)}]
@@ -271,6 +310,34 @@ urls.append(page('/topics/', title='Macau Video Topics: Food, Festivals, Heritag
                  view_html=directory, rail_key='topics',
                  ld={'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Macao video topics', 'url': SITE + '/topics/',
                      'hasPart': [{'@type': 'CollectionPage', 'name': t, 'url': SITE + topic_path(t)} for t in TOPIC_ORDER]}))
+
+# what's on
+evs = upcoming()
+ev_cards, ev_ld = [], []
+for e in evs:
+    status = '<span class="now">On now</span>' if e['_now'] else ('' if 'start' in e else '<span class="tbc">Dates to be confirmed</span>')
+    ev_cards.append(f"""<article class="event">
+      <div class="when">{E(when(e))}{status}</div>
+      <div class="what">
+        <h2>{E(e['name'])}</h2>
+        <p class="where">{E(e['where'])}</p>
+        <p>{E(e['what'])}</p>
+        <a class="watch" href="{E(e['link'])}">Watch videos →</a>
+      </div>
+    </article>""")
+    if 'start' in e:
+        ev_ld.append({'@context': 'https://schema.org', '@type': 'Event', 'name': e['name'], 'startDate': e['start'], 'endDate': e['end'],
+                      'eventStatus': 'https://schema.org/EventScheduled', 'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
+                      'description': e['what'],
+                      'location': {'@type': 'Place', 'name': e['where'], 'address': {'@type': 'PostalAddress', 'addressLocality': 'Macao', 'addressCountry': 'MO'}}})
+whats_on = (f'    <div class="head"><h1>What\'s on in Macao</h1><p class="intro">Festivals, races and celebrations coming up in Macao, '
+            'with the videos to watch before you go. Where this season\'s dates have not been announced yet, we show the usual timing. '
+            'Always check the organiser\'s official site before you travel.</p></div>\n'
+            f'    <div class="events">{"".join(ev_cards)}</div>')
+urls.append(page('/whats-on/', title="What's On in Macau: Festivals and Events Calendar",
+                 description='Upcoming festivals and events in Macao: the Grand Prix, the Food Festival, Light Up Macao, Chinese New Year, the fireworks contest and more, with videos of each.',
+                 view_html=whats_on, rail_key='whats-on',
+                 ld=[{'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': "What's on in Macao", 'url': SITE + '/whats-on/'}] + ev_ld))
 
 # about
 n_ch = len({v['channel'] for v in DATA})
