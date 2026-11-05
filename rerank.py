@@ -16,6 +16,8 @@ OFF_TOPIC = re.compile(r'體育|运动|運動|足球|籃球|排球|乒乓|羽毛
                        r'長跑|长跑|賽道|挑戰賽|武林|體質|健康|exercício|saúde|covid|抗原|康碼|財政局|電子服務|政務|報考|'
                        r'交通安排|交通管制|號碼布|冠軍賽|競技|\b10k\b|'
                        r'記者會|新聞發布|招標|招聘|簡介會|說明會|立法|施政|預算|tender|press conference|recruit', re.I)
+CJK = re.compile(r'[\u4e00-\u9fff]')
+LATIN_WORD = re.compile(r'[A-Za-z]{4,}')
 CULTURE = {'Festivals & events', 'Heritage & history', 'Arts & music', 'Traditions & local life', 'Food'}
 GP = re.compile(r'格蘭披治|grand prix', re.I)
 
@@ -87,12 +89,18 @@ def main():
         v['short'] = v['seconds'] <= 180
         if v['official'] and v['topic'] == 'Travel & sights' and v['channel'].startswith('澳門文化局'):
             v['topic'] = 'Arts & music'
+        # Language follows the title text: a channel's default language is often wrong.
+        if CJK.search(t) and not LATIN_WORD.search(t):
+            v['lang'] = 'Chinese'
         culture_bonus = 0.6 if v['topic'] in CULTURE else 0
+        # English-first: the site is for English speakers, so videos with Chinese or
+        # Portuguese titles stay available but rank lower in "Best first".
+        lang_penalty = {'Chinese': 2.5, 'Portuguese': 2.0}.get(v.get('lang'), 0)
         v['score'] = round(math.log2(1 + breakout) * 1.6
                            + min(eng, 0.12) / 0.12 * 2.0
                            + fresh * 2.0
                            + math.log10(max(v['views'], 1)) * 0.6
-                           + culture_bonus, 2)
+                           + culture_bonus - lang_penalty, 2)
         for k in ('topics', 'desc', 'channelId', 'likes', 'comments'):
             v.pop(k, None)
         out.append(v)

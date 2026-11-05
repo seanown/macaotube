@@ -20,8 +20,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -41,7 +41,7 @@ jobs:
           YT_KEY: ${{ secrets.YT_KEY }}
         run: python fetch.py
 
-      - name: Rank and build page
+      - name: Rank and build site
         run: |
           python rerank.py
           python build.py
@@ -55,7 +55,7 @@ jobs:
           git diff --cached --quiet || git commit -m "Refresh data $(date -u +%F)"
           git push
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: site
 
@@ -68,3 +68,13 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Tell Bing and other IndexNow search engines that pages changed.
+  ping:
+    needs: deploy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v5
+      - name: Ping IndexNow
+        run: python3 ping.py

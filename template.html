@@ -1,6 +1,3 @@
-<title>MacaoTube</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
 <style>
 /* Layout: YouTube-style shell (top bar, left rail, thumbnail grid), after hackertube.org.
    Identity: Macao flag green for the accent, white/near-black neutrals with a cool tint. */
@@ -26,17 +23,20 @@
   --accent: #3fc29c; --accent-soft: #13332a; color-scheme: dark }
 
 * { box-sizing: border-box; }
-body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 14px; line-height: 1.4; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 14px; line-height: 1.4; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
 svg { width: 22px; height: 22px; fill: currentColor; flex: none; }
+.skip { position: absolute; left: -9999px; top: 8px; z-index: 50; background: var(--accent); color: #fff; padding: 8px 14px; border-radius: 8px; }
+.skip:focus { left: 12px; }
 
 /* top bar */
-.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; height: var(--top); background: var(--bg);
+.top { position: sticky; top: 0; z-index: 20; height: var(--top); background: var(--bg);
   display: flex; align-items: center; gap: 16px;
   padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px)); }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
 .iconbtn { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; }
 .iconbtn:hover { background: var(--surface); }
 .logo { font-weight: 800; font-size: 19px; letter-spacing: -0.03em; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
@@ -52,24 +52,34 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* shell */
 .shell { display: grid; grid-template-columns: var(--rail) 1fr; }
-.rail { position: sticky; top: calc(var(--top) + env(safe-area-inset-top, 0px)); height: calc(100vh - var(--top)); overflow-y: auto;
+.rail { position: sticky; top: var(--top); height: calc(100vh - var(--top)); overflow-y: auto;
   padding: 8px 12px 24px max(12px, env(safe-area-inset-left, 0px)); display: flex; flex-direction: column; gap: 2px; }
-.rail a { display: flex; align-items: center; gap: 20px; height: 40px; padding: 0 12px; border-radius: 10px; font-size: 14px; }
+.rail a { display: flex; align-items: center; gap: 20px; min-height: 40px; padding: 0 12px; border-radius: 10px; font-size: 14px; }
 .rail a:hover { background: var(--surface); }
 .rail a[aria-current=page] { background: var(--surface); font-weight: 600; }
 .rail a .n { margin-left: auto; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.rail hr { border: 0; border-top: 1px solid var(--line); margin: 10px 4px; }
+.rail hr { border: 0; border-top: 1px solid var(--line); margin: 10px 4px; width: calc(100% - 8px); }
+.rail h2 { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 6px 12px 4px; }
+.rail .topic { min-height: 34px; gap: 12px; font-size: 13.5px; }
 .rail .about { font-size: 12px; color: var(--muted); padding: 4px 12px; line-height: 1.5; margin: 0; }
 .rail .credit { font-size: 12px; color: var(--muted); padding: 2px 12px 0; margin: 0; line-height: 1.6; }
-.rail .credit a { display: inline; height: auto; padding: 0; border-radius: 0; color: var(--ink); font-weight: 600; }
+.rail .credit a { display: inline; min-height: 0; padding: 0; border-radius: 0; color: var(--ink); font-weight: 600; }
 .rail .credit a:hover { background: none; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48px 16px; }
 
+/* page heading */
+.head { margin: 6px 0 16px; display: flex; flex-direction: column; gap: 6px; }
+.head h1 { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; text-wrap: balance; }
+.head .intro { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; max-width: 72ch; }
+.head .count { color: var(--muted); font-size: 13px; }
+.crumbs { font-size: 13px; color: var(--muted); display: flex; gap: 6px; flex-wrap: wrap; }
+.crumbs a:hover { color: var(--accent); text-decoration: underline; }
+
 /* filters */
-.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 6px 0 14px; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 2px 0 16px; }
 .chip { height: 32px; padding: 0 12px; border-radius: 8px; background: var(--surface); font-weight: 500; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
 .chip:hover { background: var(--surface-2); }
-.chip[aria-pressed=true], .chip.on { background: var(--ink); color: var(--bg); }
+.chip[aria-pressed=true], .chip[aria-current=page], .chip.on { background: var(--ink); color: var(--bg); }
 .chip svg { width: 18px; height: 18px; }
 .chip .x { opacity: .7; }
 .panel { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px 28px; padding: 6px 0 22px; border-bottom: 1px solid var(--line); margin-bottom: 18px; }
@@ -77,15 +87,12 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
 .panel button { display: block; text-align: left; padding: 5px 0; color: var(--muted); }
 .panel button:hover { color: var(--ink); }
 .panel button[aria-pressed=true] { color: var(--ink); font-weight: 700; }
-.heading { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 4px 0 14px; }
-.heading h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
-.heading span { color: var(--muted); }
 
 /* grid of cards */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 32px 16px; }
 .grid.shorts { grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr)); }
 .card { display: flex; flex-direction: column; gap: 10px; min-width: 0; position: relative; }
-.thumb { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: var(--surface); max-width: 100%; }
+.thumb { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: var(--surface); max-width: 100%; display: block; }
 .shorts .thumb { aspect-ratio: 9 / 16; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s ease; }
 .card:hover .thumb img { transform: scale(1.03); }
@@ -95,9 +102,11 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
   display: grid; place-items: center; opacity: 0; transition: opacity .15s; }
 .later svg { width: 20px; height: 20px; }
 .card:hover .later, .later:focus-visible, .later[aria-pressed=true] { opacity: 1; }
+@media (hover: none) { .later { opacity: .85; } }
 .later[aria-pressed=true] { background: var(--accent); }
 .info { display: flex; flex-direction: column; gap: 3px; padding-right: 8px; }
-.title { font-size: 15.5px; font-weight: 600; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.title { font-size: 15.5px; font-weight: 600; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; margin: 0; }
+.title a:hover { color: var(--accent); }
 .shorts .title { font-size: 14.5px; }
 .ch { color: var(--muted); display: flex; align-items: center; gap: 5px; min-width: 0; }
 .ch span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -108,27 +117,26 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
 .empty { padding: 60px 0; text-align: center; color: var(--muted); grid-column: 1 / -1; }
 .more { display: block; margin: 32px auto 0; height: 38px; padding: 0 22px; border-radius: 19px; border: 1px solid var(--line); font-weight: 600; color: var(--accent); }
 
-/* categories */
+/* topic directory */
 .cats { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; }
 .cat { background: var(--surface); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 2px; }
-.cat h3 { margin: 0 0 8px; font-size: 16px; display: flex; justify-content: space-between; gap: 8px; }
-.cat h3 button { text-align: left; font-weight: 700; }
-.cat h3 button:hover { color: var(--accent); }
-.cat h3 span, .cat .row span { font-size: 12px; color: var(--muted); font-weight: 500; font-variant-numeric: tabular-nums; }
-.cat .row { display: flex; justify-content: space-between; gap: 8px; padding: 4px 0; color: var(--muted); text-align: left; width: 100%; }
+.cat h2 { margin: 0 0 4px; font-size: 16px; display: flex; justify-content: space-between; gap: 8px; }
+.cat h2 a:hover { color: var(--accent); }
+.cat h2 span, .cat .row span { font-size: 12px; color: var(--muted); font-weight: 500; font-variant-numeric: tabular-nums; }
+.cat p { margin: 0 0 8px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.cat .row { display: flex; justify-content: space-between; gap: 8px; padding: 4px 0; color: var(--muted); }
 .cat .row:hover { color: var(--ink); }
 .cat .bar2 { height: 4px; border-radius: 2px; background: var(--surface-2); margin: 2px 0 10px; overflow: hidden; }
 .cat .bar2 i { display: block; height: 100%; background: var(--accent); }
-.note { color: var(--muted); max-width: 70ch; margin: 28px 0 0; font-size: 13px; line-height: 1.55; }
 
-/* about page */
-.aboutpage { max-width: 720px; display: flex; flex-direction: column; gap: 28px; padding-top: 6px; }
-.aboutpage h1 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
-.aboutpage .lede { margin: 8px 0 0; font-size: 17px; color: var(--muted); line-height: 1.55; max-width: 62ch; }
-.aboutpage h2 { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
-.aboutpage p { margin: 0 0 10px; line-height: 1.65; max-width: 65ch; }
-.aboutpage p a, .sites a .u { color: var(--accent); font-weight: 600; }
-.aboutpage p a:hover { text-decoration: underline; text-underline-offset: 2px; }
+/* prose pages (about, 404) */
+.prose { max-width: 720px; display: flex; flex-direction: column; gap: 28px; padding-top: 6px; }
+.prose h1 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
+.prose .lede { margin: 8px 0 0; font-size: 17px; color: var(--muted); line-height: 1.55; max-width: 62ch; }
+.prose h2 { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.prose p { margin: 0 0 10px; line-height: 1.65; max-width: 65ch; }
+.prose p a, .sites a .u { color: var(--accent); font-weight: 600; }
+.prose p a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .org { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: center; }
 .org img { width: 96px; height: 96px; border-radius: 50%; display: block; }
 .org p:last-child { margin-bottom: 0; }
@@ -138,15 +146,16 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
 .sites a b { font-size: 15px; }
 .sites a span { color: var(--muted); font-size: 13px; line-height: 1.45; }
 .sites a .u { font-size: 13px; margin-top: 2px; }
-.aboutpage .fine { font-size: 13px; color: var(--muted); }
+.prose .fine { font-size: 13px; color: var(--muted); }
+.topiclinks { display: flex; flex-wrap: wrap; gap: 8px; }
 @media (max-width: 560px) { .org { grid-template-columns: 1fr; } .org img { width: 80px; height: 80px; } }
 
 /* responsive: rail becomes an overlay drawer */
 @media (max-width: 860px) {
   .shell { grid-template-columns: 1fr; }
-  .rail { position: fixed; z-index: 25; left: 0; top: calc(var(--top) + env(safe-area-inset-top, 0px)); width: var(--rail); background: var(--bg);
-    box-shadow: 4px 0 24px rgba(0,0,0,.15); transform: translateX(-105%); transition: transform .2s ease; }
-  body.drawer .rail { transform: none; }
+  .rail { position: fixed; z-index: 25; left: 0; top: var(--top); width: var(--rail); background: var(--bg);
+    box-shadow: 4px 0 24px rgba(0,0,0,.15); transform: translateX(-105%); transition: transform .2s ease; visibility: hidden; }
+  body.drawer .rail { transform: none; visibility: visible; }
   main { padding-left: max(16px, env(safe-area-inset-left, 0px)); }
 }
 @media (max-width: 560px) {
@@ -155,49 +164,50 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
   .logo b { display: none; }
   .search button { width: 46px; }
   .grid.shorts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .head h1 { font-size: 21px; }
 }
 @media (prefers-reduced-motion: reduce) { .thumb img, .rail { transition: none; } }
 </style>
-
+<!--BODY-->
+<script>try { var t = localStorage.getItem('macaotube:theme'); if (t) document.documentElement.dataset.theme = JSON.parse(t); } catch (e) {}</script>
+<a class="skip" href="#main">Skip to videos</a>
 <header class="top">
-  <button class="iconbtn" id="menu" aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
-  <a class="logo" href="#home" aria-label="MacaoTube home"><b></b><span>Macao<i>Tube</i></span></a>
-  <form class="search" id="searchForm" role="search">
-    <input type="search" id="q" placeholder="Search Macao videos" aria-label="Search">
+  <button class="iconbtn" id="menu" aria-label="Menu" aria-controls="rail" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+  <a class="logo" href="/" aria-label="MacaoTube home"><b></b><span>Macao<i>Tube</i></span></a>
+  <form class="search" id="searchForm" role="search" action="/" method="get">
+    <input type="search" id="q" name="q" placeholder="Search Macao videos" aria-label="Search Macao videos">
     <button aria-label="Search"><svg viewBox="0 0 24 24"><path d="M10 3a7 7 0 0 1 5.6 11.2l5.1 5.1-1.4 1.4-5.1-5.1A7 7 0 1 1 10 3zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg></button>
   </form>
-  <button class="iconbtn" id="help" aria-label="About MacaoTube"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 11.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 6a3.5 3.5 0 0 1 1.2 6.8c-.5.2-.7.5-.7.9V14h-2v-.6c0-1.2.7-2.1 1.8-2.5A1.5 1.5 0 1 0 10.5 9.5h-2A3.5 3.5 0 0 1 12 6z"/></svg></button>
+  <a class="iconbtn" href="/about/" aria-label="About MacaoTube"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 11.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 6a3.5 3.5 0 0 1 1.2 6.8c-.5.2-.7.5-.7.9V14h-2v-.6c0-1.2.7-2.1 1.8-2.5A1.5 1.5 0 1 0 10.5 9.5h-2A3.5 3.5 0 0 1 12 6z"/></svg></a>
   <button class="iconbtn" id="theme" aria-label="Switch light or dark"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.5 0-.9-.1-1.4A5.5 5.5 0 0 1 13.4 3.1 9.2 9.2 0 0 0 12 3z"/></svg></button>
 </header>
 
 <div class="shell">
   <nav class="rail" id="rail" aria-label="Sections">
-    <a href="#home" data-r="home"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6h-2v6H6v-9H3z"/></svg>Home</a>
-    <a href="#videos" data-r="videos"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zm2 2v10h14V7zm5 2l5 3-5 3z"/></svg>Videos<span class="n" id="n-videos"></span></a>
-    <a href="#shorts" data-r="shorts"><svg viewBox="0 0 24 24"><path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h8V4zm2 5l4 3-4 3z"/></svg>Shorts<span class="n" id="n-shorts"></span></a>
+    <a href="/" data-r="home"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6h-2v6H6v-9H3z"/></svg>Home</a>
+    <a href="/videos/" data-r="videos"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zm2 2v10h14V7zm5 2l5 3-5 3z"/></svg>Videos<span class="n">%%N_VIDEOS%%</span></a>
+    <a href="/shorts/" data-r="shorts"><svg viewBox="0 0 24 24"><path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h8V4zm2 5l4 3-4 3z"/></svg>Shorts<span class="n">%%N_SHORTS%%</span></a>
     <hr>
-    <a href="#official" data-r="official"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 2.2 3.2-.4.6 3.2 2.8 1.6-1.4 2.9 1.4 2.9-2.8 1.6-.6 3.2-3.2-.4L12 22l-2.4-2.2-3.2.4-.6-3.2L3 15.4l1.4-2.9L3 9.6l2.8-1.6.6-3.2 3.2.4zm-1.2 13.4l5.6-5.6-1.4-1.4-4.2 4.2-2-2-1.4 1.4z"/></svg>Official<span class="n" id="n-official"></span></a>
-    <a href="#creators" data-r="creators"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-8 8c0-3.3 3.6-6 8-6s8 2.7 8 6v1H4z"/></svg>Creators<span class="n" id="n-creators"></span></a>
-    <a href="#later" data-r="later"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 3v4.6l3.6 2.1-1 1.7L11 12.7V7z"/></svg>Watch later<span class="n" id="n-later"></span></a>
-    <a href="#categories" data-r="categories"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm8-2h8v8h-8zm2 2v4h4v-4z"/></svg>Categories</a>
+    <a href="/official/" data-r="official"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 2.2 3.2-.4.6 3.2 2.8 1.6-1.4 2.9 1.4 2.9-2.8 1.6-.6 3.2-3.2-.4L12 22l-2.4-2.2-3.2.4-.6-3.2L3 15.4l1.4-2.9L3 9.6l2.8-1.6.6-3.2 3.2.4zm-1.2 13.4l5.6-5.6-1.4-1.4-4.2 4.2-2-2-1.4 1.4z"/></svg>Official<span class="n">%%N_OFFICIAL%%</span></a>
+    <a href="/creators/" data-r="creators"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-8 8c0-3.3 3.6-6 8-6s8 2.7 8 6v1H4z"/></svg>Creators<span class="n">%%N_CREATORS%%</span></a>
+    <a href="/later/" data-r="later"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 3v4.6l3.6 2.1-1 1.7L11 12.7V7z"/></svg>Watch later<span class="n" id="n-later"></span></a>
+    <hr>
+    <h2>Explore Macao</h2>
+    %%RAIL_TOPICS%%
+    <a href="/topics/" data-r="topics" class="topic"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm8-2h8v8h-8zm2 2v4h4v-4z"/></svg>All topics</a>
     <hr>
     <p class="about">Discover and Visit Macao: the best of its tourism and culture on YouTube, from official channels and the independent creators people actually watch. Refreshed daily.</p>
-    <a href="#about" data-r="about"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 6v8h-2v-8zm-1-4a1.25 1.25 0 1 1 0 2.5A1.25 1.25 0 0 1 12 6z"/></svg>About</a>
+    <a href="/about/" data-r="about"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 6v8h-2v-8zm-1-4a1.25 1.25 0 1 1 0 2.5A1.25 1.25 0 0 1 12 6z"/></svg>About</a>
     <p class="credit">Curated by <a href="https://ownsean.com" target="_blank" rel="noopener">Sean Own</a> · a <a href="https://gbaeca.org" target="_blank" rel="noopener">GBAECA</a> initiative</p>
   </nav>
 
   <main id="main">
-    <div class="bar" id="bar"></div>
-    <div class="panel" id="panel" hidden></div>
-    <div id="view"></div>
+%%VIEW%%
   </main>
 </div>
 
-
-
 <script>
-const DATA = /*DATA*/[];
-const BUILT = "/*BUILT*/";
+const PAGE = /*PAGE*/{};
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmtN = n => n >= 1e9 ? (n/1e9).toFixed(1).replace(/\.0$/,'')+'B' : n >= 1e6 ? (n/1e6).toFixed(n >= 1e7 ? 0 : 1).replace(/\.0$/,'')+'M'
@@ -210,204 +220,143 @@ const ago = d => { const days = (NOW - new Date(d+'T00:00:00Z')) / 864e5;
   return u === 'today' ? 'today' : `${n} ${u}${n === 1 ? '' : 's'} ago`; };
 const store = { get(k, d) { try { return JSON.parse(localStorage.getItem('macaotube:'+k)) ?? d; } catch (e) { return d; } },
                 set(k, v) { try { localStorage.setItem('macaotube:'+k, JSON.stringify(v)); } catch (e) {} } };
-
-const ICON_CHECK = '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm-1.2 13.4l5.6-5.6-1.4-1.4-4.2 4.2-2-2-1.4 1.4z"/></svg>';
+const ICON_CHECK = '<svg viewBox="0 0 24 24" aria-label="Official channel"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm-1.2 13.4l5.6-5.6-1.4-1.4-4.2 4.2-2-2-1.4 1.4z"/></svg>';
 const ICON_CLOCK = '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 3v4.6l3.6 2.1-1 1.7L11 12.7V7z"/></svg>';
 const ICON_FILTER = '<svg viewBox="0 0 24 24"><path d="M3 6h10v2H3zm14 0h4v2h-4zm-2-2h2v6h-2zM3 16h4v2H3zm8 0h10v2H11zm-2-2h2v6H9z"/></svg>';
 
-// ---------- state ----------
-const F = { date: '', topic: '', dur: '', lang: '', sort: 'score' };
-let route = 'home', q = '', shown = 0, panelOpen = false, later = new Set(store.get('later', []));
-const PAGE = 48;
+let later = new Set(store.get('later', []));
+const setLaterCount = () => { const n = $('n-later'); if (n) n.textContent = later.size || ''; };
 
-const FILTERS = {
-  date: { label: 'Upload date', opts: [['', 'Any time'], ['year', 'Past year'], ['2020s', '2020s'], ['2010s', '2010s'], ['older', 'Before 2010']] },
-  dur:  { label: 'Duration', opts: [['', 'Any length'], ['s', 'Under 4 minutes'], ['m', '4–20 minutes'], ['l', '20–60 minutes'], ['xl', 'Over 1 hour']] },
-  lang: { label: 'Language', opts: [['', 'Any language'], ['English', 'English'], ['Chinese', '中文'], ['Portuguese', 'Português']] },
-  sort: { label: 'Sort by', opts: [['score', 'Best first'], ['breakout', 'Biggest breakout'], ['engagement', 'Most engaging'], ['views', 'View count'], ['new', 'Upload date'], ['old', 'Oldest first']] },
-};
-const TOPICS = [...new Set(DATA.map(v => v.topic))].sort((a, b) => DATA.filter(v => v.topic === b).length - DATA.filter(v => v.topic === a).length);
-FILTERS.topic = { label: 'Topic', opts: [['', 'All topics'], ...TOPICS.map(t => [t, t])] };
-const ORDER = ['date', 'topic', 'dur', 'lang', 'sort'];
-
-const matchDate = (v, d) => { const y = +v.published.slice(0, 4);
-  return !d || (d === 'year' ? NOW - new Date(v.published) < 365.25*864e5 : d === '2020s' ? y >= 2020 : d === '2010s' ? (y >= 2010 && y < 2020) : y < 2010); };
-const matchDur = (v, d) => !d || (d === 's' ? v.seconds < 240 : d === 'm' ? v.seconds >= 240 && v.seconds < 1200 : d === 'l' ? v.seconds >= 1200 && v.seconds < 3600 : v.seconds >= 3600);
-const SORTS = { score: (a,b) => b.score - a.score, breakout: (a,b) => b.breakout - a.breakout || b.score - a.score,
-  engagement: (a,b) => b.engagement - a.engagement, views: (a,b) => b.views - a.views,
-  new: (a,b) => b.published.localeCompare(a.published), old: (a,b) => a.published.localeCompare(b.published) };
-
-function rows() {
-  const needle = q.toLowerCase();
-  return DATA.filter(v =>
-    (route !== 'videos' || !v.short) && (route !== 'shorts' || v.short) &&
-    (route !== 'official' || v.official) && (route !== 'creators' || !v.official) &&
-    (route !== 'later' || later.has(v.id)) &&
-    (!F.topic || v.topic === F.topic) && (!F.lang || v.lang === F.lang) && matchDate(v, F.date) && matchDur(v, F.dur) &&
-    (!needle || (v.title + ' ' + v.channel + ' ' + v.topic).toLowerCase().includes(needle))
-  ).sort(SORTS[F.sort]);
-}
-
-// ---------- rendering ----------
-function card(v) {
-  const href = `https://www.youtube.com/${v.short ? 'shorts/' : 'watch?v='}${v.id}`;
-  const img = v.short ? `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg` : `https://i.ytimg.com/vi/${v.id}/mqdefault.jpg`;
-  const saved = later.has(v.id);
-  const bo = v.breakout >= 3 ? ` • <span class="bo" title="Views compared with this channel's average">${v.breakout >= 50 ? '50×+' : Math.round(v.breakout)+'×'} usual</span>` : '';
-  const lang = v.lang === 'Chinese' ? '<span class="lang">中文</span>' : v.lang === 'Portuguese' ? '<span class="lang">PT</span>' : '';
-  return `<article class="card">
-    <a class="thumb" href="${href}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-      <img src="${img}" alt="" loading="lazy" decoding="async" onerror="this.remove()">
-      <span class="dur">${dur(v.seconds)}</span>
-    </a>
-    <button class="later" data-id="${v.id}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from' : 'Save to'} Watch later">${ICON_CLOCK}</button>
-    <div class="info">
-      <a class="title" href="${href}" target="_blank" rel="noopener" title="${esc(v.title)}">${esc(v.title)}</a>
-      <div class="ch">${v.official ? ICON_CHECK : ''}<span>${esc(v.channel)}</span>${lang}</div>
-      <div class="stats">${fmtN(v.views)} views • ${ago(v.published)}${bo}</div>
-    </div>
-  </article>`;
-}
-
-function renderBar() {
-  const active = ORDER.filter(k => k !== 'sort' && F[k]).map(k =>
-    `<button class="chip on" data-clear="${k}">${esc(FILTERS[k].opts.find(o => o[0] === F[k])[1])} <span class="x" aria-hidden="true">✕</span></button>`).join('');
-  const sortChip = F.sort !== 'score' ? `<button class="chip on" data-clear="sort">${esc(FILTERS.sort.opts.find(o => o[0] === F.sort)[1])} <span class="x" aria-hidden="true">✕</span></button>` : '';
-  const topicChips = route === 'categories' ? '' : TOPICS.slice(0, 7).map(t =>
-    `<button class="chip" data-topic="${esc(t)}" aria-pressed="${F.topic === t}">${esc(t)}</button>`).join('');
-  $('bar').innerHTML = `<button class="chip" id="filters" aria-expanded="${panelOpen}">${ICON_FILTER}Filters</button>${active}${sortChip}${F.topic ? '' : topicChips}`;
-  $('panel').hidden = !panelOpen;
-  if (panelOpen) $('panel').innerHTML = ORDER.map(k => `<div><h4>${FILTERS[k].label}</h4>${FILTERS[k].opts.map(([val, lab]) =>
-    `<button data-f="${k}" data-v="${esc(val)}" aria-pressed="${F[k] === val}">${esc(lab)}</button>`).join('')}</div>`).join('');
-}
-
-const TITLES = { home: 'Home', videos: 'Videos', shorts: 'Shorts', official: 'Official channels', creators: 'Independent creators', later: 'Watch later', categories: 'Categories', about: 'About' };
-const SUBS = { official: 'Discover and Visit Macao', creators: 'English-language videos by creators outside government',
-  later: 'Saved in this browser only' };
-
-function renderList(reset) {
-  const r = rows();
-  if (reset) shown = 0;
-  const start = shown; shown = Math.min(r.length, shown + PAGE);
-  const view = $('view');
-  if (reset) {
-    const head = route === 'home' && !q && !F.topic ? '' :
-      `<div class="heading"><h1>${esc(q ? `Results for “${q}”` : F.topic && route === 'home' ? F.topic : TITLES[route])}</h1><span>${r.length.toLocaleString()} videos${SUBS[route] ? ' · ' + SUBS[route] : ''}</span></div>`;
-    view.innerHTML = head + `<div class="grid${route === 'shorts' ? ' shorts' : ''}" id="grid"></div><button class="more" id="more" hidden>Show more</button>`;
-  }
-  const grid = $('grid');
-  if (!r.length) { grid.innerHTML = `<p class="empty">${route === 'later' ? 'Nothing saved yet. Hover a video and press the clock to keep it here.' : 'No videos match. Try clearing a filter or the search.'}</p>`; }
-  else grid.insertAdjacentHTML('beforeend', r.slice(start, shown).map(card).join(''));
-  $('more').hidden = shown >= r.length;
-}
-
-function renderCategories() {
-  const groups = TOPICS.map(t => {
-    const vs = DATA.filter(v => v.topic === t);
-    const by = (f) => vs.filter(f).length;
-    return { t, n: vs.length, rows: [
-      ['Official channels', by(v => v.official), { route: 'official' }],
-      ['Independent creators', by(v => !v.official), { route: 'creators' }],
-      ['Shorts', by(v => v.short), { route: 'shorts' }],
-      ['In English', by(v => v.lang === 'English'), { lang: 'English' }],
-      ['中文', by(v => v.lang === 'Chinese'), { lang: 'Chinese' }],
-      ['Português', by(v => v.lang === 'Portuguese'), { lang: 'Portuguese' }],
-      ['Past year', by(v => matchDate(v, 'year')), { date: 'year' }],
-    ].filter(x => x[1] > 0) };
-  });
-  const max = Math.max(...groups.map(g => g.n));
-  $('view').innerHTML = `<div class="heading"><h1>Categories</h1><span>${TOPICS.length} topics · ${DATA.length.toLocaleString()} videos</span></div>
-    <div class="cats">${groups.map(g => `<section class="cat">
-      <h3><button data-go='${esc(JSON.stringify({ topic: g.t }))}'>${esc(g.t)}</button><span>${g.n.toLocaleString()}</span></h3>
-      <div class="bar2"><i style="width:${(g.n / max * 100).toFixed(0)}%"></i></div>
-      ${g.rows.map(([lab, n, go]) => `<button class="row" data-go='${esc(JSON.stringify({ topic: g.t, ...go }))}'>${esc(lab)}<span>${n.toLocaleString()}</span></button>`).join('')}
-    </section>`).join('')}</div>
-    <p class="note">Topics come from each video's title, in English and Chinese. Pick a row to open that slice of the topic.</p>`;
-}
-
-function renderAbout() {
-  const off = DATA.filter(v => v.official).length, ch = new Set(DATA.map(v => v.channel)).size;
-  $('view').innerHTML = `<article class="aboutpage">
-    <header>
-      <h1>Discover and Visit Macao</h1>
-      <p class="lede">MacaoTube gathers the best YouTube videos about Macao in one place: its festivals, heritage, food, neighbourhoods and nightlife, from the city's official channels and from the travellers and creators people actually watch.</p>
-    </header>
-    <section>
-      <h2>How it works</h2>
-      <p>Every night MacaoTube collects the latest uploads from Macao's official tourism and culture channels and searches YouTube for English-language videos about the city. Right now that is ${DATA.length.toLocaleString()} videos from ${ch.toLocaleString()} channels, ${off.toLocaleString()} of them official.</p>
-      <p><b>Best first</b> favours videos that did far better than their channel usually does, that viewers liked and commented on, and that are recent, with a small lift for festivals, heritage, arts, traditions and food. Sports, public notices and spam are left out. Shorts are videos of three minutes or less.</p>
-    </section>
-    <section>
-      <h2>Who's behind it</h2>
-      <p>MacaoTube is curated by <a href="https://ownsean.com" target="_blank" rel="noopener">Sean Own</a>, a Macao entrepreneur, investor and curator, and is a GBAECA initiative.</p>
-      <div class="org">
-        <a href="https://gbaeca.org" target="_blank" rel="noopener"><img src="gbaeca-logo.png" width="96" height="96" alt="Logo of the Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association"></a>
-        <div>
-          <p>The <a href="https://gbaeca.org" target="_blank" rel="noopener">Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association</a> (GBAECA) is a non-profit founded in Macao in 2019. It helps businesses grow e-commerce and cross-border trade across the Greater Bay Area.</p>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2>More from Sean Own</h2>
-      <div class="sites">
-        <a href="https://ownsean.com" target="_blank" rel="noopener"><b>Sean Own</b><span>Projects, ventures and media, in English.</span><span class="u">ownsean.com</span></a>
-        <a href="https://seanown.org" target="_blank" rel="noopener"><b>翁振軒 Sean Own</b><span>Writing on AI, culture and industry from Macao, in Chinese.</span><span class="u">seanown.org</span></a>
-        <a href="https://gbaeca.org" target="_blank" rel="noopener"><b>GBAECA</b><span>The Greater Bay Area Electronic Commerce Association, in Chinese.</span><span class="u">gbaeca.org</span></a>
-      </div>
-    </section>
-    <p class="fine">${BUILT ? `Last refreshed ${BUILT}. ` : ''}Videos remain on YouTube and belong to their creators; MacaoTube only links to them.</p>
-  </article>`;
-}
-
-function render() {
-  document.querySelectorAll('.rail a').forEach(a => a.dataset.r === route ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
-  renderBar();
-  $('bar').hidden = route === 'about'; $('panel').hidden = route === 'about' || !panelOpen;
-  if (route === 'categories') renderCategories(); else if (route === 'about') renderAbout(); else renderList(true);
-  document.title = route === 'home' ? 'MacaoTube' : `${TITLES[route]} · MacaoTube`;
-}
-
-function counts() {
-  $('n-videos').textContent = fmtN(DATA.filter(v => !v.short).length);
-  $('n-shorts').textContent = fmtN(DATA.filter(v => v.short).length);
-  $('n-official').textContent = fmtN(DATA.filter(v => v.official).length);
-  $('n-creators').textContent = fmtN(DATA.filter(v => !v.official).length);
-  $('n-later').textContent = later.size ? later.size : '';
-}
-
-// ---------- events ----------
-function go(r) { route = TITLES[r] ? r : 'home'; document.body.classList.remove('drawer'); render(); window.scrollTo(0, 0); }
-window.addEventListener('hashchange', () => go(location.hash.slice(1)));
+// ---------- shared chrome (every page) ----------
 $('menu').addEventListener('click', () => {
-  if (matchMedia('(max-width: 860px)').matches) document.body.classList.toggle('drawer');
-  else { const s = document.querySelector('.shell'); s.style.gridTemplateColumns = s.style.gridTemplateColumns ? '' : '0 1fr'; $('rail').hidden = !$('rail').hidden; }
+  if (matchMedia('(max-width: 860px)').matches) {
+    const open = document.body.classList.toggle('drawer'); $('menu').setAttribute('aria-expanded', open);
+  } else { const s = document.querySelector('.shell'); const hide = !s.style.gridTemplateColumns;
+    s.style.gridTemplateColumns = hide ? '0 1fr' : ''; $('rail').hidden = hide; }
 });
-$('searchForm').addEventListener('submit', e => { e.preventDefault(); q = $('q').value.trim(); if (route === 'categories' || route === 'about') { location.hash = 'home'; } render(); });
-$('q').addEventListener('input', () => { if (!$('q').value) { q = ''; render(); } });
-$('help').addEventListener('click', () => { location.hash = 'about'; });
 $('theme').addEventListener('click', () => {
   const dark = getComputedStyle(document.documentElement).colorScheme.includes('dark');
   document.documentElement.dataset.theme = dark ? 'light' : 'dark'; store.set('theme', document.documentElement.dataset.theme);
 });
-document.addEventListener('click', e => {
-  const t = e.target.closest('button'); if (!t) return;
-  if (t.id === 'filters') { panelOpen = !panelOpen; renderBar(); }
-  else if (t.id === 'more') renderList(false);
-  else if (t.dataset.f) { F[t.dataset.f] = t.dataset.v; render(); }
-  else if (t.dataset.clear) { F[t.dataset.clear] = t.dataset.clear === 'sort' ? 'score' : ''; render(); }
-  else if (t.dataset.topic !== undefined) { F.topic = F.topic === t.dataset.topic ? '' : t.dataset.topic; render(); }
-  else if (t.dataset.go) { const g = JSON.parse(t.dataset.go); Object.assign(F, { lang: '', date: '' }, g);
-    const r = g.route || 'home'; delete F.route; if (location.hash.slice(1) === r) render(); else location.hash = r; }
-  else if (t.classList.contains('later')) {
-    const id = t.dataset.id; later.has(id) ? later.delete(id) : later.add(id); store.set('later', [...later]);
-    t.setAttribute('aria-pressed', later.has(id)); t.setAttribute('aria-label', (later.has(id) ? 'Remove from' : 'Save to') + ' Watch later');
-    counts(); if (route === 'later') renderList(true);
-  }
-});
 document.addEventListener('keydown', e => { if (e.key === '/' && document.activeElement !== $('q')) { e.preventDefault(); $('q').focus(); } });
+setLaterCount();
+// links from the old single-page version (#about, #videos, ...)
+const OLD = { about: '/about/', videos: '/videos/', shorts: '/shorts/', official: '/official/', creators: '/creators/', later: '/later/', categories: '/topics/', home: '/' };
+if (location.pathname === '/' && OLD[location.hash.slice(1)]) location.replace(OLD[location.hash.slice(1)]);
 
-// ---------- boot ----------
-const savedTheme = store.get('theme', null); if (savedTheme) document.documentElement.dataset.theme = savedTheme;
-counts();
-go(location.hash.slice(1));
+// ---------- video lists ----------
+if (PAGE.view === 'list' || PAGE.view === 'later') {
+  const params = new URLSearchParams(location.search);
+  const F = { date: '', dur: '', lang: '', sort: 'score', q: '' };
+  for (const k of Object.keys(F)) if (params.get(k)) F[k] = params.get(k);
+  const PAGE_SIZE = 48;
+  let DATA = null, shown = PAGE.shown || 0, panelOpen = false;
+  const headHTML = $('head') ? $('head').innerHTML : '';
+  $('q').value = F.q;
+
+  const FILTERS = {
+    date: { label: 'Upload date', opts: [['', 'Any time'], ['year', 'Past year'], ['2020s', '2020s'], ['2010s', '2010s'], ['older', 'Before 2010']] },
+    dur:  { label: 'Duration', opts: [['', 'Any length'], ['s', 'Under 4 minutes'], ['m', '4–20 minutes'], ['l', '20–60 minutes'], ['xl', 'Over 1 hour']] },
+    lang: { label: 'Language', opts: [['', 'Any language'], ['English', 'English'], ['Chinese', '中文'], ['Portuguese', 'Português']] },
+    sort: { label: 'Sort by', opts: [['score', 'Best first'], ['breakout', 'Biggest breakout'], ['engagement', 'Most engaging'], ['views', 'View count'], ['new', 'Upload date'], ['old', 'Oldest first']] },
+  };
+  const ORDER = ['date', 'dur', 'lang', 'sort'];
+  const matchDate = (v, d) => { const y = +v.published.slice(0, 4);
+    return !d || (d === 'year' ? NOW - new Date(v.published) < 365.25*864e5 : d === '2020s' ? y >= 2020 : d === '2010s' ? (y >= 2010 && y < 2020) : y < 2010); };
+  const matchDur = (v, d) => !d || (d === 's' ? v.seconds < 240 : d === 'm' ? v.seconds >= 240 && v.seconds < 1200 : d === 'l' ? v.seconds >= 1200 && v.seconds < 3600 : v.seconds >= 3600);
+  const SORTS = { score: (a,b) => b.score - a.score, breakout: (a,b) => b.breakout - a.breakout || b.score - a.score,
+    engagement: (a,b) => b.engagement - a.engagement, views: (a,b) => b.views - a.views,
+    new: (a,b) => b.published.localeCompare(a.published), old: (a,b) => a.published.localeCompare(b.published) };
+  const B = PAGE.base || {};
+  const isDefault = () => ORDER.every(k => F[k] === (k === 'sort' ? 'score' : '')) && !F.q;
+
+  function rows() {
+    const needle = F.q.toLowerCase();
+    return DATA.filter(v =>
+      (B.format !== 'long' || !v.short) && (B.format !== 'short' || v.short) &&
+      (B.src !== 'official' || v.official) && (B.src !== 'creators' || !v.official) &&
+      (!B.topic || v.topic === B.topic) && (PAGE.view !== 'later' || later.has(v.id)) &&
+      (!F.lang || v.lang === F.lang) && matchDate(v, F.date) && matchDur(v, F.dur) &&
+      (!needle || (v.title + ' ' + v.channel + ' ' + v.topic).toLowerCase().includes(needle))
+    ).sort(SORTS[F.sort]);
+  }
+
+  function card(v) {
+    const href = `https://www.youtube.com/${v.short ? 'shorts/' : 'watch?v='}${v.id}`;
+    const img = `https://i.ytimg.com/vi/${v.id}/${v.short ? 'hqdefault' : 'mqdefault'}.jpg`;
+    const saved = later.has(v.id);
+    const bo = v.breakout >= 3 ? ` • <span class="bo" title="Views compared with this channel's average">${v.breakout >= 50 ? '50×+' : Math.round(v.breakout)+'×'} usual</span>` : '';
+    const lang = v.lang === 'Chinese' ? '<span class="lang">中文</span>' : v.lang === 'Portuguese' ? '<span class="lang">PT</span>' : '';
+    return `<article class="card">
+      <a class="thumb" href="${href}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+        <img src="${img}" alt="" width="320" height="180" loading="lazy" decoding="async" onerror="this.remove()">
+        <span class="dur">${dur(v.seconds)}</span>
+      </a>
+      <button class="later" data-id="${v.id}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from' : 'Save to'} Watch later">${ICON_CLOCK}</button>
+      <div class="info">
+        <h3 class="title"><a href="${href}" target="_blank" rel="noopener" title="${esc(v.title)}">${esc(v.title)}</a></h3>
+        <div class="ch">${v.official ? ICON_CHECK : ''}<span>${esc(v.channel)}</span>${lang}</div>
+        <div class="stats">${fmtN(v.views)} views • ${ago(v.published)}${bo}</div>
+      </div>
+    </article>`;
+  }
+
+  function syncURL() {
+    const p = new URLSearchParams();
+    for (const k of [...ORDER, 'q']) if (F[k] && !(k === 'sort' && F[k] === 'score')) p.set(k, F[k]);
+    history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+  }
+
+  function renderBar() {
+    const active = ORDER.filter(k => k !== 'sort' && F[k]).map(k =>
+      `<button class="chip on" data-clear="${k}">${esc(FILTERS[k].opts.find(o => o[0] === F[k])[1])} <span class="x" aria-hidden="true">✕</span></button>`).join('');
+    const sortChip = F.sort !== 'score' ? `<button class="chip on" data-clear="sort">${esc(FILTERS.sort.opts.find(o => o[0] === F.sort)[1])} <span class="x" aria-hidden="true">✕</span></button>` : '';
+    const qChip = F.q ? `<button class="chip on" data-clear="q">“${esc(F.q)}” <span class="x" aria-hidden="true">✕</span></button>` : '';
+    const filtersBtn = `<button class="chip" id="filters" aria-expanded="${panelOpen}" aria-controls="panel">${ICON_FILTER}Filters</button>`;
+    $('bar').innerHTML = filtersBtn + qChip + active + sortChip + (PAGE.chips || '');
+    $('panel').hidden = !panelOpen;
+    if (panelOpen) $('panel').innerHTML = ORDER.map(k => `<div><h4>${FILTERS[k].label}</h4>${FILTERS[k].opts.map(([val, lab]) =>
+      `<button data-f="${k}" data-v="${esc(val)}" aria-pressed="${F[k] === val}">${esc(lab)}</button>`).join('')}</div>`).join('');
+  }
+
+  function renderList(reset) {
+    const r = rows();
+    if (reset) shown = 0;
+    const start = shown; shown = Math.min(r.length, shown + PAGE_SIZE);
+    if (reset) $('grid').innerHTML = '';
+    if (!r.length) $('grid').innerHTML = `<p class="empty">${PAGE.view === 'later' ? 'Nothing saved yet. Press the clock on any video to keep it here.' : 'No videos match. Try clearing a filter or the search.'}</p>`;
+    else $('grid').insertAdjacentHTML('beforeend', r.slice(start, shown).map(card).join(''));
+    $('more').hidden = shown >= r.length;
+    if ($('head')) {
+      if (F.q) $('head').innerHTML = `<h1>Results for “${esc(F.q)}”</h1><span class="count">${r.length.toLocaleString()} videos</span>`;
+      else { $('head').innerHTML = headHTML; const c = $('head').querySelector('.count'); if (c) c.textContent = `${r.length.toLocaleString()} videos`; }
+    }
+    document.title = F.q ? `“${F.q}” · MacaoTube` : PAGE.title;
+  }
+
+  function update() { syncURL(); renderBar(); renderList(true); }
+
+  document.addEventListener('click', e => {
+    const t = e.target.closest('button'); if (!t) return;
+    if (t.id === 'filters') { panelOpen = !panelOpen; renderBar(); }
+    else if (t.id === 'more') { if (DATA) renderList(false); }
+    else if (t.dataset.f) { F[t.dataset.f] = t.dataset.v; update(); }
+    else if (t.dataset.clear) { F[t.dataset.clear] = t.dataset.clear === 'sort' ? 'score' : ''; if (t.dataset.clear === 'q') $('q').value = ''; update(); }
+    else if (t.classList.contains('later')) {
+      const id = t.dataset.id; later.has(id) ? later.delete(id) : later.add(id); store.set('later', [...later]);
+      t.setAttribute('aria-pressed', later.has(id)); t.setAttribute('aria-label', (later.has(id) ? 'Remove from' : 'Save to') + ' Watch later');
+      setLaterCount(); if (PAGE.view === 'later' && DATA) renderList(true);
+    }
+  });
+  $('searchForm').addEventListener('submit', e => { e.preventDefault(); F.q = $('q').value.trim(); if (DATA) update(); });
+
+  renderBar();
+  $('more').hidden = false;
+  fetch('/videos.json?v=' + PAGE.built).then(r => r.json()).then(d => {
+    DATA = d;
+    // The server already rendered the first page of the default view; only redraw when needed.
+    if (PAGE.view === 'later' || !isDefault()) update();
+    else { const r = rows(); $('more').hidden = shown >= r.length; }
+  }).catch(() => { $('more').hidden = true; });
+}
 </script>
