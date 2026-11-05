@@ -12,7 +12,7 @@ Output
 """
 import datetime as dt, html, json, os, shutil
 import re
-from pages import SITE, NAME, TOPICS, SECTIONS, EVENTS, PACKAGES, PARTNER_EMAIL, SPONSORS, GP_HUB, GP_OFFICIAL, topic_path
+from pages import SITE, NAME, TOPICS, SECTIONS, EVENTS, PACKAGES, PARTNER_EMAIL, SPONSORS, SOCIAL, GP_HUB, GP_OFFICIAL, topic_path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
@@ -169,6 +169,9 @@ RAIL_TOPICS = ''.join(
     for t in TOPIC_ORDER[:7])
 
 
+SOCIAL_LINKS = ' · '.join(f'<a href="{u}" target="_blank" rel="me noopener">{n}</a>' for n, u in SOCIAL)
+
+
 def analytics():
     out = ''
     if GA_ID:
@@ -229,7 +232,7 @@ def page(path, *, title, description, view_html, rail_key, page_js=None, ld=None
 </head>
 <body>
 """
-    body = BODY.replace('%%VIEW%%', view_html).replace('%%RAIL_TOPICS%%', RAIL_TOPICS)
+    body = BODY.replace('%%VIEW%%', view_html).replace('%%RAIL_TOPICS%%', RAIL_TOPICS).replace('%%SOCIAL%%', SOCIAL_LINKS)
     for k, val in COUNTS.items():
         body = body.replace(f'%%{k}%%', val)
     if rail_key:
@@ -273,7 +276,7 @@ for key, s in SECTIONS.items():
            'isPartOf': {'@type': 'WebSite', 'name': NAME, 'url': SITE + '/'}, 'mainEntity': item_list(vids)}]
     if key == 'home':
         ld.insert(0, {'@context': 'https://schema.org', '@type': 'WebSite', 'name': NAME, 'alternateName': 'Macao Tube',
-                      'url': SITE + '/', 'description': s['description'], 'inLanguage': 'en', 'publisher': PUBLISHER,
+                      'url': SITE + '/', 'description': s['description'], 'inLanguage': 'en', 'publisher': PUBLISHER, 'sameAs': [u for _, u in SOCIAL],
                       'potentialAction': {'@type': 'SearchAction',
                                           'target': {'@type': 'EntryPoint', 'urlTemplate': SITE + '/?q={search_term_string}'},
                                           'query-input': 'required name=search_term_string'}})
@@ -488,6 +491,10 @@ about = f"""    <article class="prose">
       <section>
         <h2>Explore</h2>
         <div class="topiclinks">{topic_chips(n=len(TOPIC_ORDER))}</div>
+      </section>
+      <section>
+        <h2>Follow MacaoTube</h2>
+        <p>New videos, festival guides and race-week picks: {' · '.join(f'<a href="{u}" target="_blank" rel="me noopener">{n}</a>' for n, u in SOCIAL)}.</p>
       </section>
       <section>
         <h2>Who's behind it</h2>

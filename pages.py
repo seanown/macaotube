@@ -277,3 +277,11 @@ GP_HUB = {
         ('Fan trips, vlogs and the museum', r'vlog|museum|博物館|\bday \d|final day|tsingtao|everything you need|visiting|review|explained|what its like|明星'),
     ],
 }
+
+# Official MacaoTube social accounts (TikTok to be added once registered in the app).
+SOCIAL = [
+    ('Instagram', 'https://www.instagram.com/macaotube/'),
+    ('Threads', 'https://www.threads.com/@macaotube'),
+    ('X', 'https://x.com/MacaoTube'),
+    ('YouTube', 'https://www.youtube.com/@macaotube_org'),
+]
