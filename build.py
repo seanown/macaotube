@@ -175,8 +175,11 @@ def analytics():
                 "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}"
                 "gtag('js',new Date());"
                 # team mode: macaotube.org/?team=1 marks this browser's visits as internal traffic (?team=0 undoes it)
-                "var mt;try{var q=new URLSearchParams(location.search).get('team');if(q==='1')localStorage.setItem('macaotube:team','1');"
-                "if(q==='0')localStorage.removeItem('macaotube:team');mt=localStorage.getItem('macaotube:team');}catch(e){}"
+                # tolerant of phone keyboards: ?team=1, ？team=1, /team=1, team＝1 all work, and a mistyped path goes home
+                "var mt;try{var u=decodeURIComponent(location.pathname+location.search),m=u.match(/team[=＝]([01])/i),q=m&&m[1];"
+                "if(q==='1')localStorage.setItem('macaotube:team','1');"
+                "if(q==='0')localStorage.removeItem('macaotube:team');mt=localStorage.getItem('macaotube:team');"
+                "if(q&&location.pathname!=='/')location.replace('/');}catch(e){}"
                 f"gtag('config','{GA_ID}',mt?{{traffic_type:'internal'}}:{{}});</script>\n")
     if BAIDU_ID:
         assert len(BAIDU_ID) == 32 and BAIDU_ID.isalnum(), 'BAIDU_ID should be the 32-character code after hm.js?'
