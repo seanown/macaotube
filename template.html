@@ -148,6 +148,28 @@ main { min-width: 0; padding: 8px max(16px, env(safe-area-inset-right, 0px)) 48p
 .event .watch { color: var(--accent); font-weight: 600; }
 .event .watch:hover { text-decoration: underline; }
 @media (max-width: 560px) { .event { grid-template-columns: 1fr; } }
+/* Grand Prix hub */
+.facts { margin: 0 0 28px; padding: 16px 20px; background: var(--surface); border-radius: 12px; max-width: 860px; display: flex; flex-direction: column; gap: 10px; }
+.facts div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; }
+.facts dt { font-weight: 700; color: var(--accent); }
+.facts dd { margin: 0; line-height: 1.55; }
+.facts a { color: var(--accent); font-weight: 600; text-decoration: underline; }
+.gprow { margin: 0 0 36px; }
+.gprow h2, .faq h2 { margin: 0 0 14px; font-size: 20px; font-weight: 800; letter-spacing: -0.01em; }
+.gprow .watch { display: inline-block; margin-top: 14px; color: var(--accent); font-weight: 600; }
+.gprow .watch:hover { text-decoration: underline; }
+.faq { max-width: 860px; margin: 8px 0 24px; }
+.faq details { border-top: 1px solid var(--line); padding: 12px 0; }
+.faq summary { font-weight: 700; cursor: pointer; font-size: 15px; }
+.faq details p { margin: 8px 0 0; line-height: 1.6; color: var(--muted); max-width: 70ch; }
+@media (max-width: 560px) {
+  .facts div { grid-template-columns: 1fr; gap: 2px; }
+  /* each row becomes a swipeable strip on phones instead of six stacked cards */
+  .gprow .grid { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+                 margin-right: -16px; padding: 0 16px 4px 0; scrollbar-width: none; }
+  .gprow .grid::-webkit-scrollbar { display: none; }
+  .gprow .grid .card { flex: 0 0 78%; scroll-snap-align: start; }
+}
 
 /* partner + sponsor */
 .sponsor { margin: 2px 0 0; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }

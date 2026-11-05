@@ -11,7 +11,8 @@ Output
   plus everything in static/ (icons, preview image, logo, IndexNow key).
 """
 import datetime as dt, html, json, os, shutil
-from pages import SITE, NAME, TOPICS, SECTIONS, EVENTS, PACKAGES, PARTNER_EMAIL, SPONSORS, topic_path
+import re
+from pages import SITE, NAME, TOPICS, SECTIONS, EVENTS, PACKAGES, PARTNER_EMAIL, SPONSORS, GP_HUB, GP_OFFICIAL, topic_path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
@@ -288,6 +289,8 @@ for t in TOPIC_ORDER:
     head = ('<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span>'
             '<a href="/topics/">Topics</a></nav>'
             f'<h1>{E(t)}</h1><p class="intro">{E(m["intro"])}</p><span class="count">{len(vids):,} videos</span>')
+    if t == 'Grand Prix' and any(e['link'] == GP_HUB['path'] for e in upcoming()):
+        head += f'<p class="soon"><b>Going in {TODAY.year}?</b> <a href="{GP_HUB["path"]}">See our race-week guide →</a></p>'
     head += sponsor_line(path)
     ld = [{'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': m['title'], 'url': SITE + path,
            'description': m['description'], 'inLanguage': 'en', 'about': {'@type': 'Place', 'name': 'Macao'},
@@ -354,6 +357,62 @@ urls.append(page('/whats-on/', title="What's On in Macau: Festivals and Events C
                  description='Upcoming festivals and events in Macao: the Grand Prix, the Food Festival, Light Up Macao, Chinese New Year, the fireworks contest and more, with videos of each.',
                  view_html=whats_on, rail_key='whats-on',
                  ld=[{'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': "What's on in Macao", 'url': SITE + '/whats-on/'}] + ev_ld))
+
+# Grand Prix race-week hub
+gp, H = [v for v in DATA if v['topic'] == 'Grand Prix'], GP_HUB
+skip = re.compile(H['skip'], re.I)
+rows, used = [], set()
+for label, pat in H['rows']:
+    rx = re.compile(pat, re.I)
+    # earlier rows claim every title they match, so each video appears in one row only
+    hits = [v for v in gp if v['id'] not in used and not skip.search(v['title']) and rx.search(v['title'])]
+    pick, per_channel = [], {}
+    for v in hits:  # full-length videos only, and at most two per channel so one sponsor's clips don't fill a row
+        if not v['short'] and per_channel.get(v['channel'], 0) < 2:
+            pick.append(v); per_channel[v['channel']] = per_channel.get(v['channel'], 0) + 1
+        if len(pick) == 6:
+            break
+    if len(pick) >= 3:
+        used.update(v['id'] for v in hits)
+        rows.append((label, pick))
+gp_ev = next((e for e in EVENTS if e['link'] == H['path']), None)
+facts = ''.join(f'<div><dt>{E(k)}</dt><dd>{E(val)}</dd></div>' for k, val in H['facts'])
+rows_html = ''.join(f"""
+    <section class="gprow">
+      <h2>{E(label)}</h2>
+      <div class="grid">{''.join(card(v) for v in pick)}</div>
+      <a class="watch" href="/topics/grand-prix/">See all Grand Prix videos →</a>
+    </section>""" for label, pick in rows)
+faq_html = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in H['faq'])
+gp_html = f"""    <div class="head" id="head">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/whats-on/">What's on</a></nav>
+      <h1>Macau Grand Prix {TODAY.year}</h1>
+      <p class="intro">{E(H['intro'])}</p>
+      {sponsor_line(H['path'])}
+    </div>
+    <dl class="facts">{facts}
+      <div><dt>Official site</dt><dd><a href="{GP_OFFICIAL}" target="_blank" rel="noopener">macau.grandprix.gov.mo</a> for the timetable, tickets and road closures.</dd></div>
+    </dl>{rows_html}
+    <section class="faq">
+      <h2>Macau Grand Prix FAQ</h2>
+      {faq_html}
+    </section>"""
+gp_ld = [{'@context': 'https://schema.org', '@type': 'WebPage', 'name': H['title'], 'url': SITE + H['path'], 'description': H['description'],
+          'inLanguage': 'en', 'isPartOf': {'@type': 'WebSite', 'name': NAME, 'url': SITE + '/'}},
+         {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+             {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE + '/'},
+             {'@type': 'ListItem', 'position': 2, 'name': "What's on", 'item': SITE + '/whats-on/'},
+             {'@type': 'ListItem', 'position': 3, 'name': 'Macau Grand Prix', 'item': SITE + H['path']}]},
+         {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+             {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in H['faq']]}]
+if gp_ev:
+    gp_ld.append({'@context': 'https://schema.org', '@type': 'SportsEvent', 'name': gp_ev['name'], 'sport': 'Motor racing',
+                  'startDate': gp_ev['start'], 'endDate': gp_ev['end'], 'eventStatus': 'https://schema.org/EventScheduled',
+                  'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode', 'url': GP_OFFICIAL,
+                  'description': gp_ev['what'],
+                  'location': {'@type': 'Place', 'name': 'Guia Circuit',
+                               'address': {'@type': 'PostalAddress', 'addressLocality': 'Macao', 'addressCountry': 'MO'}}})
+urls.append(page(H['path'], title=H['title'], description=H['description'], view_html=gp_html, rail_key='whats-on', ld=gp_ld))
 
 # partner page
 pk_cards = ''.join(f"""<section class="pkg">

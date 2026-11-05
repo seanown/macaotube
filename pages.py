@@ -148,10 +148,10 @@ EVENTS = [
      'where': 'Venues across the city, including the Macao Cultural Centre',
      'what': 'Two months of classical concerts, opera and crossover performances, some of them free.',
      'link': '/topics/arts/', 'source': 'https://www.thestandard.com.hk/news/article/345942'},
-    {'name': '73rd Macau Grand Prix', 'start': '2026-11-19', 'end': '2026-11-22', 'provisional': True,
+    {'name': '73rd Macau Grand Prix', 'start': '2026-11-19', 'end': '2026-11-22',
      'where': 'Guia Circuit',
-     'what': 'Four days of street racing, including the GT World Cup and the Motorcycle Grand Prix. These dates are provisional, so check the official Grand Prix site before booking; hotels fill up and prices peak.',
-     'link': '/topics/grand-prix/', 'source': 'https://51gt3.com/en/article/101373/provisional-dates-announced-for-the-73rd-macau-grand-prix-in-2026'},
+     'what': 'Four days of street racing: the FIA FR, GT and F4 World Cups, the Guia Race and the Motorcycle Grand Prix. Hotels fill up and prices peak, so book early.',
+     'link': '/grand-prix/', 'source': 'https://macaudailytimes.com.mo/organizers-confirm-program-for-the-73rd-edition.html'},
     {'name': '26th Macau Food Festival', 'start': '2026-11-20', 'end': '2026-12-06',
      'where': 'Sai Van Lake Square, beside Macau Tower',
      'what': 'Around 150 local food and drink vendors. Open 4pm to 11pm Monday to Thursday, and 3pm to midnight Friday to Sunday.',
@@ -220,3 +220,60 @@ PACKAGES = [
 # Live sponsorships: page path -> sponsor. Shown as a labelled "Presented by" line.
 # Example: '/topics/food/': {'name': 'Example Café', 'url': 'https://example.com', 'line': 'Macanese food since 1990'}
 SPONSORS = {}
+
+
+# Grand Prix race-week hub (/grand-prix/). Facts checked 2026-11-05 against:
+#   https://macaudailytimes.com.mo/organizers-confirm-program-for-the-73rd-edition.html (12 Oct 2026: dates, seven races, ticket channels, on-site booths)
+#   https://www.macaupostdaily.com/news/29720 (20 Oct 2026: dates, Guia Circuit, race names, 58th Motorcycle GP)
+#   https://en.wikipedia.org/wiki/Guia_Circuit (6.12 km, opened 1954, Melco Hairpin 7 m wide)
+#   https://macaudailytimes.com.mo/gp-tickets-go-on-sale-with-a-sharp-price-increase.html (2023 prices: race days MOP 400-1,000, practice MOP 100)
+# 2026 per-stand prices were not confirmed by an official source, so the page gives the recent range and sends readers to the official site.
+GP_OFFICIAL = 'https://www.macau.grandprix.gov.mo/'
+GP_HUB = {
+    'path': '/grand-prix/',
+    'title': 'Macau Grand Prix 2026: Dates, Races, Tickets and the Best Videos',
+    'description': 'The 73rd Macau Grand Prix runs 19-22 November 2026 on the Guia Circuit. Dates, the seven races, tickets, where to watch, and the best onboard laps, races and crashes on YouTube.',
+    'intro': ('Every November, the streets of Macao turn into the Guia Circuit, a 6.1 km track with walls inches from the cars '
+              'and a hairpin so tight that drivers queue to get round it. Here is what is on this year, how to go, '
+              'and the videos to watch before race week.'),
+    'facts': [
+        ('When', '19-22 November 2026. Thursday and Friday are practice and qualifying; Saturday and Sunday are race days.'),
+        ('Where', 'Guia Circuit, a 6.1 km street track around the Macao peninsula, first raced in 1954.'),
+        ('Edition', 'The 73rd Macau Grand Prix and the 58th Macau Motorcycle Grand Prix.'),
+        ('Races', 'Macau Grand Prix (FIA FR World Cup), Macau GT Cup (FIA GT World Cup), Macau Guia Race (FIA TCR World Tour), '
+                  'FIA F4 World Cup, Macau Motorcycle Grand Prix, Greater Bay Area GT Cup (GT4) and Macau Roadsport Challenge.'),
+        ('Tickets', 'On sale now through Macau Ticket, Kong Seng stores, Trip.com, Ctrip, Damai and EGL Tours, plus booths at the circuit '
+                    'with counters and self-service machines. In recent years race-day seats cost MOP 400-1,000 depending on the stand, '
+                    'and practice days MOP 100; check this year\'s prices on the official site.'),
+    ],
+    'faq': [
+        ('When is the Macau Grand Prix 2026?',
+         'The 73rd Macau Grand Prix runs from 19 to 22 November 2026. Thursday 19 and Friday 20 November are practice and qualifying days; '
+         'the races are on Saturday 21 and Sunday 22 November.'),
+        ('Where is the Macau Grand Prix held?',
+         'On the Guia Circuit, a 6.1 km street circuit on the Macao peninsula that has hosted racing since 1954. Its Melco Hairpin is only '
+         'about 7 metres wide, one of the tightest corners in international motorsport.'),
+        ('What races are on at the 2026 Macau Grand Prix?',
+         'Seven races: the Macau Grand Prix for the FIA FR World Cup, the Macau GT Cup for the FIA GT World Cup, the Macau Guia Race for the '
+         'FIA TCR World Tour, the FIA F4 World Cup, the 58th Macau Motorcycle Grand Prix, the Greater Bay Area GT Cup and the Macau Roadsport Challenge.'),
+        ('How do I buy Macau Grand Prix tickets?',
+         'Through Macau Ticket (macauticket.com), Kong Seng stores in Macao, outlets in Hong Kong and mainland China, the Trip.com, Ctrip and Damai apps, '
+         'and the EGL Tours website. During the event there are ticket booths at the circuit with counters and self-service machines.'),
+        ('How much are Macau Grand Prix tickets?',
+         'In recent years practice and qualifying days cost MOP 100 and race days MOP 400 to 1,000 depending on the stand. '
+         'Prices can change each year, so check the official Macau Grand Prix website before you buy.'),
+        ('Can I watch the Macau Grand Prix for free?',
+         'From 2023 to 2025 the FIA streamed the FR, F3, F4 and GT World Cup races at Macau live on its YouTube channel, and the full replays '
+         'are still online; you will find them in the rows above. Check the FIA channel nearer race week to see whether 2026 is streamed too.'),
+    ],
+    # Each video joins the first row whose pattern matches its title; rows under 3 videos are hidden.
+    'skip': r'disney|assetto|game vs|gran turismo|iracing|f1 2026|karting',
+    'rows': [
+        ('Onboard laps', r'\bon-?board\b|\bhot lap\b|\blap (?:around|of)\b|\bdrive around\b|driver.s eye|in car camera'),
+        ('Crashes and drama', r'\bcrash|pile ?-?up|\bfails\b|\bwtf\b|\binsan|\bcraz|\bhorror\b|\bairborne\b|\bflip\b|wild finish|incredible finish'),
+        ('Motorcycle Grand Prix', r'motorcycle|\bbikes?\b|電單車|schwantz|hickman|\bsbk\b|road ?racing|king of the roads|motogp'),
+        ('GT World Cup', r'\bgt\b|\bgt[34]\b|gt cup|gt world cup'),
+        ('Formula races: FR, F3 and F4', r'\bf[34]\b|formula (?:3|4|regional)|\bfr world cup\b'),
+        ('Fan trips, vlogs and the museum', r'vlog|museum|博物館|\bday \d|final day|tsingtao|everything you need|visiting|review|explained|what its like|明星'),
+    ],
+}
