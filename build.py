@@ -332,6 +332,20 @@ urls.append(page('/topics/', title='Macau Video Topics: Food, Festivals, Heritag
                  ld={'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Macao video topics', 'url': SITE + '/topics/',
                      'hasPart': [{'@type': 'CollectionPage', 'name': t, 'url': SITE + topic_path(t)} for t in TOPIC_ORDER]}))
 
+def event_extras(e):
+    """Optional Event fields, only where we know them: organizer, and offers for free-entry events or a ticket page."""
+    x = {}
+    if e.get('organizer'):
+        x['organizer'] = {'@type': 'Organization', 'name': e['organizer'][0], 'url': e['organizer'][1]}
+    if e.get('free'):
+        x['isAccessibleForFree'] = True
+        x['offers'] = {'@type': 'Offer', 'price': 0, 'priceCurrency': 'MOP', 'availability': 'https://schema.org/InStock',
+                       'url': SITE + '/whats-on/'}
+    elif e.get('tickets'):
+        x['offers'] = {'@type': 'Offer', 'url': e['tickets'], 'priceCurrency': 'MOP', 'availability': 'https://schema.org/InStock'}
+    return x
+
+
 # what's on
 evs = upcoming()
 ev_cards, ev_ld = [], []
@@ -351,7 +365,9 @@ for e in evs:
         ev_ld.append({'@context': 'https://schema.org', '@type': 'Event', 'name': e['name'], 'startDate': e['start'], 'endDate': e['end'],
                       'eventStatus': 'https://schema.org/EventScheduled', 'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
                       'description': e['what'],
-                      'location': {'@type': 'Place', 'name': e['where'], 'address': {'@type': 'PostalAddress', 'addressLocality': 'Macao', 'addressCountry': 'MO'}}})
+                      'image': [SITE + '/og.png'],
+                      'location': {'@type': 'Place', 'name': e['where'], 'address': {'@type': 'PostalAddress', 'addressLocality': 'Macao', 'addressCountry': 'MO'}},
+                      **event_extras(e)})
 whats_on = (f'    <div class="head"><h1>What\'s on in Macao</h1><p class="intro">Festivals, races and celebrations coming up in Macao, '
             'with the videos to watch before you go. Where this season\'s dates have not been announced yet, we show the usual timing. '
             'Always check the organiser\'s official site before you travel.</p></div>\n'
@@ -413,8 +429,10 @@ if gp_ev:
                   'startDate': gp_ev['start'], 'endDate': gp_ev['end'], 'eventStatus': 'https://schema.org/EventScheduled',
                   'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode', 'url': GP_OFFICIAL,
                   'description': gp_ev['what'],
+                  'image': [SITE + '/og.png'],
                   'location': {'@type': 'Place', 'name': 'Guia Circuit',
-                               'address': {'@type': 'PostalAddress', 'addressLocality': 'Macao', 'addressCountry': 'MO'}}})
+                               'address': {'@type': 'PostalAddress', 'addressLocality': 'Macao', 'addressCountry': 'MO'}},
+                  **event_extras(gp_ev)})
 urls.append(page(H['path'], title=H['title'], description=H['description'], view_html=gp_html, rail_key='whats-on', ld=gp_ld))
 
 # partner page
