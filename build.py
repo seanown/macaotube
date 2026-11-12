@@ -358,7 +358,7 @@ for e in evs:
         <h2>{E(e['name'])}</h2>
         <p class="where">{E(e['where'])}</p>
         <p>{E(e['what'])}</p>
-        <a class="watch" href="{E(e['link'])}">Watch videos →</a>
+        <a class="watch" href="{E(e['link'])}">Watch videos →</a>{f'<span class="sep" aria-hidden="true"> · </span><a class="watch off" href="{E(e["organizer"][1])}" target="_blank" rel="noopener">Official info ↗</a>' if e.get('organizer') else ''}
       </div>
     </article>""")
     if 'start' in e:
@@ -411,6 +411,7 @@ gp_html = f"""    <div class="head" id="head">
     </div>
     <dl class="facts">{facts}
       <div><dt>Official site</dt><dd><a href="{GP_OFFICIAL}" target="_blank" rel="noopener">macau.grandprix.gov.mo</a> for the timetable, tickets and road closures.</dd></div>
+      <div><dt>Buy tickets</dt><dd><a href="https://www.macauticket.com/" target="_blank" rel="noopener">macauticket.com</a> online, or at the booths beside each stand.</dd></div>
     </dl>{rows_html}
     <section class="faq">
       <h2>Macau Grand Prix FAQ</h2>
