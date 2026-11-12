@@ -222,7 +222,7 @@ PACKAGES = [
 SPONSORS = {}
 
 
-# Grand Prix race-week hub (/grand-prix/). Facts checked 2026-11-05 against:
+# Grand Prix race-week hub (/grand-prix/). Facts checked 2026-11-05 (ticket prices re-checked 2026-11-12 via moefriends.com and heatalk.com, both citing the organiser) against:
 #   https://macaudailytimes.com.mo/organizers-confirm-program-for-the-73rd-edition.html (12 Oct 2026: dates, seven races, ticket channels, on-site booths)
 #   https://www.macaupostdaily.com/news/29720 (20 Oct 2026: dates, Guia Circuit, race names, 58th Motorcycle GP)
 #   https://en.wikipedia.org/wiki/Guia_Circuit (6.12 km, opened 1954, Melco Hairpin 7 m wide)
@@ -242,9 +242,9 @@ GP_HUB = {
         ('Edition', 'The 73rd Macau Grand Prix and the 58th Macau Motorcycle Grand Prix.'),
         ('Races', 'Macau Grand Prix (FIA FR World Cup), Macau GT Cup (FIA GT World Cup), Macau Guia Race (FIA TCR World Tour), '
                   'FIA F4 World Cup, Macau Motorcycle Grand Prix, Greater Bay Area GT Cup (GT4) and Macau Roadsport Challenge.'),
-        ('Tickets', 'On sale now through Macau Ticket, Kong Seng stores, Trip.com, Ctrip, Damai and EGL Tours, plus booths at the circuit '
-                    'with counters and self-service machines. In recent years race-day seats cost MOP 400-1,000 depending on the stand, '
-                    'and practice days MOP 100; check this year\'s prices on the official site.'),
+        ('Tickets', 'On sale since 9 October through Macau Ticket, Kwong Sing stores, Trip.com, Ctrip and Damai, plus booths by the stands '
+                    'with counters and self-service machines. Practice and qualifying days (19-20 Nov) cost MOP 100 for any stand; race days (21-22 Nov) '
+                    'cost MOP 400 at the Reservoir Stand, MOP 750 at the Grandstand and MOP 1,200 for a reserved seat at the Lisboa Bend. Everyone aged 2 or over needs a ticket.'),
     ],
     'faq': [
         ('When is the Macau Grand Prix 2026?',
@@ -260,8 +260,9 @@ GP_HUB = {
          'Through Macau Ticket (macauticket.com), Kong Seng stores in Macao, outlets in Hong Kong and mainland China, the Trip.com, Ctrip and Damai apps, '
          'and the EGL Tours website. During the event there are ticket booths at the circuit with counters and self-service machines.'),
         ('How much are Macau Grand Prix tickets?',
-         'In recent years practice and qualifying days cost MOP 100 and race days MOP 400 to 1,000 depending on the stand. '
-         'Prices can change each year, so check the official Macau Grand Prix website before you buy.'),
+         'For 2026, practice and qualifying days (19 and 20 November) cost MOP 100 a day at any stand. On race days (21 and 22 November) '
+         'the Reservoir Stand costs MOP 400, the Grandstand MOP 750 and a reserved seat at the Lisboa Bend MOP 1,200, per person per day. '
+         'Macao residents with a student card, aged 65 or over or with a disability card can buy a MOP 150 Reservoir Stand ticket on race days.'),
         ('Can I watch the Macau Grand Prix for free?',
          'From 2023 to 2025 the FIA streamed the FR, F3, F4 and GT World Cup races at Macau live on its YouTube channel, and the full replays '
          'are still online; you will find them in the rows above. Check the FIA channel nearer race week to see whether 2026 is streamed too.'),
