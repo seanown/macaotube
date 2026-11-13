@@ -155,7 +155,7 @@ EVENTS = [
     {'name': '26th Macau Food Festival', 'start': '2026-11-20', 'end': '2026-12-06',
      'where': 'Sai Van Lake Square, beside Macau Tower',
      'what': 'Around 150 local food and drink vendors. Open 4pm to 11pm Monday to Thursday, and 3pm to midnight Friday to Sunday.',
-     'link': '/?q=food+festival', 'free': True, 'source': 'https://thebeat.asia/hong-kong/delish/happenings/26th-macau-food-festival'},
+     'link': '/food-festival/', 'free': True, 'source': 'https://thebeat.asia/hong-kong/delish/happenings/26th-macau-food-festival'},
     {'name': 'Light Up Macao', 'when': 'Usually December into January', 'sort': '2026-12-06',
      'where': 'Nam Van and other neighbourhoods',
      'what': 'Free evening light installations and projection shows around the city. Dates for this season are not yet announced.',
@@ -227,7 +227,6 @@ SPONSORS = {}
 #   https://www.macaupostdaily.com/news/29720 (20 Oct 2026: dates, Guia Circuit, race names, 58th Motorcycle GP)
 #   https://en.wikipedia.org/wiki/Guia_Circuit (6.12 km, opened 1954, Melco Hairpin 7 m wide)
 #   https://macaudailytimes.com.mo/gp-tickets-go-on-sale-with-a-sharp-price-increase.html (2023 prices: race days MOP 400-1,000, practice MOP 100)
-# 2026 per-stand prices were not confirmed by an official source, so the page gives the recent range and sends readers to the official site.
 GP_OFFICIAL = 'https://www.macau.grandprix.gov.mo/'
 GP_HUB = {
     'path': '/grand-prix/',
@@ -276,6 +275,41 @@ GP_HUB = {
         ('GT World Cup', r'\bgt\b|\bgt[34]\b|gt cup|gt world cup'),
         ('Formula races: FR, F3 and F4', r'\bf[34]\b|formula (?:3|4|regional)|\bfr world cup\b'),
         ('Fan trips, vlogs and the museum', r'vlog|museum|博物館|\bday \d|final day|tsingtao|everything you need|visiting|review|explained|what its like|明星'),
+    ],
+}
+
+# Food Festival hub (/food-festival/). Facts checked 2026-11-12 against
+#   https://thebeat.asia/hong-kong/delish/happenings/26th-macau-food-festival (dates, venue, ~150 vendors, opening hours)
+FF_HUB = {
+    'path': '/food-festival/',
+    'title': 'Macau Food Festival 2026: Dates, Opening Hours and the Best Videos',
+    'description': 'The 26th Macau Food Festival runs 20 November to 6 December 2026 at Sai Van Lake Square beside Macau Tower. Dates, opening hours, how to get there, and the most-watched videos from past years.',
+    'intro': ('For 17 days every winter, Sai Van Lake Square beside Macau Tower fills with food and drink stalls. '
+              'Entry is free; you pay for what you eat. Here is what to know for this year, and videos from past festivals to see what it is like.'),
+    'facts': [
+        ('When', '20 November to 6 December 2026, the 26th edition.'),
+        ('Opening hours', '4pm to 11pm Monday to Thursday; 3pm to midnight Friday to Sunday.'),
+        ('Where', 'Sai Van Lake Square, on the waterfront beside Macau Tower, on the Macao peninsula.'),
+        ('What', 'Around 150 local food and drink vendors.'),
+        ('Entry', 'Free. Stalls take payment for food and drink.'),
+        ('Same week', 'The Macau Grand Prix runs 19-22 November, so the festival\'s first weekend is also race weekend: book hotels early.'),
+    ],
+    'faq': [
+        ('When is the Macau Food Festival 2026?',
+         'The 26th Macau Food Festival runs from 20 November to 6 December 2026.'),
+        ('Where is the Macau Food Festival held?',
+         'At Sai Van Lake Square, on the waterfront beside Macau Tower on the Macao peninsula.'),
+        ('What are the opening hours?',
+         'From 4pm to 11pm Monday to Thursday, and from 3pm to midnight Friday to Sunday.'),
+        ('Is the Macau Food Festival free?',
+         'Entry is free. You pay the stalls for what you eat and drink.'),
+        ('How many stalls are there?',
+         'Around 150 local food and drink vendors take part this year.'),
+    ],
+    'skip': r'jichangwook|kdrama|wookie|ice cube|2nd biggest|international cities',
+    'rows': [
+        ('Recent festivals (2023-2025)', r'2023|2024|2025|23rd|24th|25th'),
+        ('Walk-throughs and food trips', r'.'),
     ],
 }
 

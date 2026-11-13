@@ -12,7 +12,7 @@ Output
 """
 import datetime as dt, html, json, os, shutil
 import re
-from pages import SITE, NAME, TOPICS, SECTIONS, EVENTS, PACKAGES, PARTNER_EMAIL, SPONSORS, SOCIAL, GP_HUB, GP_OFFICIAL, topic_path
+from pages import SITE, NAME, TOPICS, SECTIONS, EVENTS, PACKAGES, PARTNER_EMAIL, SPONSORS, SOCIAL, GP_HUB, GP_OFFICIAL, FF_HUB, topic_path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'site')
@@ -294,6 +294,8 @@ for t in TOPIC_ORDER:
             f'<h1>{E(t)}</h1><p class="intro">{E(m["intro"])}</p><span class="count">{len(vids):,} videos</span>')
     if t == 'Grand Prix' and any(e['link'] == GP_HUB['path'] for e in upcoming()):
         head += f'<p class="soon"><b>Going in {TODAY.year}?</b> <a href="{GP_HUB["path"]}">See our race-week guide →</a></p>'
+    if t == 'Food' and any(e['link'] == FF_HUB['path'] for e in upcoming()):
+        head += f'<p class="soon"><b>Food Festival {TODAY.year}:</b> <a href="{FF_HUB["path"]}">dates, opening hours and videos →</a></p>'
     head += sponsor_line(path)
     ld = [{'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': m['title'], 'url': SITE + path,
            'description': m['description'], 'inLanguage': 'en', 'about': {'@type': 'Place', 'name': 'Macao'},
@@ -435,6 +437,52 @@ if gp_ev:
                                'address': {'@type': 'PostalAddress', 'addressLocality': 'Macao', 'addressCountry': 'MO'}},
                   **event_extras(gp_ev)})
 urls.append(page(H['path'], title=H['title'], description=H['description'], view_html=gp_html, rail_key='whats-on', ld=gp_ld))
+
+# Food Festival hub
+F = FF_HUB
+ffv = [v for v in DATA if re.search(r'food fest|美食節', v['title'], re.I) and not re.search(F['skip'], v['title'], re.I)]
+ff_rows, ff_used = [], set()
+for label, pat in F['rows']:
+    rx = re.compile(pat, re.I)
+    pick = [v for v in ffv if v['id'] not in ff_used and rx.search(v['title'])][:6]
+    if len(pick) >= 3:
+        ff_used.update(v['id'] for v in pick)
+        ff_rows.append((label, pick))
+ff_ev = next((e for e in EVENTS if e['link'] == F['path']), None)
+ff_html = f"""    <div class="head" id="head">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/whats-on/">What's on</a></nav>
+      <h1>Macau Food Festival {TODAY.year}</h1>
+      <p class="intro">{E(F['intro'])}</p>
+      {sponsor_line(F['path'])}
+    </div>
+    <dl class="facts">{''.join(f'<div><dt>{E(k)}</dt><dd>{E(val)}</dd></div>' for k, val in F['facts'])}
+      <div><dt>Grand Prix</dt><dd><a href="{GP_HUB['path']}">Our Macau Grand Prix race-week guide</a></dd></div>
+    </dl>{''.join(f"""
+    <section class="gprow">
+      <h2>{E(label)}</h2>
+      <div class="grid">{''.join(card(v) for v in pick)}</div>
+      <a class="watch" href="/topics/food/">See all Macao food videos →</a>
+    </section>""" for label, pick in ff_rows)}
+    <section class="faq">
+      <h2>Macau Food Festival FAQ</h2>
+      {''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in F['faq'])}
+    </section>"""
+ff_ld = [{'@context': 'https://schema.org', '@type': 'WebPage', 'name': F['title'], 'url': SITE + F['path'], 'description': F['description'],
+          'inLanguage': 'en', 'isPartOf': {'@type': 'WebSite', 'name': NAME, 'url': SITE + '/'}},
+         {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+             {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE + '/'},
+             {'@type': 'ListItem', 'position': 2, 'name': "What's on", 'item': SITE + '/whats-on/'},
+             {'@type': 'ListItem', 'position': 3, 'name': 'Macau Food Festival', 'item': SITE + F['path']}]},
+         {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+             {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in F['faq']]}]
+if ff_ev:
+    ff_ld.append({'@context': 'https://schema.org', '@type': 'FoodEvent', 'name': ff_ev['name'], 'startDate': ff_ev['start'], 'endDate': ff_ev['end'],
+                  'eventStatus': 'https://schema.org/EventScheduled', 'eventAttendanceMode': 'https://schema.org/OfflineEventAttendanceMode',
+                  'description': ff_ev['what'], 'image': [SITE + '/og.png'],
+                  'location': {'@type': 'Place', 'name': 'Sai Van Lake Square',
+                               'address': {'@type': 'PostalAddress', 'addressLocality': 'Macao', 'addressCountry': 'MO'}},
+                  **event_extras(ff_ev)})
+urls.append(page(F['path'], title=F['title'], description=F['description'], view_html=ff_html, rail_key='whats-on', ld=ff_ld))
 
 # partner page
 pk_cards = ''.join(f"""<section class="pkg">
