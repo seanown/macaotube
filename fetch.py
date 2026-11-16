@@ -9,7 +9,7 @@ Every run
                           never drop off just because they slipped in a search
 
 Quota (free tier = 10,000 units/day): search.list costs 100; videos.list costs
-1 per 50 ids. A nightly run uses ~3,200 units. If the quota
+1 per 50 ids. A nightly run uses ~5,500 units. If the quota
 runs out mid-run, whatever was found so far is kept.
 
 Usage
@@ -46,11 +46,20 @@ QUERIES = {
     'Neighbourhoods': ['Taipa village', 'Coloane Macau', 'Macau Tower', 'Macau old town'],
     'Grand Prix': ['Macau Grand Prix', 'Macau Grand Prix onboard', 'Macau Motorcycle Grand Prix', 'Macau GT World Cup',
                    'Macau Grand Prix highlights', 'Guia Circuit'],
-    'Living there': ['living in Macau', 'moving to Macau'],
+    'Living there': ['living in Macau', 'moving to Macau', 'Macau expat', 'working in Macau', 'cost of living Macau'],
+    'Getting there': ['Hong Kong to Macau ferry', 'Hong Kong Zhuhai Macau bridge', 'Hong Kong to Macau bus',
+                      'Macau airport', 'Zhuhai to Macau', 'Macau border crossing', 'Macau light rail', 'how to get around Macau'],
+    'Resorts & shows': ['Galaxy Macau', 'The Venetian Macao', 'The Londoner Macao', 'Wynn Palace Macau', 'Studio City Macau',
+                        'City of Dreams Macau', 'MGM Cotai', 'Macau luxury hotel review', 'Macau shopping', 'Macau nightlife'],
+    'More sights': ['Coloane hiking trail', 'Macau Giant Panda Pavilion', 'Guia Fortress Macau', 'Macau Fisherman\'s Wharf',
+                    'Lou Lim Ieoc Garden', 'Macau Science Center', 'Macau cable car', 'Hac Sa beach Macau',
+                    'Macau hidden gems', 'Macau at night', 'Macau 4K walk', 'Macau drone'],
+    'More food': ['Macau dim sum', 'Macau cafe', 'Macau dessert', 'Macau seafood', 'Macau almond cookies', 'Macau bakery'],
 }
 # Searched for brand-new uploads every night.
 NEWEST = ['Macau', 'Macao', 'Macau travel', 'Macau food', 'Macau vlog', 'Macau casino',
-          'Light Up Macao', 'Macau Grand Prix', 'Taipa', 'Macao festival']
+          'Light Up Macao', 'Macau Grand Prix', 'Taipa', 'Macao festival',
+          'Macau Food Festival', 'Macau hotel', 'Hong Kong to Macau', 'Cotai']
 MACAU = re.compile(r'maca[uo]|澳門|澳门|taipa|coloane|cotai', re.I)
 
 
