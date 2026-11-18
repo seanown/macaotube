@@ -12,6 +12,12 @@
 "Travel"
 ]
 },
+"-0j6EVvAzHg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "-1KlPk6-uIY": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -31,6 +37,12 @@
 "Neighbourhoods"
 ]
 },
+"-26oixvxTnQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "-3Q33EdSCIM": {
 "first_seen": "2026-11-11",
 "topics": []
@@ -44,7 +56,8 @@
 "-5Z72aP7wBs": {
 "first_seen": "2026-11-05",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"More sights"
 ]
 },
 "-5h6oU5vOqA": {
@@ -65,10 +78,22 @@
 "Getting there"
 ]
 },
+"-9ix1LGvtaA": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "-ApWf8iI0Ho": {
 "first_seen": "2026-11-06",
 "topics": [
 "Casinos & hotels"
+]
+},
+"-BGgkL4alMs": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "-C9H2YqH5xA": {
@@ -103,6 +128,10 @@
 },
 "-E_BpvYaS2A": {
 "first_seen": "2026-11-04",
+"topics": []
+},
+"-GFI23Rnja0": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "-GhBART3vJA": {
@@ -184,7 +213,8 @@
 "-SuuwmzD4kA": {
 "first_seen": "2026-11-11",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"Resorts & shows"
 ]
 },
 "-TeJ4VTUp24": {
@@ -202,6 +232,13 @@
 "-VeEY2uJS8A": {
 "first_seen": "2026-11-17",
 "topics": []
+},
+"-XzyqnIGys8": {
+"first_seen": "2026-11-18",
+"topics": [
+"Neighbourhoods",
+"Resorts & shows"
+]
 },
 "-Y4IAsLGjnE": {
 "first_seen": "2026-11-15",
@@ -249,11 +286,23 @@
 "Resorts & shows"
 ]
 },
+"-euQtYjBb18": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "-f-LYhB2bWs": {
 "first_seen": "2026-11-04",
 "topics": [
 "Casinos & hotels",
 "Resorts & shows"
+]
+},
+"-gmbug3EtxA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "-gtqbtUw89Q": {
@@ -290,6 +339,12 @@
 "first_seen": "2026-11-17",
 "topics": [
 "More sights"
+]
+},
+"-k57QDz12-Y": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "-lXADVIouYM": {
@@ -359,9 +414,21 @@
 "History & culture"
 ]
 },
+"-qKUfxYnbvg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "-qe2ZASIydY": {
 "first_seen": "2026-11-04",
 "topics": []
+},
+"-tt42jbVp1I": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "-uCceOyNdQI": {
 "first_seen": "2026-11-03",
@@ -426,6 +493,10 @@
 },
 "032pemAUr40": {
 "first_seen": "2026-11-07",
+"topics": []
+},
+"03n8Ej8zD9Q": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "07_N1gKYfkU": {
@@ -503,6 +574,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -550,6 +622,22 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"0I1uBNkf3lk": {
+"first_seen": "2026-11-18",
+"topics": []
+},
+"0IC34jiWy4A": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
+"0JVdc1Z9Og0": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "0JXrL2YDGQQ": {
@@ -606,7 +694,8 @@
 "0RrrBU_BId0": {
 "first_seen": "2026-11-03",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"Resorts & shows"
 ]
 },
 "0Smr58e2VjM": {
@@ -692,7 +781,8 @@
 "0cZTviv7XX0": {
 "first_seen": "2026-11-03",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"Resorts & shows"
 ]
 },
 "0dj2ImsK9No": {
@@ -708,6 +798,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture"
+]
+},
+"0fLyrmrSRcw": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "0gVjKW3xUOg": {
@@ -749,7 +845,8 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Food",
-"More food"
+"More food",
+"Resorts & shows"
 ]
 },
 "0oo6BnQdnAo": {
@@ -803,6 +900,12 @@
 "0uopFVijTTo": {
 "first_seen": "2026-11-06",
 "topics": []
+},
+"0usp80J0y9o": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
 },
 "0vXvtD6qmmE": {
 "first_seen": "2026-11-04",
@@ -901,6 +1004,10 @@
 "Food"
 ]
 },
+"16nn7-qrZv4": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "16rakZLHcos": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -918,7 +1025,9 @@
 "topics": [
 "Casinos & hotels",
 "Food",
+"Getting there",
 "History & culture",
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -943,6 +1052,10 @@
 },
 "1C9mutrUqH8": {
 "first_seen": "2026-11-12",
+"topics": []
+},
+"1E6FCIrz3J0": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "1EFSGSiyYjc": {
@@ -1044,7 +1157,8 @@
 "1V9PuovxWMI": {
 "first_seen": "2026-11-07",
 "topics": [
-"Festivals"
+"Festivals",
+"More sights"
 ]
 },
 "1WSLyi1tRbo": {
@@ -1090,6 +1204,10 @@
 "More sights"
 ]
 },
+"1czcPYn-6Kc": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "1d0xYITeTOk": {
 "first_seen": "2026-11-16",
 "topics": []
@@ -1116,10 +1234,15 @@
 "Getting there"
 ]
 },
+"1frCx_01Nc8": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "1gZoL8TiIGY": {
 "first_seen": "2026-11-05",
 "topics": [
-"Food"
+"Food",
+"More food"
 ]
 },
 "1h5N0rsaK8E": {
@@ -1210,6 +1333,7 @@
 "topics": [
 "Casinos & hotels",
 "Food",
+"Getting there",
 "Living there",
 "More sights",
 "Neighbourhoods",
@@ -1222,18 +1346,26 @@
 "More food"
 ]
 },
+"1vtz3E87Z6U": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "1yOKGiYVEug": {
 "first_seen": "2026-11-17",
 "topics": [
 "More sights"
 ]
 },
+"1zBY8-8ps2k": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "2-fUH3GdJzc": {
 "first_seen": "2026-11-13",
-"topics": []
-},
-"2-oisD2hrVE": {
-"first_seen": "2026-11-17",
 "topics": []
 },
 "20EMeUAbeAc": {
@@ -1305,7 +1437,8 @@
 "29sj1G-D2go": {
 "first_seen": "2026-11-16",
 "topics": [
-"More sights"
+"More sights",
+"Resorts & shows"
 ]
 },
 "2EyPnNMOsA4": {
@@ -1364,7 +1497,8 @@
 "2LnQKKupXfM": {
 "first_seen": "2026-11-04",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"More sights"
 ]
 },
 "2MxHKrZwgkU": {
@@ -1403,10 +1537,23 @@
 "first_seen": "2026-11-04",
 "topics": []
 },
+"2QygWneV8_E": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights",
+"Resorts & shows"
+]
+},
 "2RG4SEaxsp4": {
 "first_seen": "2026-11-16",
 "topics": [
 "More food"
+]
+},
+"2S2el8-TGlA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "2T9bJ2NVybY": {
@@ -1446,9 +1593,16 @@
 "Resorts & shows"
 ]
 },
+"2UpxFXq0HZs": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "2UsHcy3fsy0": {
 "first_seen": "2026-11-17",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -1489,6 +1643,12 @@
 "2cUPevjYSlA": {
 "first_seen": "2026-11-10",
 "topics": []
+},
+"2cyoJNk0RvQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "2d38LocaW7o": {
 "first_seen": "2026-11-05",
@@ -1688,7 +1848,8 @@
 "3GKBIQ3av1o": {
 "first_seen": "2026-11-04",
 "topics": [
-"Food"
+"Food",
+"More food"
 ]
 },
 "3H5Z8XDqw9U": {
@@ -1701,6 +1862,7 @@
 "3HC-QAIsSoY": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Travel"
 ]
 },
@@ -1715,6 +1877,10 @@
 "topics": [
 "History & culture"
 ]
+},
+"3HyghTwTfeY": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "3J4W-ejlCQ0": {
 "first_seen": "2026-11-03",
@@ -1887,6 +2053,12 @@
 "first_seen": "2026-11-17",
 "topics": []
 },
+"3jRla2BUm7E": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "3l-sPj6AxdI": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -1956,6 +2128,10 @@
 "History & culture"
 ]
 },
+"3xZL7SrouBs": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "3yI_u_ssVXk": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -1980,10 +2156,17 @@
 "History & culture"
 ]
 },
+"416j_97OsoA": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "43ASmn8TcwY": {
 "first_seen": "2026-11-03",
 "topics": [
-"History & culture"
+"History & culture",
+"Resorts & shows"
 ]
 },
 "441Jw5gjDXY": {
@@ -2053,6 +2236,12 @@
 "4CsV90sj-Kc": {
 "first_seen": "2026-11-16",
 "topics": []
+},
+"4CuI7XSIp6Q": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "4EXv2wfm1dA": {
 "first_seen": "2026-11-03",
@@ -2139,6 +2328,7 @@
 "4TwuPeTpDuA": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Travel"
 ]
 },
@@ -2162,6 +2352,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"4WmzYiXyY9Y": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "4X-oeZhQ1p8": {
 "first_seen": "2026-11-14",
@@ -2263,9 +2457,16 @@
 "History & culture"
 ]
 },
+"4fW4Hijo9OE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "4fXZQZ3rwvA": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -2278,6 +2479,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"4goDy5TCdjE": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "4gw1zszvmDU": {
 "first_seen": "2026-11-12",
@@ -2323,6 +2528,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Grand Prix"
+]
+},
+"4lxV9qU4AQA": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "4m_mi5AsPcA": {
@@ -2393,6 +2604,12 @@
 "Neighbourhoods"
 ]
 },
+"4soflbnAQ84": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "4tQotLQmKHk": {
 "first_seen": "2026-11-04",
 "topics": []
@@ -2424,7 +2641,8 @@
 "4zcaigknFJg": {
 "first_seen": "2026-11-13",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"More sights"
 ]
 },
 "5-rtwli9BL0": {
@@ -2455,6 +2673,12 @@
 "Casinos & hotels"
 ]
 },
+"54cseHo8Tg8": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "54fpR8MMNqI": {
 "first_seen": "2026-11-15",
 "topics": []
@@ -2471,6 +2695,12 @@
 },
 "55zErvOF2nc": {
 "first_seen": "2026-11-16",
+"topics": [
+"More sights"
+]
+},
+"56TKtC6iu9A": {
+"first_seen": "2026-11-18",
 "topics": [
 "More sights"
 ]
@@ -2503,6 +2733,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"5BwUIFLb1l0": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "5DpZ35BycJw": {
@@ -2571,6 +2807,12 @@
 "Travel"
 ]
 },
+"5Kmh_u-lPB0": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "5LowBhA2NmY": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -2589,6 +2831,12 @@
 },
 "5M1EoDoGwLk": {
 "first_seen": "2026-11-16",
+"topics": [
+"Getting there"
+]
+},
+"5OCDz7BE1Sc": {
+"first_seen": "2026-11-18",
 "topics": [
 "Getting there"
 ]
@@ -2685,6 +2933,7 @@
 "5ePxxhPyXEs": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -2707,7 +2956,8 @@
 "5kDXie8kXB4": {
 "first_seen": "2026-11-03",
 "topics": [
-"Food"
+"Food",
+"More food"
 ]
 },
 "5lEsu7LIK14": {
@@ -2769,6 +3019,12 @@
 "topics": [
 "Resorts & shows",
 "Travel"
+]
+},
+"5tKStD5-8y0": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "5to99hRYIK8": {
@@ -2945,10 +3201,22 @@
 "first_seen": "2026-11-17",
 "topics": []
 },
+"6AZRS8jpOE4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "6C7TxKtgem8": {
 "first_seen": "2026-11-07",
 "topics": [
 "Festivals"
+]
+},
+"6DmmzHMjgkI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "6EgQBsc2YDU": {
@@ -2997,6 +3265,12 @@
 "Resorts & shows"
 ]
 },
+"6Mr2O2hgBQU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "6PK1yJZbHr8": {
 "first_seen": "2026-11-10",
 "topics": []
@@ -3040,6 +3314,10 @@
 "first_seen": "2026-11-14",
 "topics": []
 },
+"6VMmQyTG25k": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "6VoQUgtYrcA": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -3049,6 +3327,12 @@
 "6WWd6SI0vn8": {
 "first_seen": "2026-11-10",
 "topics": []
+},
+"6WhEwdDr070": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "6Wqp_qu89SM": {
 "first_seen": "2026-11-05",
@@ -3172,6 +3456,10 @@
 "More sights"
 ]
 },
+"6oS_VmqnF48": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "6ob-23IXrRw": {
 "first_seen": "2026-11-13",
 "topics": [
@@ -3228,6 +3516,12 @@
 "first_seen": "2026-11-17",
 "topics": [
 "More sights"
+]
+},
+"6xMHtKly8F0": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "6yw1P0ksWmE": {
@@ -3435,6 +3729,10 @@
 "Neighbourhoods"
 ]
 },
+"7MwuIJPKQ6A": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "7NQ5-r2sklM": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -3483,13 +3781,21 @@
 },
 "7TBJ7rja-pY": {
 "first_seen": "2026-11-15",
-"topics": []
+"topics": [
+"Travel"
+]
 },
 "7TDgZ5sHAlo": {
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals",
 "Food"
+]
+},
+"7T_BwxAdcWw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "7UCp2URLcVE": {
@@ -3509,7 +3815,14 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture",
+"More sights",
 "Travel"
+]
+},
+"7V_kFq3d6H8": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "7WQR29EYajg": {
@@ -3593,6 +3906,12 @@
 "first_seen": "2026-11-15",
 "topics": [
 "Festivals"
+]
+},
+"7vLK3h5-DUg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "7vk7KcCP624": {
@@ -3705,7 +4024,8 @@
 "8B5ZRFaLk6c": {
 "first_seen": "2026-11-08",
 "topics": [
-"Food"
+"Food",
+"More food"
 ]
 },
 "8BDmPpT7qmc": {
@@ -3877,6 +4197,12 @@
 "Resorts & shows"
 ]
 },
+"8WH0HcoUyqA": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "8WJNYjddRAI": {
 "first_seen": "2026-11-11",
 "topics": [
@@ -3908,6 +4234,12 @@
 "Travel"
 ]
 },
+"8d2wZWWPcNw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "8d5LDbwZV7o": {
 "first_seen": "2026-11-04",
 "topics": [
@@ -3935,9 +4267,16 @@
 "first_seen": "2026-11-08",
 "topics": []
 },
+"8l-TGtitLIc": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "8m4wfFu5kbQ": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "History & culture",
 "Neighbourhoods"
 ]
@@ -3946,6 +4285,12 @@
 "first_seen": "2026-11-17",
 "topics": [
 "More sights"
+]
+},
+"8q0bah4QbPA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "8qY2JB5RadE": {
@@ -3959,6 +4304,7 @@
 "topics": [
 "Festivals",
 "Food",
+"Getting there",
 "Living there",
 "Neighbourhoods",
 "Travel"
@@ -3968,6 +4314,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"8tDBAMZ-u-A": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "8u0weA61oP0": {
@@ -3980,6 +4332,12 @@
 "first_seen": "2026-11-04",
 "topics": [
 "Casinos & hotels"
+]
+},
+"8vk0mqQlUag": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "8vuX1956SO8": {
@@ -4223,6 +4581,10 @@
 "first_seen": "2026-11-12",
 "topics": []
 },
+"9WY1ZpEAOio": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "9_mdecZxItE": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -4419,6 +4781,12 @@
 "Travel"
 ]
 },
+"A2AsPXqLHaM": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "A2B-JI5ahvA": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -4487,11 +4855,21 @@
 "first_seen": "2026-11-11",
 "topics": []
 },
+"ACjiJvM2Res": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "ACtaJh6uEzc": {
 "first_seen": "2026-11-17",
 "topics": [
 "Resorts & shows"
 ]
+},
+"ADdnCpzFMiE": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "AEJlIACEDjY": {
 "first_seen": "2026-11-04",
@@ -4514,6 +4892,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"AINC0qT7VQM": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "AIZ7wCaEXMg": {
 "first_seen": "2026-11-04",
@@ -4563,6 +4945,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
+"More sights",
 "Travel"
 ]
 },
@@ -4609,10 +4992,6 @@
 "topics": [
 "Festivals"
 ]
-},
-"AYGIvBqdQ88": {
-"first_seen": "2026-11-17",
-"topics": []
 },
 "AYzHwOHostY": {
 "first_seen": "2026-11-16",
@@ -4661,6 +5040,7 @@
 "AcVwLeYIgYk": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Neighbourhoods",
 "Travel"
 ]
@@ -4749,6 +5129,10 @@
 "More sights"
 ]
 },
+"AvqPUSUqE14": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "AwmVLg7j5vI": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -4766,6 +5150,10 @@
 "topics": [
 "Living there"
 ]
+},
+"AyPsNgV5Lbg": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "AyiFp0-g3kg": {
 "first_seen": "2026-11-03",
@@ -4840,6 +5228,12 @@
 "Festivals"
 ]
 },
+"B5UjtWRuFqg": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "B6AttKHGpNg": {
 "first_seen": "2026-11-10",
 "topics": []
@@ -4853,6 +5247,12 @@
 "B7YgJgeQka4": {
 "first_seen": "2026-11-04",
 "topics": []
+},
+"B7b38UWd1LA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
 },
 "B88q2ALnllI": {
 "first_seen": "2026-11-05",
@@ -4911,6 +5311,12 @@
 "first_seen": "2026-11-10",
 "topics": []
 },
+"BFwtboG2Oc8": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "BGTkR4qO5ME": {
 "first_seen": "2026-11-12",
 "topics": [
@@ -4951,6 +5357,10 @@
 "first_seen": "2026-11-10",
 "topics": []
 },
+"BMJaqC_ZSkM": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "BMQJOJzkk3E": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -4983,6 +5393,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture",
+"More sights",
 "Neighbourhoods"
 ]
 },
@@ -5013,6 +5424,12 @@
 "topics": [
 "Resorts & shows",
 "Travel"
+]
+},
+"BSNbWcu8678": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "BTAo52FQxDk": {
@@ -5071,6 +5488,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"B_2aMVsg4YI": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "BaqrhJzUXN4": {
@@ -5147,10 +5570,15 @@
 "first_seen": "2026-11-14",
 "topics": []
 },
+"BlPnF0UeLLo": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "BldfUf2c0Uc": {
 "first_seen": "2026-11-05",
 "topics": [
 "Casinos & hotels",
+"More sights",
 "Travel"
 ]
 },
@@ -5345,6 +5773,7 @@
 "CIWyjhF7Oj8": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Grand Prix"
 ]
 },
@@ -5407,6 +5836,12 @@
 "Festivals"
 ]
 },
+"CNir5o0xnAE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Food"
+]
+},
 "CNzlvrMKIKI": {
 "first_seen": "2026-11-08",
 "topics": [
@@ -5445,6 +5880,12 @@
 "first_seen": "2026-11-06",
 "topics": [
 "Festivals"
+]
+},
+"CTjl1kGB18M": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "CTkS5zwFHbI": {
@@ -5523,6 +5964,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Getting there",
+"More sights",
 "Travel"
 ]
 },
@@ -5554,6 +5996,18 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"ChWL_aDIxnI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
+"Cj9b8G5F9uQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "CjazYKwXGbQ": {
@@ -5617,6 +6071,12 @@
 "More food"
 ]
 },
+"CmUUz-RIJW4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "CmsqA3JDvRE": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -5631,6 +6091,22 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Grand Prix"
+]
+},
+"CpbghHXHwBk": {
+"first_seen": "2026-11-18",
+"topics": []
+},
+"Cq2KTd86ZS8": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
+"Cq4SJssJG-o": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "CrfE8X8gFWY": {
@@ -5774,7 +6250,8 @@
 "D3Diy2OrNJI": {
 "first_seen": "2026-11-03",
 "topics": [
-"Living there"
+"Living there",
+"More sights"
 ]
 },
 "D3Sh4q7i5SA": {
@@ -5800,6 +6277,12 @@
 "first_seen": "2026-11-12",
 "topics": [
 "Neighbourhoods"
+]
+},
+"D7iwf0rSEBQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "D8LALCyGw7I": {
@@ -5864,6 +6347,10 @@
 "first_seen": "2026-11-04",
 "topics": []
 },
+"DMqQrtYWX-g": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "DNuG6e9MB8Q": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -5875,6 +6362,10 @@
 "topics": [
 "Travel"
 ]
+},
+"DQNT_lJ69kk": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "DRDkKwZlQA8": {
 "first_seen": "2026-11-05",
@@ -5943,6 +6434,12 @@
 "Festivals"
 ]
 },
+"DZTHlkxWi3s": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "D_114OZOL_c": {
 "first_seen": "2026-11-13",
 "topics": [
@@ -5968,6 +6465,12 @@
 "Food"
 ]
 },
+"DbnRkmqYIIE": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "DbtpIQ5oaBk": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -5982,6 +6485,12 @@
 },
 "DdOs2x7Rt74": {
 "first_seen": "2026-11-16",
+"topics": [
+"Resorts & shows"
+]
+},
+"DfTfgFWT6ok": {
+"first_seen": "2026-11-18",
 "topics": [
 "Resorts & shows"
 ]
@@ -6035,6 +6544,7 @@
 "first_seen": "2026-11-06",
 "topics": [
 "Casinos & hotels",
+"Getting there",
 "More food"
 ]
 },
@@ -6053,6 +6563,12 @@
 "Dmt0hbB4ZH0": {
 "first_seen": "2026-11-04",
 "topics": []
+},
+"DmxKxDvJFAQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "Dn9ZVOxKLKs": {
 "first_seen": "2026-11-17",
@@ -6159,6 +6675,10 @@
 "topics": [
 "More sights"
 ]
+},
+"DwaiSgMbGts": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "DwgcCwxg2Vk": {
 "first_seen": "2026-11-17",
@@ -6281,6 +6801,12 @@
 "Festivals"
 ]
 },
+"EJg8oKua8-I": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "EKiWpIZ9vjk": {
 "first_seen": "2026-11-04",
 "topics": [
@@ -6332,6 +6858,7 @@
 "EQk-a5ogBSg": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "History & culture"
 ]
 },
@@ -6353,6 +6880,10 @@
 "More food"
 ]
 },
+"EWI0aP53b4I": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "EWLEkBnmHiQ": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -6362,6 +6893,12 @@
 "EWleo6-SP3c": {
 "first_seen": "2026-11-14",
 "topics": []
+},
+"EWz8wQ5uwcE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "EX57zGHuaHM": {
 "first_seen": "2026-11-03",
@@ -6488,6 +7025,7 @@
 "topics": [
 "Casinos & hotels",
 "Food",
+"Getting there",
 "More sights",
 "Neighbourhoods",
 "Travel"
@@ -6513,6 +7051,12 @@
 "first_seen": "2026-11-11",
 "topics": []
 },
+"EudeFSrVTqw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "EwWMBK6AoOM": {
 "first_seen": "2026-11-06",
 "topics": []
@@ -6525,6 +7069,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals",
+"More sights",
 "Travel"
 ]
 },
@@ -6537,6 +7082,12 @@
 "Exwen5OzATM": {
 "first_seen": "2026-11-16",
 "topics": []
+},
+"Eya3FjKId9U": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "Eytpv5o2xFs": {
 "first_seen": "2026-11-03",
@@ -6557,6 +7108,10 @@
 "topics": [
 "History & culture"
 ]
+},
+"F-eNigqH_P0": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "F-tGhhU9DDw": {
 "first_seen": "2026-11-17",
@@ -6586,6 +7141,12 @@
 "first_seen": "2026-11-17",
 "topics": [
 "More sights"
+]
+},
+"F1j4D56-HgE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "F2rMYW1tlWQ": {
@@ -6663,6 +7224,12 @@
 "Casinos & hotels"
 ]
 },
+"FDnibW4-ivQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "FEUygGOCafQ": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -6713,6 +7280,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Grand Prix"
+]
+},
+"FKCffz79ecs": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "FKEXakIYXQM": {
@@ -6796,6 +7369,7 @@
 "FSupzenfgks": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -6836,6 +7410,12 @@
 "Neighbourhoods"
 ]
 },
+"FW-DbB3DQJs": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "FW-auMH3TC8": {
 "first_seen": "2026-11-04",
 "topics": [
@@ -6851,6 +7431,12 @@
 "FWpf5whwFjo": {
 "first_seen": "2026-11-15",
 "topics": []
+},
+"FYOFE_whCkg": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "FYPf6WSqK54": {
 "first_seen": "2026-11-17",
@@ -6869,6 +7455,10 @@
 "topics": [
 "Food"
 ]
+},
+"FbsOSlJlAhU": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "FbzvBMDVZgw": {
 "first_seen": "2026-11-05",
@@ -7063,6 +7653,12 @@
 "Casinos & hotels"
 ]
 },
+"G6iBENntbOY": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "G71Sdd-Z-Jc": {
 "first_seen": "2026-11-12",
 "topics": [
@@ -7146,6 +7742,10 @@
 "History & culture"
 ]
 },
+"GH4N1-Iaato": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "GKsvmGIKfqo": {
 "first_seen": "2026-11-06",
 "topics": [
@@ -7193,6 +7793,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -7226,6 +7827,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -7233,6 +7835,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Neighbourhoods"
+]
+},
+"GUCcQnTCAwg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "GYJENzV26L4": {
@@ -7256,6 +7864,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"GcAi1vDOj3s": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "GdJuL-QWR-4": {
 "first_seen": "2026-11-04",
@@ -7418,6 +8030,12 @@
 "More sights"
 ]
 },
+"H1s2EraMnxw": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "H2FsDVH0Pjk": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -7495,12 +8113,15 @@
 "H98j2-1UmgM": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
 "H9_PEoSqpdI": {
 "first_seen": "2026-11-11",
-"topics": []
+"topics": [
+"Resorts & shows"
+]
 },
 "HAN6M1bdWzM": {
 "first_seen": "2026-11-03",
@@ -7569,6 +8190,10 @@
 "Food"
 ]
 },
+"HJ8wRDbgoAE": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "HJmhbd4af9w": {
 "first_seen": "2026-11-10",
 "topics": []
@@ -7618,6 +8243,12 @@
 "first_seen": "2026-11-06",
 "topics": []
 },
+"HOXgKYwwKRg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "HQf0mwfvPEg": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -7655,9 +8286,21 @@
 "History & culture"
 ]
 },
+"HTYV7yPIuG4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "HTyOUOK0Yfo": {
 "first_seen": "2026-11-16",
 "topics": []
+},
+"HU267um82Hc": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "HViN7_P60tQ": {
 "first_seen": "2026-11-05",
@@ -7720,6 +8363,7 @@
 "H_i6zYdRtlk": {
 "first_seen": "2026-11-16",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -7727,6 +8371,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture",
+"More sights",
 "Neighbourhoods",
 "Travel"
 ]
@@ -7772,6 +8417,18 @@
 "first_seen": "2026-11-13",
 "topics": []
 },
+"HfB0kEEtyO8": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
+"HfkDPBzmOls": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "HgFIS8OD6GQ": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -7796,6 +8453,12 @@
 "Grand Prix"
 ]
 },
+"HiB09PUO-IA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "HiTedjxGPd4": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -7809,6 +8472,7 @@
 "HluoInKOeQY": {
 "first_seen": "2026-11-16",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -8030,6 +8694,12 @@
 "Grand Prix"
 ]
 },
+"IC19JDTVQZo": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "IDFzobFgpxk": {
 "first_seen": "2026-11-11",
 "topics": [
@@ -8045,8 +8715,13 @@
 "IK2fM32UrDM": {
 "first_seen": "2026-11-17",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
+},
+"IL2ZQHNRMsU": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "IL9ubXYj_7Q": {
 "first_seen": "2026-11-03",
@@ -8090,6 +8765,12 @@
 "Living there"
 ]
 },
+"IOrhetZlAic": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "IPC9JuCj-04": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -8099,7 +8780,9 @@
 "IQhzYD94u30": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Neighbourhoods",
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -8228,6 +8911,12 @@
 "Getting there"
 ]
 },
+"In82xKXvFQ0": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "IooDePLIQuQ": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -8291,6 +8980,12 @@
 "Festivals"
 ]
 },
+"IuaircWf684": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "IvGU8ytOzh4": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -8319,6 +9014,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels"
+]
+},
+"IxqaXcDUGHY": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "IyTFtv_hAcs": {
@@ -8365,6 +9066,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels"
+]
+},
+"J2d73h2g3K4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "J2qWNPR3P9g": {
@@ -8424,6 +9131,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture",
+"More sights",
 "Neighbourhoods",
 "Travel"
 ]
@@ -8454,10 +9162,17 @@
 "History & culture"
 ]
 },
+"JFDU-PMZ6oU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "JG7xJYtOr0A": {
 "first_seen": "2026-11-05",
 "topics": [
 "Casinos & hotels",
+"More sights",
 "Travel"
 ]
 },
@@ -8485,6 +9200,12 @@
 },
 "JHvyGT6rxWI": {
 "first_seen": "2026-11-16",
+"topics": [
+"Resorts & shows"
+]
+},
+"JIVi_ppf-Kk": {
+"first_seen": "2026-11-18",
 "topics": [
 "Resorts & shows"
 ]
@@ -8537,10 +9258,17 @@
 "Resorts & shows"
 ]
 },
+"JOmZY2ciV0g": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "JPFr2I9amBU": {
 "first_seen": "2026-11-03",
 "topics": [
-"Food"
+"Food",
+"More food"
 ]
 },
 "JQ1Pfn7qO8o": {
@@ -8571,6 +9299,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"JTlmVNAXqjE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "JU9stJgRU3Q": {
@@ -8719,11 +9453,21 @@
 "More sights"
 ]
 },
+"Jd7kUYENjuA": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "JdLKyPeS3OI": {
 "first_seen": "2026-11-16",
 "topics": [
 "Living there"
 ]
+},
+"JdMKYq32C9c": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "JfnLLZ-7x_Q": {
 "first_seen": "2026-11-16",
@@ -8768,9 +9512,21 @@
 "More food"
 ]
 },
+"JjAH2VY7gfM": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "JjPtXPdPRoI": {
 "first_seen": "2026-11-16",
 "topics": []
+},
+"Jjx0SBcezHk": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "JkgGE0UNT18": {
 "first_seen": "2026-11-04",
@@ -8792,6 +9548,12 @@
 "first_seen": "2026-11-16",
 "topics": []
 },
+"JoHC_mC4DZ8": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "JorJBvA5vsE": {
 "first_seen": "2026-11-14",
 "topics": []
@@ -8805,6 +9567,12 @@
 "Jpg8pgZM-to": {
 "first_seen": "2026-11-14",
 "topics": []
+},
+"JrdEeHU8NfE": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "JrnhEKvPxGo": {
 "first_seen": "2026-11-08",
@@ -8835,6 +9603,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"Jtd58ba-AGU": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "JveQNpjklwA": {
 "first_seen": "2026-11-05",
@@ -8889,6 +9661,12 @@
 "Resorts & shows"
 ]
 },
+"K0ZYepJ4DWw": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "K0eVFG_A0Jg": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -8901,6 +9679,12 @@
 "topics": [
 "Food",
 "More food"
+]
+},
+"K2ynrd93M30": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "K3OfOmKns4E": {
@@ -8917,6 +9701,10 @@
 },
 "K71GDXyV48E": {
 "first_seen": "2026-11-13",
+"topics": []
+},
+"K7f74i0-YOI": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "K7iVFENP-As": {
@@ -9045,7 +9833,8 @@
 "KPFIO3JtGA4": {
 "first_seen": "2026-11-03",
 "topics": [
-"Festivals"
+"Festivals",
+"Resorts & shows"
 ]
 },
 "KPLu1-q71Hc": {
@@ -9140,6 +9929,12 @@
 "first_seen": "2026-11-11",
 "topics": []
 },
+"KZM90ysjaBk": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "KZdc2I-wR6s": {
 "first_seen": "2026-11-04",
 "topics": []
@@ -9156,6 +9951,10 @@
 },
 "KbfLYFLRY7s": {
 "first_seen": "2026-11-12",
+"topics": []
+},
+"KcRE8eHEevk": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "KeQQBdGKxEs": {
@@ -9203,6 +10002,12 @@
 "Neighbourhoods"
 ]
 },
+"Kk0w_rVJ8tA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "KkYzzOPkFd4": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -9244,6 +10049,12 @@
 "Grand Prix"
 ]
 },
+"KqLncpuQRUU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "KqUPFNXg16A": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -9266,6 +10077,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture"
+]
+},
+"KtH8YHVkw0Y": {
+"first_seen": "2026-11-18",
+"topics": [
+"Festivals"
 ]
 },
 "KvLB-mbORd4": {
@@ -9295,7 +10112,8 @@
 "KyiKi5Knt3o": {
 "first_seen": "2026-11-04",
 "topics": [
-"Food"
+"Food",
+"More food"
 ]
 },
 "KzxF4Fqrl_E": {
@@ -9325,6 +10143,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
+"Food",
 "Getting there",
 "History & culture",
 "More food",
@@ -9356,6 +10175,12 @@
 "topics": [
 "Festivals",
 "Food"
+]
+},
+"L2y8GdauA28": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "L4EIiMQnUIo": {
@@ -9420,6 +10245,12 @@
 "Festivals"
 ]
 },
+"LBxMFfw01dQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "LD8Y7q1B9-o": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -9439,6 +10270,10 @@
 "Neighbourhoods",
 "Travel"
 ]
+},
+"LEJOeo6sPdM": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "LFI2BoRi3vM": {
 "first_seen": "2026-11-16",
@@ -9500,6 +10335,12 @@
 "LLwmxiRQY-g": {
 "first_seen": "2026-11-15",
 "topics": []
+},
+"LNgupHgCNDA": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "LQ0RoinrRl0": {
 "first_seen": "2026-11-03",
@@ -9607,6 +10448,16 @@
 "Resorts & shows"
 ]
 },
+"LhfM69wuHaU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
+"Lhr-O1Wa3gw": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "Li8EnmmYdv0": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -9668,6 +10519,7 @@
 "Ltbdnozzdt4": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Living there"
 ]
 },
@@ -9809,6 +10661,10 @@
 "Food"
 ]
 },
+"M2xjDYOfZHA": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "M3j4QIAwjdA": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -9843,6 +10699,12 @@
 "History & culture"
 ]
 },
+"M7J3V2P68EI": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "M8-3UoVkCGA": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -9859,6 +10721,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Food"
+]
+},
+"MBVbNcrZAOE": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "MCgR_aoTv6c": {
@@ -9913,6 +10781,12 @@
 "first_seen": "2026-11-17",
 "topics": [
 "More food"
+]
+},
+"MHHNWKSMycU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "MHbSJjSI_hw": {
@@ -9998,6 +10872,18 @@
 "Getting there"
 ]
 },
+"MQ9tFJoMkWw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
+"MRlNGN1igOQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "MRz-f0tvQZQ": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -10038,6 +10924,18 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"MUKw1Z2lC6E": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
+"MVmSbEqGRLw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "MWSWRdQ3Hr8": {
@@ -10124,6 +11022,12 @@
 "first_seen": "2026-11-16",
 "topics": [
 "Living there"
+]
+},
+"MisFaHsb9dM": {
+"first_seen": "2026-11-18",
+"topics": [
+"Casinos & hotels"
 ]
 },
 "MjcuhQY7ppc": {
@@ -10257,7 +11161,8 @@
 "N08wWH0rE0M": {
 "first_seen": "2026-11-03",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"More sights"
 ]
 },
 "N2ASKXU4VoA": {
@@ -10375,6 +11280,7 @@
 "NEK1fKQksZQ": {
 "first_seen": "2026-11-03",
 "topics": [
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -10438,6 +11344,12 @@
 "More sights"
 ]
 },
+"NL-YtQlQe_w": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "NL8-OFUYILk": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -10478,6 +11390,12 @@
 "History & culture"
 ]
 },
+"NYyGsZshCVo": {
+"first_seen": "2026-11-18",
+"topics": [
+"Casinos & hotels"
+]
+},
 "NZD8gKiE-eM": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -10495,6 +11413,7 @@
 "NaU0OXRfQBE": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Neighbourhoods",
 "Travel"
 ]
@@ -10559,9 +11478,16 @@
 "Festivals"
 ]
 },
+"NhZOpkR-BPs": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "Ni0HLll_G5o": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Travel"
 ]
 },
@@ -10591,6 +11517,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Food"
+]
+},
+"Nohv6f9RizM": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "Nosqy8sNs6Q": {
@@ -10678,6 +11610,12 @@
 "first_seen": "2026-11-06",
 "topics": []
 },
+"NzUi1dYS3Mo": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "O0DPoSDjKHg": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -10739,6 +11677,12 @@
 "Food"
 ]
 },
+"O9hWG-Viy9U": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "O9zVg4pzPnA": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -10769,6 +11713,10 @@
 "topics": [
 "Travel"
 ]
+},
+"OGLvOdDt6Kc": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "OGkiTqSl5y0": {
 "first_seen": "2026-11-03",
@@ -10801,6 +11749,10 @@
 "topics": [
 "Travel"
 ]
+},
+"OLO-dAyDW-M": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "OLl2AL2Dv7A": {
 "first_seen": "2026-11-13",
@@ -10842,12 +11794,25 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture",
+"More sights",
 "Travel"
 ]
 },
 "OR3--cal36A": {
 "first_seen": "2026-11-04",
 "topics": []
+},
+"OR7FdxwuKIA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
+"OSLWYaG-Z4I": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "OTWMn3ZEk2I": {
 "first_seen": "2026-11-17",
@@ -10941,6 +11906,12 @@
 "Neighbourhoods"
 ]
 },
+"Octkw_wpud0": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "OcyaqDnWun0": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -10950,7 +11921,8 @@
 "OdbaeXpFsYQ": {
 "first_seen": "2026-11-03",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"Resorts & shows"
 ]
 },
 "Oe197_5Eh0I": {
@@ -11097,6 +12069,12 @@
 "Casinos & hotels"
 ]
 },
+"OwxePjqX93g": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "OxAyDtrlfg8": {
 "first_seen": "2026-11-07",
 "topics": [
@@ -11142,6 +12120,12 @@
 "Festivals"
 ]
 },
+"P2eXEetKTO8": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "P2nSTai_29o": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -11159,6 +12143,10 @@
 "topics": [
 "Travel"
 ]
+},
+"P4bCSEN0wv4": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "P7WNVqf0vac": {
 "first_seen": "2026-11-05",
@@ -11216,10 +12204,22 @@
 "first_seen": "2026-11-08",
 "topics": []
 },
+"PAkTkMT0bO0": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "PAmu5REEIR4": {
 "first_seen": "2026-11-03",
 "topics": [
 "Neighbourhoods"
+]
+},
+"PBiiM9Zu5Zo": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "PCVs4ssPbRI": {
@@ -11242,6 +12242,10 @@
 },
 "PE12q0bzBlw": {
 "first_seen": "2026-11-04",
+"topics": []
+},
+"PHjTSpbiRis": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "PICQzL22z_g": {
@@ -11316,6 +12320,18 @@
 "History & culture"
 ]
 },
+"PTdi_cwKTwk": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
+"PThvCECO7HE": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "PToeYQo7DAU": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -11388,7 +12404,14 @@
 "first_seen": "2026-11-04",
 "topics": [
 "Getting there",
+"More sights",
 "Travel"
+]
+},
+"PefDbmlB8sk": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "PefOoHMqgrw": {
@@ -11423,6 +12446,10 @@
 "More food"
 ]
 },
+"Pio7XK61TIY": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "PjQLVSi8WW4": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -11432,7 +12459,8 @@
 "PkIj1FD2AaA": {
 "first_seen": "2026-11-03",
 "topics": [
-"Food"
+"Food",
+"More food"
 ]
 },
 "PkRuq0V1_p4": {
@@ -11453,6 +12481,10 @@
 "Grand Prix"
 ]
 },
+"PnZn14DWfN0": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "Pn_Vg2JwUFA": {
 "first_seen": "2026-11-08",
 "topics": [
@@ -11465,6 +12497,7 @@
 "Casinos & hotels",
 "Getting there",
 "History & culture",
+"More sights",
 "Neighbourhoods",
 "Travel"
 ]
@@ -11565,6 +12598,12 @@
 "Neighbourhoods"
 ]
 },
+"PzVOvDH8nSE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "PzdDVAJCh4w": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -11647,6 +12686,12 @@
 "Festivals"
 ]
 },
+"Q7Lrwux779k": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "Q8Le2ltZvlo": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -11657,6 +12702,12 @@
 "first_seen": "2026-11-06",
 "topics": [
 "Festivals"
+]
+},
+"QAC3-U0lt08": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "QAgvunHB59Y": {
@@ -11717,6 +12768,12 @@
 "Festivals"
 ]
 },
+"QLlEYVKgbKY": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "QM1HMuKj4Kw": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -11751,12 +12808,24 @@
 "Festivals"
 ]
 },
+"QSsX5fk3oxI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "QUbBNNHkRAo": {
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
 "More sights",
 "Travel"
+]
+},
+"QYKXIE7cwoo": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "QYYR-y4rCeQ": {
@@ -11794,6 +12863,10 @@
 "topics": [
 "Casinos & hotels"
 ]
+},
+"QcuRFFvxPV4": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "QdBplpVFmbM": {
 "first_seen": "2026-11-03",
@@ -11915,6 +12988,12 @@
 "More sights"
 ]
 },
+"QsYpkalQtIA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "Qsd9dvx0cKo": {
 "first_seen": "2026-11-06",
 "topics": [
@@ -11932,6 +13011,12 @@
 "topics": [
 "Food",
 "More food"
+]
+},
+"Qu24E0FVFCI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "Qw8KlZP8HPU": {
@@ -11964,6 +13049,12 @@
 "Neighbourhoods"
 ]
 },
+"QybrhP1rLCs": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "Qyr76Z6t8q0": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -11992,10 +13083,22 @@
 "Living there"
 ]
 },
+"R4UtOkjEc2I": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "R5MN2iN9NuM": {
 "first_seen": "2026-11-08",
 "topics": [
 "Festivals"
+]
+},
+"R5hDk8kYdmQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "R65lGaMF9bQ": {
@@ -12093,6 +13196,10 @@
 "Food"
 ]
 },
+"RLb87c-LabU": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "RM42dUNt84A": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -12173,6 +13280,10 @@
 "Festivals"
 ]
 },
+"RWo7SAyByiY": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "RXJPu0-s0no": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -12214,6 +13325,7 @@
 "topics": [
 "Casinos & hotels",
 "Food",
+"More sights",
 "Resorts & shows",
 "Travel"
 ]
@@ -12324,6 +13436,12 @@
 "Grand Prix"
 ]
 },
+"RjwFO2HOtec": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "Rk1QLs4xPOI": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -12349,6 +13467,7 @@
 "RmDWK4bNqVs": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Neighbourhoods",
 "Travel"
 ]
@@ -12450,6 +13569,12 @@
 "first_seen": "2026-11-04",
 "topics": []
 },
+"S44vIeZt5xY": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "S5Q9Miu4TY0": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -12489,6 +13614,12 @@
 "Resorts & shows"
 ]
 },
+"S99__L0YQM8": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "S9J5lncNl8Q": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -12500,10 +13631,6 @@
 "topics": [
 "More food"
 ]
-},
-"S9pO96A5i0Y": {
-"first_seen": "2026-11-16",
-"topics": []
 },
 "SB4oEx9MYuM": {
 "first_seen": "2026-11-16",
@@ -12558,6 +13685,18 @@
 "More sights"
 ]
 },
+"SKoDZaQ1XJg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
+"SLAz6R3vYOY": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "SLIjsDH5ed4": {
 "first_seen": "2026-11-08",
 "topics": [
@@ -12585,6 +13724,7 @@
 "topics": [
 "Casinos & hotels",
 "Food",
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -12661,6 +13801,12 @@
 "Festivals"
 ]
 },
+"SVpBbvCnl0Q": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "SXHJDQZtBJ8": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -12677,10 +13823,22 @@
 "Travel"
 ]
 },
+"SXnq8PWNXOw": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "SYApegZKvFs": {
 "first_seen": "2026-11-03",
 "topics": [
 "Food"
+]
+},
+"SZ9tYKyAUWw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "SZw1N-wJqag": {
@@ -12769,6 +13927,7 @@
 "Food",
 "Getting there",
 "More sights",
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -12787,6 +13946,7 @@
 "SnUu5RBgDrM": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -12842,6 +14002,10 @@
 "Neighbourhoods"
 ]
 },
+"Sw-vJbQ2rT4": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "SwOX2OevkLY": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -12884,10 +14048,22 @@
 "Festivals"
 ]
 },
+"SyW7lde1qG4": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "SyZkoH4XPqk": {
 "first_seen": "2026-11-03",
 "topics": [
 "Living there"
+]
+},
+"SyvoVzIK11E": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "Sz1CXLO_Qsw": {
@@ -12896,10 +14072,17 @@
 "Food"
 ]
 },
+"Sz8bAaNeLLI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "T-O94Lye-xA": {
 "first_seen": "2026-11-03",
 "topics": [
-"Food"
+"Food",
+"Resorts & shows"
 ]
 },
 "T-qijV3G-h4": {
@@ -12919,6 +14102,12 @@
 "Festivals"
 ]
 },
+"T1R2gAxlj1M": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "T4LZeG8Od2w": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -12935,6 +14124,12 @@
 "first_seen": "2026-11-16",
 "topics": [
 "Grand Prix"
+]
+},
+"T50FIf9kLVs": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "T533cnh1cVE": {
@@ -13086,6 +14281,10 @@
 "More food"
 ]
 },
+"TQi4nwHXfGk": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "TR5tyjZEzOI": {
 "first_seen": "2026-11-07",
 "topics": [
@@ -13120,9 +14319,25 @@
 "first_seen": "2026-11-04",
 "topics": []
 },
+"TXV_TJUzLr0": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "TXdgjRZpW00": {
 "first_seen": "2026-11-17",
 "topics": []
+},
+"TY_1Fq9dhdo": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
+"TZXZGu5MhcQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"Grand Prix"
+]
 },
 "TZemE6bvlGE": {
 "first_seen": "2026-11-05",
@@ -13140,6 +14355,12 @@
 "first_seen": "2026-11-07",
 "topics": [
 "Neighbourhoods"
+]
+},
+"TapCR2TPkUA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "TasHT85EAKs": {
@@ -13162,6 +14383,12 @@
 },
 "Td0_z3bk5Bg": {
 "first_seen": "2026-11-16",
+"topics": [
+"More sights"
+]
+},
+"Td8_4s-ays0": {
+"first_seen": "2026-11-18",
 "topics": [
 "More sights"
 ]
@@ -13194,6 +14421,18 @@
 "Festivals"
 ]
 },
+"TgySH5Lm3OI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
+"Th0RMSYmWC0": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "Ti-Ta0MErUU": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -13207,6 +14446,12 @@
 "TjGLSkk6mn0": {
 "first_seen": "2026-11-11",
 "topics": []
+},
+"TjJ_Gy1cUZg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Casinos & hotels"
+]
 },
 "TjLQhhF3FT8": {
 "first_seen": "2026-11-16",
@@ -13223,6 +14468,7 @@
 "TjZnPjvHbko": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Neighbourhoods",
 "Travel"
 ]
@@ -13384,6 +14630,12 @@
 "first_seen": "2026-11-04",
 "topics": []
 },
+"U85nKK1y16w": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "U8MvxkFLQA0": {
 "first_seen": "2026-11-08",
 "topics": [
@@ -13519,6 +14771,10 @@
 "Festivals"
 ]
 },
+"UPT_AWn4QH0": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "UPsdPfWDiPA": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -13580,11 +14836,13 @@
 "topics": [
 "Casinos & hotels",
 "Food",
+"Getting there",
 "History & culture",
 "Living there",
 "More food",
 "More sights",
 "Neighbourhoods",
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -13599,8 +14857,10 @@
 "topics": [
 "Casinos & hotels",
 "Food",
+"Getting there",
 "Living there",
 "More sights",
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -13618,6 +14878,12 @@
 },
 "UbzveOXWAPw": {
 "first_seen": "2026-11-17",
+"topics": [
+"More sights"
+]
+},
+"UcNHs-VwMS8": {
+"first_seen": "2026-11-18",
 "topics": [
 "More sights"
 ]
@@ -13658,6 +14924,13 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"Un-TmDlFmJU": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights",
+"Resorts & shows"
 ]
 },
 "UnIF77KCJ5g": {
@@ -13709,6 +14982,12 @@
 "Resorts & shows"
 ]
 },
+"UtLg9Sd1-0c": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "UtVp7qaKZ-E": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -13718,7 +14997,9 @@
 "UufYfAgaQFs": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Neighbourhoods",
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -13740,9 +15021,21 @@
 "Festivals"
 ]
 },
+"Uz7C6PNE0PU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "UzMKE-yMMp4": {
 "first_seen": "2026-11-04",
 "topics": []
+},
+"UzOtvTMAZV8": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
 },
 "UzU3M-run0o": {
 "first_seen": "2026-11-05",
@@ -13867,6 +15160,12 @@
 "More sights"
 ]
 },
+"VDyLpZM2kgQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "VEw9J7sHRmE": {
 "first_seen": "2026-11-07",
 "topics": []
@@ -13924,6 +15223,12 @@
 "first_seen": "2026-11-17",
 "topics": [
 "Grand Prix"
+]
+},
+"VQoMwKHIagY": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "VSET45X0wV8": {
@@ -13984,6 +15289,12 @@
 "Festivals"
 ]
 },
+"Vc2yv_waaRA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "VcHpih87Aec": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -13996,6 +15307,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Neighbourhoods"
+]
+},
+"Vdn2tdxnniw": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "Ve6ibhFkhpE": {
@@ -14034,9 +15351,23 @@
 "History & culture"
 ]
 },
+"Vgh5HmoDcdc": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
+"Vh3EZ5kKwNQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food",
+"Resorts & shows"
+]
+},
 "VhlfhGdjaeY": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -14051,6 +15382,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Neighbourhoods"
+]
+},
+"Vkkpxm7YhJc": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "VlhVNZ07Z44": {
@@ -14088,6 +15425,12 @@
 "Festivals"
 ]
 },
+"Vpzxa-OQtLo": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "VqR4MSTRnlU": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -14112,11 +15455,19 @@
 "first_seen": "2026-11-17",
 "topics": []
 },
+"VvVCcKn67OE": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "Vw8Zr_4G_oQ": {
 "first_seen": "2026-11-08",
 "topics": [
 "Grand Prix"
 ]
+},
+"VxYS345uOu8": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "VzJvskz0_gI": {
 "first_seen": "2026-11-16",
@@ -14137,6 +15488,12 @@
 "topics": [
 "Casinos & hotels",
 "Resorts & shows"
+]
+},
+"W1RfAGHEeO0": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "W1gK00UVz0M": {
@@ -14215,6 +15572,12 @@
 "History & culture"
 ]
 },
+"WDsLZW_V-pI": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "WE1Yl2ujWZU": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -14253,6 +15616,7 @@
 "WJ6Ff5cW7rg": {
 "first_seen": "2026-11-17",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -14269,10 +15633,6 @@
 "Food",
 "More food"
 ]
-},
-"WK91adXI_tg": {
-"first_seen": "2026-11-14",
-"topics": []
 },
 "WKF4gTwKbnM": {
 "first_seen": "2026-11-16",
@@ -14319,6 +15679,18 @@
 "More food"
 ]
 },
+"WTCQQgk3vrY": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
+"WTJ-_vfh7d4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "WTzwjDjKFOg": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -14347,6 +15719,12 @@
 "first_seen": "2026-11-08",
 "topics": [
 "Festivals"
+]
+},
+"WY5switPOeo": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "WYw08JVc1jI": {
@@ -14416,6 +15794,12 @@
 "Festivals"
 ]
 },
+"WnQSvjdlWB4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "Wo0zyIv635s": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -14481,6 +15865,12 @@
 "Travel"
 ]
 },
+"Wxy23T4kAOs": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "X0W2T8MsBpQ": {
 "first_seen": "2026-11-06",
 "topics": [
@@ -14510,6 +15900,10 @@
 "topics": [
 "Travel"
 ]
+},
+"X81Ky-VoxIA": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "X8o_jW3Uzao": {
 "first_seen": "2026-11-16",
@@ -14581,16 +15975,29 @@
 "More sights"
 ]
 },
+"XIqaPgFTSeI": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "XIy0JaH9qZ8": {
 "first_seen": "2026-11-03",
 "topics": [
 "Neighbourhoods"
 ]
 },
+"XJZV-yad1EM": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "XKGmWqjfmIU": {
 "first_seen": "2026-11-03",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"More sights"
 ]
 },
 "XKZy8azNOqw": {
@@ -14608,10 +16015,6 @@
 "topics": [
 "Grand Prix"
 ]
-},
-"XMJYSUiI-po": {
-"first_seen": "2026-11-16",
-"topics": []
 },
 "XN4kb45_c-g": {
 "first_seen": "2026-11-17",
@@ -14636,9 +16039,11 @@
 "Food"
 ]
 },
-"XO6PnIsik_s": {
-"first_seen": "2026-11-17",
-"topics": []
+"XO9R04xrGJ4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
 },
 "XQSimTQb8fI": {
 "first_seen": "2026-11-05",
@@ -14747,10 +16152,22 @@
 "History & culture"
 ]
 },
+"Xfiapnt2XGU": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "XhTJkGUHHec": {
 "first_seen": "2026-11-16",
 "topics": [
 "More sights"
+]
+},
+"XhoHzMc-5gw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "XihdVLpb1s8": {
@@ -14766,6 +16183,12 @@
 "Xj2iaepQVEo": {
 "first_seen": "2026-11-15",
 "topics": []
+},
+"XjK5g_2XaiY": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "XjP2FN52XXs": {
 "first_seen": "2026-11-06",
@@ -14783,8 +16206,20 @@
 "first_seen": "2026-11-04",
 "topics": []
 },
+"XnvyQQe9nwk": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "XoKcLbeQeF8": {
 "first_seen": "2026-11-16",
+"topics": [
+"Getting there"
+]
+},
+"XpxJptuS0tk": {
+"first_seen": "2026-11-18",
 "topics": [
 "Getting there"
 ]
@@ -14815,6 +16250,12 @@
 "first_seen": "2026-11-06",
 "topics": [
 "Food"
+]
+},
+"Xvkcj4TRnRY": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "Xx5v5eNTkcw": {
@@ -14848,10 +16289,6 @@
 "Casinos & hotels"
 ]
 },
-"Y01dXPvlVh4": {
-"first_seen": "2026-11-14",
-"topics": []
-},
 "Y19tydkbwV0": {
 "first_seen": "2026-11-08",
 "topics": [
@@ -14871,6 +16308,10 @@
 },
 "Y2TGJzE01hM": {
 "first_seen": "2026-11-12",
+"topics": []
+},
+"Y2yiGit0A14": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "Y3Ji7gaMNCk": {
@@ -14962,7 +16403,14 @@
 "YB97Uufh2QE": {
 "first_seen": "2026-11-05",
 "topics": [
-"Food"
+"Food",
+"More food"
+]
+},
+"YBGE_yW7WUQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "YBbiqxwX4uw": {
@@ -15118,6 +16566,10 @@
 "Resorts & shows"
 ]
 },
+"YVQC6Om4mZ4": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "YVpx9jk9Ujc": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -15147,6 +16599,7 @@
 "YatbWUB2sSc": {
 "first_seen": "2026-11-17",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -15159,6 +16612,7 @@
 "YcEzNJG-kGA": {
 "first_seen": "2026-11-17",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -15208,6 +16662,7 @@
 "YkX5A5j1tFo": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -15227,6 +16682,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Festivals"
+]
+},
+"YoSkbEhl1ak": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "Ype4nSn55i4": {
@@ -15257,10 +16718,6 @@
 "More sights"
 ]
 },
-"Ys8yHgoyyUU": {
-"first_seen": "2026-11-14",
-"topics": []
-},
 "YsxgSQwdMJQ": {
 "first_seen": "2026-11-06",
 "topics": [
@@ -15275,6 +16732,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Grand Prix"
+]
+},
+"Yw833ey70u8": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "Yx-zYeJqOy4": {
@@ -15391,6 +16854,12 @@
 "Neighbourhoods"
 ]
 },
+"Z7SXDXkn-DM": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "Z9McOfMf_x0": {
 "first_seen": "2026-11-10",
 "topics": [
@@ -15413,6 +16882,12 @@
 "Travel"
 ]
 },
+"ZB3eYGpqs9c": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "ZBDdYnCHz-o": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -15433,6 +16908,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Food"
+]
+},
+"ZDMDZcErmEI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "ZDwN3UADJ2s": {
@@ -15460,6 +16941,10 @@
 "Festivals"
 ]
 },
+"ZG_16uDuPEE": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "ZH8q9LAL20k": {
 "first_seen": "2026-11-05",
 "topics": []
@@ -15467,7 +16952,8 @@
 "ZHQX3fnSVVg": {
 "first_seen": "2026-11-03",
 "topics": [
-"Living there"
+"Living there",
+"Resorts & shows"
 ]
 },
 "ZHe_FwTgWyM": {
@@ -15526,6 +17012,12 @@
 "Food"
 ]
 },
+"ZNdzZUR-QCU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "ZO24ZQxlnP8": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -15541,6 +17033,7 @@
 "ZQW6WNvvjBo": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -15548,6 +17041,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Food"
+]
+},
+"ZTHkYZLEtok": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "ZTm9Sj2lemQ": {
@@ -15573,6 +17072,12 @@
 "Resorts & shows"
 ]
 },
+"ZZ55lYUNA3M": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "ZZHOATT1DiM": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -15582,6 +17087,12 @@
 "Z_4gwepb_dE": {
 "first_seen": "2026-11-04",
 "topics": []
+},
+"Z_v2XdZtBCk": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "ZclEg08VTKA": {
 "first_seen": "2026-11-17",
@@ -15667,7 +17178,14 @@
 "ZpJCW4rpjJc": {
 "first_seen": "2026-11-03",
 "topics": [
+"Resorts & shows",
 "Travel"
+]
+},
+"ZpYmeKw1l8U": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "ZrCNPF_0aD4": {
@@ -15679,6 +17197,7 @@
 "ZsOOls_kTeM": {
 "first_seen": "2026-11-06",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -15693,6 +17212,12 @@
 "topics": [
 "Festivals",
 "Food"
+]
+},
+"ZuJdvr6yfkA": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "ZvWyb3pnhWc": {
@@ -15949,6 +17474,10 @@
 "Neighbourhoods"
 ]
 },
+"_M5d45oM5Do": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "_Mlt3I9dxTo": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -16172,6 +17701,12 @@
 "History & culture"
 ]
 },
+"_oAbgtqcij4": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "_pGrwCE_Up0": {
 "first_seen": "2026-11-13",
 "topics": []
@@ -16271,6 +17806,18 @@
 "Resorts & shows"
 ]
 },
+"a0J-5onoQo8": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
+"a0Nq9JlVQ4E": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "a0UMPX9Q7Zs": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -16319,7 +17866,8 @@
 "a5hNYH0-7Xc": {
 "first_seen": "2026-11-03",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"Resorts & shows"
 ]
 },
 "a6MYIAKQGrw": {
@@ -16328,9 +17876,19 @@
 "History & culture"
 ]
 },
+"a6wr6DTauWs": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "a7UMXOIM2G8": {
 "first_seen": "2026-11-04",
 "topics": []
+},
+"a7Uj-R8lrPw": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "a8bFOBy0Vac": {
 "first_seen": "2026-11-16",
@@ -16402,6 +17960,12 @@
 "Neighbourhoods"
 ]
 },
+"aM7NJf3dayw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "aMtgUmzJW2A": {
 "first_seen": "2026-11-08",
 "topics": [
@@ -16461,7 +18025,8 @@
 "aSLIuzstRZM": {
 "first_seen": "2026-11-08",
 "topics": [
-"Food"
+"Food",
+"More food"
 ]
 },
 "aSacEWaLZc4": {
@@ -16478,6 +18043,12 @@
 "first_seen": "2026-11-16",
 "topics": [
 "Resorts & shows"
+]
+},
+"aTDefG5KCoI": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "aTj71MGDw0E": {
@@ -16506,6 +18077,12 @@
 "first_seen": "2026-11-17",
 "topics": [
 "Getting there"
+]
+},
+"aZkMbfJSiJk": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "a_g3mv0bCts": {
@@ -16550,12 +18127,22 @@
 "History & culture"
 ]
 },
+"adX75f_XGxo": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "aeQOVimXajs": {
 "first_seen": "2026-11-16",
 "topics": []
 },
 "afKc-J9tTSQ": {
 "first_seen": "2026-11-06",
+"topics": []
+},
+"afbYzF0DNxA": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "ag95yOwXsgI": {
@@ -16648,6 +18235,12 @@
 "first_seen": "2026-11-04",
 "topics": []
 },
+"anqK-s6qjdo": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "aoU4OJg40c0": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -16695,6 +18288,10 @@
 "topics": [
 "Grand Prix"
 ]
+},
+"awTsTUdkXzs": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "awwI-kIpAuI": {
 "first_seen": "2026-11-16",
@@ -16761,6 +18358,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture"
+]
+},
+"b58C1kv8i4Y": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "b5ISSEknkP8": {
@@ -16893,6 +18496,12 @@
 "Festivals"
 ]
 },
+"bL9sYN28NYA": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "bLB5CIBelx8": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -16971,7 +18580,8 @@
 "bUO51GwUIVQ": {
 "first_seen": "2026-11-03",
 "topics": [
-"Food"
+"Food",
+"More food"
 ]
 },
 "bVFnE1UX320": {
@@ -16998,6 +18608,12 @@
 "first_seen": "2026-11-12",
 "topics": []
 },
+"b_4x1w9nOKU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "bahY1CsMSwY": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -17014,6 +18630,12 @@
 "bgxxfDeuF40": {
 "first_seen": "2026-11-16",
 "topics": []
+},
+"bhtQvjxkmhs": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "biLYjiExooc": {
 "first_seen": "2026-11-17",
@@ -17131,6 +18753,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture",
+"More sights",
 "Neighbourhoods"
 ]
 },
@@ -17167,6 +18790,12 @@
 "c2WQ78rPZ4s": {
 "first_seen": "2026-11-11",
 "topics": []
+},
+"c30pr4_yE9w": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "c3J67HojFEI": {
 "first_seen": "2026-11-10",
@@ -17215,6 +18844,10 @@
 "Grand Prix"
 ]
 },
+"cBDAb6c746I": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "cBvcszo3vEA": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -17248,7 +18881,8 @@
 "cLd3As2rjus": {
 "first_seen": "2026-11-03",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"Resorts & shows"
 ]
 },
 "cLlXMk1VV7E": {
@@ -17286,6 +18920,10 @@
 "topics": [
 "Grand Prix"
 ]
+},
+"cQX_X0vg9ww": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "cQZJJbwxfAc": {
 "first_seen": "2026-11-03",
@@ -17364,6 +19002,7 @@
 "cZZC8QzVgE0": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -17401,6 +19040,12 @@
 "first_seen": "2026-11-15",
 "topics": [
 "Festivals"
+]
+},
+"ccriVOL4sqg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "cdIa3dvM7uc": {
@@ -17474,6 +19119,12 @@
 "first_seen": "2026-11-08",
 "topics": []
 },
+"cs3i5oyin70": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "csCQ4trgVdw": {
 "first_seen": "2026-11-15",
 "topics": []
@@ -17504,6 +19155,12 @@
 "Travel"
 ]
 },
+"cvWVal9yzg4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "cwgyNpSL3zc": {
 "first_seen": "2026-11-04",
 "topics": []
@@ -17517,7 +19174,8 @@
 "cxP65diKRZM": {
 "first_seen": "2026-11-17",
 "topics": [
-"More food"
+"More food",
+"Resorts & shows"
 ]
 },
 "cxbvx4uTTV0": {
@@ -17535,10 +19193,6 @@
 "topics": [
 "Festivals"
 ]
-},
-"cyOj5GmMO3w": {
-"first_seen": "2026-11-16",
-"topics": []
 },
 "cyVN72eFq1I": {
 "first_seen": "2026-11-03",
@@ -17751,6 +19405,7 @@
 "dRqrPRGEhdU": {
 "first_seen": "2026-11-17",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -17758,6 +19413,18 @@
 "first_seen": "2026-11-12",
 "topics": [
 "Food"
+]
+},
+"dStITCgn73w": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
+"dT2mu5nEXfg": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "dThYsK9nkuA": {
@@ -17808,9 +19475,21 @@
 "Casinos & hotels"
 ]
 },
+"dZi7nFLfVoY": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "dar8ssTb3vQ": {
 "first_seen": "2026-11-12",
 "topics": []
+},
+"dav3p0SjSgg": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "dbDoaAIcUQU": {
 "first_seen": "2026-11-12",
@@ -17821,6 +19500,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"dbwuwgT8S5w": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "dcey1i_yQRc": {
 "first_seen": "2026-11-14",
@@ -17889,6 +19572,12 @@
 "first_seen": "2026-11-06",
 "topics": []
 },
+"dlDcN7Kch7g": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "dmMJKtpLTyM": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -17929,6 +19618,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Neighbourhoods"
+]
+},
+"dqRRtfkSOV4": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "drh6OZ1PVQ0": {
@@ -17975,6 +19670,7 @@
 "dwqrXEKKnug": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Neighbourhoods"
 ]
 },
@@ -18032,10 +19728,22 @@
 "Travel"
 ]
 },
+"e4wigAb4FZ0": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "e7EOfTQHgKA": {
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture"
+]
+},
+"e7Fyai4OtGg": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "e7Rt7Vvfdco": {
@@ -18093,6 +19801,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -18119,6 +19828,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"eJ9pWZI0tUU": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "eLQzeMIyGTg": {
 "first_seen": "2026-11-05",
@@ -18175,10 +19888,6 @@
 "topics": [
 "Neighbourhoods"
 ]
-},
-"eWV_HkhBYmU": {
-"first_seen": "2026-11-17",
-"topics": []
 },
 "eWrQRCasxLw": {
 "first_seen": "2026-11-17",
@@ -18263,6 +19972,13 @@
 "first_seen": "2026-11-17",
 "topics": []
 },
+"efd08NOysFc": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food",
+"Resorts & shows"
+]
+},
 "egjT0otgDjQ": {
 "first_seen": "2026-11-07",
 "topics": [
@@ -18337,7 +20053,8 @@
 "emjI3ytqDPY": {
 "first_seen": "2026-11-16",
 "topics": [
-"Getting there"
+"Getting there",
+"More sights"
 ]
 },
 "enNYC3GvHGM": {
@@ -18356,6 +20073,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Neighbourhoods"
+]
+},
+"erfbPstNF0g": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "eskRSRd5WXw": {
@@ -18377,6 +20100,12 @@
 "History & culture"
 ]
 },
+"eu0ux0PG4Rw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "euA0NsO-nLM": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -18387,6 +20116,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Food"
+]
+},
+"ewT9MbXGRWA": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "ewvym3aLFx0": {
@@ -18401,10 +20136,28 @@
 "Travel"
 ]
 },
+"eywLjtBJWMg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
+"f13JBphhxYI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "f17kj5DstzE": {
 "first_seen": "2026-11-03",
 "topics": [
 "Food"
+]
+},
+"f3Pi6-JShlo": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "f4X8egey_zQ": {
@@ -18635,6 +20388,10 @@
 "History & culture"
 ]
 },
+"fhKa-gDz1MQ": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "fi1ySnxjgwE": {
 "first_seen": "2026-11-12",
 "topics": []
@@ -18642,6 +20399,7 @@
 "fi5gXTPTP_I": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "History & culture",
 "More food"
 ]
@@ -18649,6 +20407,12 @@
 "fjRnqb_g94w": {
 "first_seen": "2026-11-07",
 "topics": []
+},
+"fjY9V7ldoLM": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "fkDh-AbYLak": {
 "first_seen": "2026-11-17",
@@ -18692,6 +20456,12 @@
 "first_seen": "2026-11-06",
 "topics": [
 "Travel"
+]
+},
+"fpZeiR7hFwc": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "fpjbuzibAkg": {
@@ -18790,6 +20560,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Living there"
+]
+},
+"gCcvWBSzdXU": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "gCyFe5sygd8": {
@@ -18950,9 +20726,14 @@
 "Casinos & hotels"
 ]
 },
+"gZJ4ZxRPkh4": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "g_Eysg4qK4Q": {
 "first_seen": "2026-11-11",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -19035,6 +20816,12 @@
 "Festivals"
 ]
 },
+"gfbc4T5rYQo": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "ggMLjCqdXc4": {
 "first_seen": "2026-11-15",
 "topics": []
@@ -19054,6 +20841,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"gjP0ts_GQ8U": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "gktGKB_gv7U": {
 "first_seen": "2026-11-12",
@@ -19075,6 +20866,12 @@
 "Festivals"
 ]
 },
+"gmzUFzEKCoo": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "gnHaj5FyBdI": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -19086,14 +20883,6 @@
 "topics": [
 "Festivals"
 ]
-},
-"gqjlCli-t7w": {
-"first_seen": "2026-11-17",
-"topics": []
-},
-"guJbM9K0Wfw": {
-"first_seen": "2026-11-17",
-"topics": []
 },
 "gv-xzYe-hUA": {
 "first_seen": "2026-11-08",
@@ -19128,21 +20917,23 @@
 "topics": [
 "Casinos & hotels",
 "Getting there",
+"More sights",
 "Resorts & shows",
 "Travel"
+]
+},
+"gyFqy4mULDY": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "gyKQeifg58o": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Neighbourhoods",
 "Travel"
-]
-},
-"gzsCq-fUbLg": {
-"first_seen": "2026-11-03",
-"topics": [
-"Neighbourhoods"
 ]
 },
 "h-R1T_zo67w": {
@@ -19336,6 +21127,12 @@
 "Neighbourhoods"
 ]
 },
+"hUQwsLuu_34": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "hUsnWAeWh-M": {
 "first_seen": "2026-11-08",
 "topics": [
@@ -19371,6 +21168,12 @@
 "Neighbourhoods"
 ]
 },
+"haUFVj_w6Jc": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "hahLoeCwsn8": {
 "first_seen": "2026-11-15",
 "topics": []
@@ -19383,8 +21186,13 @@
 "Living there",
 "More sights",
 "Neighbourhoods",
+"Resorts & shows",
 "Travel"
 ]
+},
+"hcSGy_YYqKw": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "hdtEeyUal9U": {
 "first_seen": "2026-11-03",
@@ -19452,6 +21260,12 @@
 "Casinos & hotels"
 ]
 },
+"hhwn72TPF20": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "hiB5jZanyVg": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -19477,6 +21291,10 @@
 "topics": [
 "Food"
 ]
+},
+"hkxk3wu1Q3k": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "hlcs_2ucTMs": {
 "first_seen": "2026-11-05",
@@ -19523,6 +21341,12 @@
 "Casinos & hotels",
 "History & culture",
 "Travel"
+]
+},
+"hp7_AIlTCew": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "hpfMDP1wKVk": {
@@ -19594,6 +21418,12 @@
 "Festivals"
 ]
 },
+"i0JzgAfriik": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "i0byTnxu_HY": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -19612,6 +21442,12 @@
 "first_seen": "2026-11-08",
 "topics": [
 "Festivals"
+]
+},
+"i2oTsALbXfw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "i30gzukIAVc": {
@@ -19664,11 +21500,21 @@
 "Grand Prix"
 ]
 },
+"i9VEF09EPAw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "i9gADDGQAQM": {
 "first_seen": "2026-11-03",
 "topics": [
 "Neighbourhoods"
 ]
+},
+"iAujKAJZtBA": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "iCZvLrz2kTc": {
 "first_seen": "2026-11-13",
@@ -19775,6 +21621,12 @@
 "History & culture"
 ]
 },
+"iRzZAWLfd8Q": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "iSJkjONDVoo": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -19790,6 +21642,7 @@
 "iSokpgQh7ZU": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -19932,6 +21785,7 @@
 "topics": [
 "Casinos & hotels",
 "Getting there",
+"Living there",
 "More sights",
 "Neighbourhoods",
 "Travel"
@@ -19943,10 +21797,22 @@
 "History & culture"
 ]
 },
+"ictvJEmx6yY": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "ifFQikt86v0": {
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"ifZg4SfIWkU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "igBf2iZBxhM": {
@@ -20012,9 +21878,11 @@
 "Neighbourhoods"
 ]
 },
-"ip3oeqKNLOo": {
-"first_seen": "2026-11-16",
-"topics": []
+"irvWny4c48Q": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
 },
 "isLhH3h60-A": {
 "first_seen": "2026-11-17",
@@ -20031,6 +21899,10 @@
 "topics": [
 "Neighbourhoods"
 ]
+},
+"iurIe7bLSmE": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "iuseNHhTT8c": {
 "first_seen": "2026-11-03",
@@ -20125,7 +21997,9 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Food",
-"Neighbourhoods"
+"Getting there",
+"Neighbourhoods",
+"Resorts & shows"
 ]
 },
 "j5DbMpTpUe0": {
@@ -20176,6 +22050,12 @@
 "Festivals"
 ]
 },
+"j8IySe5k544": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "j8p7cAj4mlk": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -20185,6 +22065,12 @@
 "j8zQl8uC7A4": {
 "first_seen": "2026-11-04",
 "topics": []
+},
+"j9g7C1rOVXs": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "j9krZ_cDJOw": {
 "first_seen": "2026-11-03",
@@ -20196,6 +22082,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "History & culture"
+]
+},
+"jAdxZachbqA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "jAoejyqZyJA": {
@@ -20272,7 +22164,8 @@
 "jK2DReL91x0": {
 "first_seen": "2026-11-17",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"More sights"
 ]
 },
 "jK452KFN8vY": {
@@ -20303,6 +22196,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Food"
+]
+},
+"jOL-ZRZoJ-M": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "jOto2Lq8HpY": {
@@ -20396,6 +22295,12 @@
 "Resorts & shows"
 ]
 },
+"jbQKTb5Ysjk": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
 "jcJrpElmMqw": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -20427,6 +22332,12 @@
 "jiI7i-xyJ-8": {
 "first_seen": "2026-11-10",
 "topics": []
+},
+"jm9ZRLNansE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "jmqSRhoIdac": {
 "first_seen": "2026-11-06",
@@ -20467,6 +22378,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture"
+]
+},
+"jrcvUJGQ2C0": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "jtkiVO8TNfM": {
@@ -20513,6 +22430,18 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"jyuDaWDKLIo": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
+"jyxZIrezv5w": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "jzFaxu0a8iA": {
@@ -20609,6 +22538,10 @@
 },
 "k8hX3hhZkuk": {
 "first_seen": "2026-11-12",
+"topics": []
+},
+"k91PDCz7wA4": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "k9Llgqz3z_U": {
@@ -20810,6 +22743,7 @@
 "kc0LWIBbg-Y": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Neighbourhoods",
 "Travel"
 ]
@@ -20837,6 +22771,12 @@
 "More sights",
 "Neighbourhoods",
 "Travel"
+]
+},
+"kghn3bYKbgE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "kiezucmZtvE": {
@@ -20894,8 +22834,13 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture",
+"More sights",
 "Travel"
 ]
+},
+"koWoIXz5VqY": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "kpeg2Yx2v5Y": {
 "first_seen": "2026-11-03",
@@ -20937,6 +22882,12 @@
 "Travel"
 ]
 },
+"kva1Pi-NHCY": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "kwEtecz5b7E": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -20952,6 +22903,7 @@
 "ky9sIVXtYSM": {
 "first_seen": "2026-11-17",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -21095,6 +23047,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
+"More sights",
 "Travel"
 ]
 },
@@ -21111,6 +23064,10 @@
 "History & culture"
 ]
 },
+"lL2TsPDWthM": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "lMahbJTo1ME": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -21124,6 +23081,10 @@
 "Food",
 "More food"
 ]
+},
+"lNbEZtdAUXs": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "lPEFyeY21RE": {
 "first_seen": "2026-11-05",
@@ -21169,6 +23130,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Neighbourhoods"
+]
+},
+"lVfuUHS3-EQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "lWDFksIW3jk": {
@@ -21227,6 +23194,12 @@
 "Getting there"
 ]
 },
+"leebOGb4iMA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "lejIvGDUX_4": {
 "first_seen": "2026-11-06",
 "topics": [
@@ -21255,6 +23228,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
+"Getting there",
 "Neighbourhoods",
 "Travel"
 ]
@@ -21291,6 +23265,12 @@
 "Travel"
 ]
 },
+"lov1qpsKNyw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "low29KNC7sk": {
 "first_seen": "2026-11-05",
 "topics": []
@@ -21301,11 +23281,19 @@
 },
 "lqKGh8nIpP4": {
 "first_seen": "2026-11-07",
-"topics": []
+"topics": [
+"More food"
+]
 },
 "lrrd9vQ0Bv8": {
 "first_seen": "2026-11-06",
 "topics": []
+},
+"lsFur-aelFY": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "ltIN-9xQA-M": {
 "first_seen": "2026-11-13",
@@ -21322,6 +23310,12 @@
 "luYuqRc6yoE": {
 "first_seen": "2026-11-17",
 "topics": []
+},
+"lxPExZlMgPs": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
 },
 "lzYSaHgZ1kY": {
 "first_seen": "2026-11-03",
@@ -21387,6 +23381,10 @@
 "first_seen": "2026-11-14",
 "topics": []
 },
+"m6xjIHkbDtU": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "m7ECAeTDOV8": {
 "first_seen": "2026-11-15",
 "topics": [
@@ -21437,6 +23435,7 @@
 "mD5CxoWlbNU": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Neighbourhoods",
 "Travel"
 ]
@@ -21580,6 +23579,18 @@
 "Living there"
 ]
 },
+"mXYNUNnTjuE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
+"mZMYZ1h8JBw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "m_1BOQATKNg": {
 "first_seen": "2026-11-16",
 "topics": []
@@ -21624,6 +23635,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Getting there",
+"More sights",
 "Travel"
 ]
 },
@@ -21753,6 +23765,12 @@
 "Casinos & hotels"
 ]
 },
+"mxXhJpsaZ9Q": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "n-ggRMwzVCk": {
 "first_seen": "2026-11-07",
 "topics": [
@@ -21806,6 +23824,18 @@
 "first_seen": "2026-11-11",
 "topics": [
 "History & culture"
+]
+},
+"n6hZYOtyPvQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
+"n6unF-Yp3sc": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "n7Zs96ivLuE": {
@@ -21877,6 +23907,7 @@
 "nIItOn9fwyY": {
 "first_seen": "2026-11-17",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -21951,6 +23982,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "History & culture"
+]
+},
+"nRXoW_HYG-E": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "nUmK8AwSUco": {
@@ -22113,10 +24150,6 @@
 "Grand Prix"
 ]
 },
-"njXDR4EE45I": {
-"first_seen": "2026-11-12",
-"topics": []
-},
 "nkG7Wt_7fKU": {
 "first_seen": "2026-11-08",
 "topics": [
@@ -22151,6 +24184,12 @@
 "ns7m_U2ekpE": {
 "first_seen": "2026-11-15",
 "topics": []
+},
+"nstHKp3JJFI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
 },
 "ntdNbCMuKX8": {
 "first_seen": "2026-11-16",
@@ -22216,18 +24255,16 @@
 "Festivals"
 ]
 },
-"oAjNbMBfhWE": {
-"first_seen": "2026-11-15",
-"topics": [
-"Grand Prix"
-]
-},
 "oCcD74ruPeg": {
 "first_seen": "2026-11-16",
 "topics": []
 },
 "oCho2p5kO1o": {
 "first_seen": "2026-11-11",
+"topics": []
+},
+"oD9wFte1SIE": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "oF8f5U5vnG0": {
@@ -22264,12 +24301,19 @@
 "oIhsa0fEYGw": {
 "first_seen": "2026-11-16",
 "topics": [
-"Getting there"
+"Getting there",
+"More sights"
 ]
 },
 "oJt79wNA_Uc": {
 "first_seen": "2026-11-05",
 "topics": []
+},
+"oJxW2eS0Ssw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Casinos & hotels"
+]
 },
 "oKOrcahUDHA": {
 "first_seen": "2026-11-05",
@@ -22285,6 +24329,12 @@
 "first_seen": "2026-11-13",
 "topics": [
 "Festivals"
+]
+},
+"oLvXIpuZjyo": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "oMksA1de3nQ": {
@@ -22311,6 +24361,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels",
+"More sights",
 "Travel"
 ]
 },
@@ -22342,6 +24393,12 @@
 "More sights"
 ]
 },
+"oUdWyNbpex4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "oUiNz3ZCvFc": {
 "first_seen": "2026-11-04",
 "topics": [
@@ -22366,6 +24423,12 @@
 "Festivals"
 ]
 },
+"oWl0clc8slc": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "oXa7o8JFChM": {
 "first_seen": "2026-11-06",
 "topics": [
@@ -22386,6 +24449,16 @@
 "first_seen": "2026-11-17",
 "topics": [
 "More sights"
+]
+},
+"o_jPPVhy73g": {
+"first_seen": "2026-11-18",
+"topics": []
+},
+"oa6aFwWZfF8": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "oaUdY8clZsw": {
@@ -22442,6 +24515,12 @@
 "first_seen": "2026-11-14",
 "topics": [
 "Living there"
+]
+},
+"ogNowzpGhXg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "oguhuU4qn0E": {
@@ -22554,7 +24633,8 @@
 "oxettpAKJKg": {
 "first_seen": "2026-11-03",
 "topics": [
-"Festivals"
+"Festivals",
+"Resorts & shows"
 ]
 },
 "oyMxiVQX-Gs": {
@@ -22566,7 +24646,8 @@
 "oyNSHdjO_YY": {
 "first_seen": "2026-11-16",
 "topics": [
-"Getting there"
+"Getting there",
+"Travel"
 ]
 },
 "ozYmkW4RWYA": {
@@ -22631,6 +24712,12 @@
 "first_seen": "2026-11-16",
 "topics": []
 },
+"p6TDmWhOnok": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "p7sZ6JASgSs": {
 "first_seen": "2026-11-10",
 "topics": []
@@ -22651,6 +24738,7 @@
 "pAUO8BXBiDA": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "Travel"
 ]
 },
@@ -22692,6 +24780,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"pI1qbyCyuh8": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "pJ-3PZXqJNQ": {
@@ -22907,11 +25001,21 @@
 "Festivals"
 ]
 },
+"ptjHUxmvv2c": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "puajwrOiHMo": {
 "first_seen": "2026-11-05",
 "topics": [
 "Grand Prix"
 ]
+},
+"pv02XL-uO3g": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "pvlUwrfgufg": {
 "first_seen": "2026-11-14",
@@ -22955,6 +25059,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Neighbourhoods"
+]
+},
+"pxwJTQEZN2I": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "pyh3AqC0Qvw": {
@@ -23083,6 +25193,12 @@
 "first_seen": "2026-11-13",
 "topics": []
 },
+"qM1yaxjBdTE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "qMc6H7eA7Kg": {
 "first_seen": "2026-11-15",
 "topics": []
@@ -23131,6 +25247,12 @@
 "first_seen": "2026-11-11",
 "topics": [
 "Food"
+]
+},
+"qQSlQtKAehw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "qR4QjwG-zeg": {
@@ -23195,6 +25317,12 @@
 "q_FvpfOyo_M": {
 "first_seen": "2026-11-12",
 "topics": []
+},
+"qak0CATU3F0": {
+"first_seen": "2026-11-18",
+"topics": [
+"Festivals"
+]
 },
 "qbtXlgLFxaQ": {
 "first_seen": "2026-11-16",
@@ -23301,6 +25429,7 @@
 "qoM9FxV6y8I": {
 "first_seen": "2026-11-16",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -23422,6 +25551,12 @@
 "Grand Prix"
 ]
 },
+"r2sBgNxfk_Y": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "r4VynGH02R8": {
 "first_seen": "2026-11-05",
 "topics": [
@@ -23464,6 +25599,12 @@
 "first_seen": "2026-11-12",
 "topics": []
 },
+"r8iL-ddIJus": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "r96me3_Fwxc": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -23481,6 +25622,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Grand Prix"
+]
+},
+"rBkM_TZ9xEg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "rBot6kCcvxo": {
@@ -23522,6 +25669,12 @@
 "topics": [
 "Festivals",
 "Food"
+]
+},
+"rI9cOzJzQO4": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "rIpvOdIsN1o": {
@@ -23582,7 +25735,14 @@
 "rPmPKwOZpHA": {
 "first_seen": "2026-11-04",
 "topics": [
-"Food"
+"Food",
+"More food"
+]
+},
+"rQMQBri0n24": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "rQi9-iQXChA": {
@@ -23640,9 +25800,11 @@
 "More food"
 ]
 },
-"rXd-I97gH3o": {
-"first_seen": "2026-11-13",
-"topics": []
+"rYCgF8h5yXI": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
 },
 "r_4BzCKAyUM": {
 "first_seen": "2026-11-03",
@@ -23724,6 +25886,10 @@
 "first_seen": "2026-11-08",
 "topics": []
 },
+"rigXiUUMI6E": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "rl4nyDNwXCA": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -23749,6 +25915,7 @@
 "roFDQ6Sx4BE": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -23774,6 +25941,18 @@
 "first_seen": "2026-11-08",
 "topics": [
 "Festivals"
+]
+},
+"rtparul5kBc": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
+"rtuRkRpzp8Q": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "ruGt76k0Pzo": {
@@ -23813,6 +25992,12 @@
 "rywukA9UEsA": {
 "first_seen": "2026-11-08",
 "topics": []
+},
+"ryxM79f3gEo": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
 },
 "rz_9tNskPbw": {
 "first_seen": "2026-11-07",
@@ -23871,7 +26056,8 @@
 "s8p2uQeFe_4": {
 "first_seen": "2026-11-03",
 "topics": [
-"History & culture"
+"History & culture",
+"Neighbourhoods"
 ]
 },
 "sA6pUobKYjs": {
@@ -23888,7 +26074,14 @@
 "sBtD5wkPYA8": {
 "first_seen": "2026-11-03",
 "topics": [
-"Food"
+"Food",
+"More food"
+]
+},
+"sCGWPjbJFes": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "sDtqEE3k3fI": {
@@ -23899,6 +26092,12 @@
 "first_seen": "2026-11-16",
 "topics": [
 "More food"
+]
+},
+"sEykeP11gK4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "sFoMRlwwysU": {
@@ -23916,6 +26115,10 @@
 },
 "sGwYVjhY8e8": {
 "first_seen": "2026-11-07",
+"topics": []
+},
+"sGyLZ1LYDp8": {
+"first_seen": "2026-11-18",
 "topics": []
 },
 "sI-WYFDGljw": {
@@ -23944,6 +26147,10 @@
 "Festivals",
 "Food"
 ]
+},
+"sL6EJsEnQUE": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "sLyWu2H_2sQ": {
 "first_seen": "2026-11-16",
@@ -24090,6 +26297,18 @@
 "first_seen": "2026-11-15",
 "topics": []
 },
+"sjbJiGtMQrI": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
+"sjfCkpsAHYo": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "slLd-FlOECg": {
 "first_seen": "2026-11-07",
 "topics": [
@@ -24152,6 +26371,12 @@
 "first_seen": "2026-11-05",
 "topics": []
 },
+"t0mIAIWUAyI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "t1hJe9vwiDA": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -24163,6 +26388,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"t2l74YHNHiU": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "t3seE9XPoJg": {
 "first_seen": "2026-11-12",
@@ -24194,6 +26423,12 @@
 "Food"
 ]
 },
+"t76sSgZ6CJE": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "t7D0OBR2Fpw": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -24220,6 +26455,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Casinos & hotels"
+]
+},
+"tAYzmRpE6pw": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "tB9-soq6jNs": {
@@ -24259,6 +26500,22 @@
 "Travel"
 ]
 },
+"tFjBbFoKMY4": {
+"first_seen": "2026-11-18",
+"topics": []
+},
+"tFsACPYJq2s": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
+]
+},
+"tGywTwgBWKg": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "tJIQ4zmYzc8": {
 "first_seen": "2026-11-11",
 "topics": [
@@ -24296,6 +26553,12 @@
 "History & culture"
 ]
 },
+"tR3aYxKVDvc": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "tRJK8sRCvLE": {
 "first_seen": "2026-11-04",
 "topics": []
@@ -24310,6 +26573,12 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Neighbourhoods"
+]
+},
+"tUOdeHfaYDc": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
 ]
 },
 "tUdbbMuKSSk": {
@@ -24346,6 +26615,12 @@
 "Grand Prix"
 ]
 },
+"tYGEMCDeoyE": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "tYO1VZ2CWXo": {
 "first_seen": "2026-11-16",
 "topics": [
@@ -24363,6 +26638,7 @@
 "tZxu5MddyKg": {
 "first_seen": "2026-11-03",
 "topics": [
+"Getting there",
 "History & culture",
 "Travel"
 ]
@@ -24385,6 +26661,12 @@
 "Living there"
 ]
 },
+"tccP-5DqPNs": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "tcdWY93L-qY": {
 "first_seen": "2026-11-17",
 "topics": [
@@ -24400,6 +26682,12 @@
 "topics": [
 "Food",
 "More food"
+]
+},
+"thASDxZMQgY": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "tipssVHdyEg": {
@@ -24427,7 +26715,8 @@
 "tk9oNKTPXNw": {
 "first_seen": "2026-11-04",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"Resorts & shows"
 ]
 },
 "tkgCippF1H8": {
@@ -24449,6 +26738,7 @@
 "tpVdBwwvlNE": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Neighbourhoods",
 "Travel"
 ]
@@ -24465,6 +26755,12 @@
 "first_seen": "2026-11-10",
 "topics": [
 "Neighbourhoods"
+]
+},
+"tr_Nv_V7dig": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "tsJhZWbrYj4": {
@@ -24583,6 +26879,7 @@
 "u3yAwEEUgr8": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -24631,6 +26928,12 @@
 "first_seen": "2026-11-16",
 "topics": [
 "Living there"
+]
+},
+"uAE-m1-2pSQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "uBYvFPZEaME": {
@@ -24692,6 +26995,10 @@
 "History & culture"
 ]
 },
+"uJdxM8-sCtU": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "uKQisQU-R-Y": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -24736,6 +27043,12 @@
 "first_seen": "2026-11-16",
 "topics": [
 "Getting there"
+]
+},
+"uMQqzWc5NxM": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "uM_WdOQr07s": {
@@ -24877,6 +27190,12 @@
 "Resorts & shows"
 ]
 },
+"udZZJd_4IzE": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "udfvix62Bhk": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -24894,6 +27213,12 @@
 "topics": [
 "Food",
 "Neighbourhoods"
+]
+},
+"ufgNtNOcHLI": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "ufr_tWUyoRM": {
@@ -25008,6 +27333,7 @@
 "topics": [
 "Festivals",
 "Food",
+"Getting there",
 "More sights",
 "Neighbourhoods",
 "Travel"
@@ -25042,6 +27368,18 @@
 "Festivals"
 ]
 },
+"uvCOMZZJxBQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
+"uvsMFAVOqtQ": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "uwYK4Hxxucc": {
 "first_seen": "2026-11-04",
 "topics": []
@@ -25062,10 +27400,22 @@
 "first_seen": "2026-11-17",
 "topics": []
 },
+"uzlZuJcCGVU": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "v-7aZLvClCU": {
 "first_seen": "2026-11-03",
 "topics": [
 "Festivals"
+]
+},
+"v-VYA3pMeUM": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "v0E3phEKbNk": {
@@ -25099,6 +27449,12 @@
 "v2Zwro-s1Dw": {
 "first_seen": "2026-11-16",
 "topics": []
+},
+"v32a7fFj5PI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Casinos & hotels"
+]
 },
 "v3LhQfDwEw0": {
 "first_seen": "2026-11-03",
@@ -25137,6 +27493,12 @@
 "topics": [
 "Getting there",
 "Travel"
+]
+},
+"v9HKqpqKcuI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "v9bVdPfxN_Y": {
@@ -25182,6 +27544,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Grand Prix"
+]
+},
+"vDGiSBGfOQA": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "vDrcy9iXaOE": {
@@ -25233,9 +27601,21 @@
 "Neighbourhoods"
 ]
 },
+"vPWN73EwX30": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "vPmS5COpZls": {
 "first_seen": "2026-11-14",
 "topics": []
+},
+"vPpWQ4zt3UM": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "vQ2V-xsWO8A": {
 "first_seen": "2026-11-05",
@@ -25276,6 +27656,10 @@
 "topics": [
 "History & culture"
 ]
+},
+"vVzchOdM-_k": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "vYR602zAnFU": {
 "first_seen": "2026-11-03",
@@ -25324,6 +27708,12 @@
 "History & culture"
 ]
 },
+"vgMnLmT8kMI": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "vhHp8-pSIVU": {
 "first_seen": "2026-11-08",
 "topics": [
@@ -25351,7 +27741,8 @@
 "vi-gRgWxXUg": {
 "first_seen": "2026-11-16",
 "topics": [
-"Getting there"
+"Getting there",
+"More sights"
 ]
 },
 "vi68ppfLejA": {
@@ -25452,7 +27843,8 @@
 "vs6L2vcfwkg": {
 "first_seen": "2026-11-17",
 "topics": [
-"More sights"
+"More sights",
+"Resorts & shows"
 ]
 },
 "vtOsO4rmM0E": {
@@ -25557,6 +27949,7 @@
 "w6JnmsTUIhE": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -25583,9 +27976,16 @@
 "More sights"
 ]
 },
+"w9p_BE5oNTw": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "w9q-o8Go_E4": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -25651,6 +28051,10 @@
 "first_seen": "2026-11-15",
 "topics": []
 },
+"wICRhe4b3qY": {
+"first_seen": "2026-11-18",
+"topics": []
+},
 "wIJNn1Unjc0": {
 "first_seen": "2026-11-04",
 "topics": []
@@ -25698,10 +28102,26 @@
 "Festivals"
 ]
 },
+"wNl_WorKzWw": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "wOV7yZHFgb0": {
 "first_seen": "2026-11-16",
 "topics": [
 "More sights"
+]
+},
+"wPLCDkTn4i8": {
+"first_seen": "2026-11-18",
+"topics": []
+},
+"wPgzOdK8Nrc": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "wQ3VNRpcrlI": {
@@ -25771,6 +28191,12 @@
 "first_seen": "2026-11-06",
 "topics": []
 },
+"wYPJS2myUzU": {
+"first_seen": "2026-11-18",
+"topics": [
+"History & culture"
+]
+},
 "wZKLkOM7g0c": {
 "first_seen": "2026-11-14",
 "topics": [
@@ -25787,6 +28213,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Food"
+]
+},
+"w_eET8qCiSw": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "w_yE566JGas": {
@@ -25982,6 +28414,7 @@
 "topics": [
 "Getting there",
 "History & culture",
+"More sights",
 "Travel"
 ]
 },
@@ -26002,6 +28435,7 @@
 "xC0Nc17XBLQ": {
 "first_seen": "2026-11-17",
 "topics": [
+"More sights",
 "Resorts & shows"
 ]
 },
@@ -26014,6 +28448,7 @@
 "xE1NRYOHzvA": {
 "first_seen": "2026-11-11",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -26033,6 +28468,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Casinos & hotels"
+]
+},
+"xG_xWzyVdpg": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "xIJBzM-hs_8": {
@@ -26065,6 +28506,12 @@
 "first_seen": "2026-11-17",
 "topics": [
 "More sights"
+]
+},
+"xMcts--oqW0": {
+"first_seen": "2026-11-18",
+"topics": [
+"Grand Prix"
 ]
 },
 "xOTV7oz8Ztg": {
@@ -26175,6 +28622,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Food",
+"Resorts & shows",
 "Travel"
 ]
 },
@@ -26239,7 +28687,8 @@
 "xqMeDgtNPyA": {
 "first_seen": "2026-11-16",
 "topics": [
-"Getting there"
+"Getting there",
+"More sights"
 ]
 },
 "xrFZ-YHpebE": {
@@ -26338,6 +28787,7 @@
 "topics": [
 "Festivals",
 "Food",
+"Getting there",
 "Neighbourhoods",
 "Travel"
 ]
@@ -26357,7 +28807,8 @@
 "y1ICONuF2vI": {
 "first_seen": "2026-11-03",
 "topics": [
-"Casinos & hotels"
+"Casinos & hotels",
+"Resorts & shows"
 ]
 },
 "y1VMAnyLy0k": {
@@ -26367,6 +28818,12 @@
 "y1kXDHPH4tY": {
 "first_seen": "2026-11-10",
 "topics": []
+},
+"y1y2vI6cllc": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "y2NhEmE5-IU": {
 "first_seen": "2026-11-03",
@@ -26387,6 +28844,7 @@
 "y4za7vZ_NNg": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -26405,6 +28863,7 @@
 "first_seen": "2026-11-03",
 "topics": [
 "Getting there",
+"More sights",
 "Travel"
 ]
 },
@@ -26439,6 +28898,7 @@
 "yB-ih8vDmkc": {
 "first_seen": "2026-11-07",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -26529,6 +28989,12 @@
 "Grand Prix"
 ]
 },
+"yLjGGxLOda4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Getting there"
+]
+},
 "yLxubYfVyRY": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -26542,10 +29008,6 @@
 "topics": [
 "Living there"
 ]
-},
-"yMyW9JyGfXA": {
-"first_seen": "2026-11-16",
-"topics": []
 },
 "yNCapxAS9k8": {
 "first_seen": "2026-11-08",
@@ -26579,6 +29041,12 @@
 "first_seen": "2026-11-06",
 "topics": [
 "Casinos & hotels"
+]
+},
+"yQWDTiu7xxg": {
+"first_seen": "2026-11-18",
+"topics": [
+"More food"
 ]
 },
 "yTSfHBbulWg": {
@@ -26737,6 +29205,7 @@
 "ykvlh6K8hYk": {
 "first_seen": "2026-11-03",
 "topics": [
+"More sights",
 "Travel"
 ]
 },
@@ -26812,6 +29281,12 @@
 "yxk8nEGM_Ic": {
 "first_seen": "2026-11-07",
 "topics": []
+},
+"yyTBM88lgEM": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
 },
 "yyqakTL9Rb4": {
 "first_seen": "2026-11-17",
@@ -26893,6 +29368,12 @@
 "first_seen": "2026-11-11",
 "topics": []
 },
+"z8qnLXCj4SI": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
+]
+},
 "z8r-rZMdEmQ": {
 "first_seen": "2026-11-07",
 "topics": []
@@ -26902,6 +29383,10 @@
 "topics": [
 "Festivals"
 ]
+},
+"zAPxYsLgsfA": {
+"first_seen": "2026-11-18",
+"topics": []
 },
 "zBwo9iK70R4": {
 "first_seen": "2026-11-03",
@@ -26934,6 +29419,12 @@
 "Festivals"
 ]
 },
+"zFKGHwbAslc": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
+]
+},
 "zG22qQydPVQ": {
 "first_seen": "2026-11-13",
 "topics": [
@@ -26951,10 +29442,6 @@
 },
 "zGe8BS-Mg6Q": {
 "first_seen": "2026-11-05",
-"topics": []
-},
-"zI5RIRp_API": {
-"first_seen": "2026-11-17",
 "topics": []
 },
 "zL9QrpVUHlo": {
@@ -27019,6 +29506,12 @@
 "first_seen": "2026-11-06",
 "topics": [
 "Casinos & hotels"
+]
+},
+"zUGsYSjOXE4": {
+"first_seen": "2026-11-18",
+"topics": [
+"Resorts & shows"
 ]
 },
 "zUQE2i4Rahk": {
@@ -27125,10 +29618,6 @@
 "Resorts & shows"
 ]
 },
-"zjuwP7lmmp8": {
-"first_seen": "2026-11-11",
-"topics": []
-},
 "zkU9JlgYyeQ": {
 "first_seen": "2026-11-03",
 "topics": [
@@ -27190,6 +29679,12 @@
 "first_seen": "2026-11-05",
 "topics": [
 "Living there"
+]
+},
+"zrXoXAN9PlE": {
+"first_seen": "2026-11-18",
+"topics": [
+"More sights"
 ]
 },
 "zsqjcwEh-h8": {
