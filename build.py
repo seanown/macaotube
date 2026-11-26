@@ -543,6 +543,65 @@ urls.append(page('/privacy/', title='Privacy', description='How MacaoTube handle
                  view_html=privacy_html, rail_key='privacy',
                  ld={'@context': 'https://schema.org', '@type': 'WebPage', 'name': 'MacaoTube privacy', 'url': SITE + '/privacy/', 'publisher': PUBLISHER}))
 
+# terms of service (approved wording; URLs are links, same treatment as the privacy page)
+terms_html = """    <article class="prose">
+      <header>
+        <h1>Terms of Service</h1>
+        <p class="fine">Last updated 27 November 2026.</p>
+        <p>These terms apply when you use the MacaoTube website at <a href="/">https://macaotube.org/</a>. By using the site, you agree to them. If you do not agree, please do not use the site.</p>
+      </header>
+      <section>
+        <h2>Who we are</h2>
+        <p>MacaoTube is a free website that gathers YouTube videos about Macao in one place. It is curated by Sean Own and is an initiative of the Guangdong-Hong Kong-Macao Greater Bay Area Electronic Commerce Association (GBAECA), a non-profit founded in Macao in 2019.</p>
+        <p>Contact: <a href="mailto:hello@macaotube.org">hello@macaotube.org</a>. For sponsorship and partnerships: <a href="mailto:partners@macaotube.org">partners@macaotube.org</a>.</p>
+      </section>
+      <section>
+        <h2>What MacaoTube does</h2>
+        <p>MacaoTube lists publicly available YouTube videos about Macao, organised by topic. It has no accounts or sign-ups. We do not host the videos ourselves.</p>
+      </section>
+      <section>
+        <h2>YouTube and other services</h2>
+        <p>MacaoTube uses YouTube API Services to show titles, thumbnails, channel names and view counts. We only read public video information. When you play a video, you leave MacaoTube and go to YouTube, where the YouTube Terms of Service (<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">https://www.youtube.com/t/terms</a>) and the Google Privacy Policy (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>) apply. By using MacaoTube you also agree to the YouTube Terms of Service.</p>
+        <p>MacaoTube is an independent site, not affiliated with or endorsed by YouTube or Google.</p>
+      </section>
+      <section>
+        <h2>Videos and intellectual property</h2>
+        <p>Videos remain on YouTube and belong to their creators. MacaoTube only links to them. If you are a creator or rights holder and want a video removed from our listings, email <a href="mailto:hello@macaotube.org">hello@macaotube.org</a> and we will look into it.</p>
+        <p>The MacaoTube name, logo and the design of this website belong to us. You may not copy them for a commercial purpose without our permission.</p>
+      </section>
+      <section>
+        <h2>Acceptable use</h2>
+        <p>Use the site lawfully. Do not attempt to break, overload or scrape the site in a way that disrupts the service, and do not use MacaoTube to spread spam or unlawful content.</p>
+      </section>
+      <section>
+        <h2>Sponsored placements</h2>
+        <p>We may show labelled sponsored placements. Sponsors do not change which videos are shown or in what order. Partner packages are described on the Partner page (<a href="/partner/">https://macaotube.org/partner/</a>).</p>
+      </section>
+      <section>
+        <h2>No warranty</h2>
+        <p>MacaoTube is provided free of charge, as is. Video titles, thumbnails and view counts come from YouTube and may be out of date or incomplete. We do not promise that the site will always be available or error-free, and a listing on MacaoTube is not a recommendation of any business, event or video.</p>
+      </section>
+      <section>
+        <h2>Limitation of liability</h2>
+        <p>To the extent permitted by the laws of the Macao Special Administrative Region, we are not liable for losses that arise from your use of the site or from videos or third-party sites you reach through it. This does not affect any rights you have that cannot be waived by law.</p>
+      </section>
+      <section>
+        <h2>Privacy</h2>
+        <p>How we handle information is explained in our Privacy Policy (<a href="/privacy/">https://macaotube.org/privacy/</a>).</p>
+      </section>
+      <section>
+        <h2>Changes</h2>
+        <p>We may update these terms from time to time. The date at the top of this page will change when we do. Continued use of the site after an update means you accept the revised terms.</p>
+      </section>
+      <section>
+        <h2>Governing law</h2>
+        <p>These terms are governed by the laws of the Macao Special Administrative Region.</p>
+      </section>
+    </article>"""
+urls.append(page('/terms/', title='Terms of Service', description='Terms of Service for the MacaoTube website.',
+                 view_html=terms_html, rail_key='terms',
+                 ld={'@context': 'https://schema.org', '@type': 'WebPage', 'name': 'MacaoTube terms of service', 'url': SITE + '/terms/', 'publisher': PUBLISHER}))
+
 # about
 n_ch = len({v['channel'] for v in DATA})
 about = f"""    <article class="prose">
